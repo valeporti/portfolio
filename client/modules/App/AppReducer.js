@@ -1,9 +1,10 @@
 // Import Actions
-import { TOGGLE_ADD_POST } from './AppActions';
+import { TOGGLE_ADD_POST, TOGGLE_ACTIVE_MENU } from './AppActions';
 
 // Initial State
 const initialState = {
   showAddPost: false,
+  activeMenu: false,
 };
 
 const AppReducer = (state = initialState, action) => {
@@ -12,7 +13,10 @@ const AppReducer = (state = initialState, action) => {
       return {
         showAddPost: !state.showAddPost,
       };
-
+    case TOGGLE_ACTIVE_MENU:
+      return {
+        activeMenu: !state.activeMenu,
+      }
     default:
       return state;
   }

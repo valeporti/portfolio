@@ -9,14 +9,17 @@ import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Menu from './components/Menu/Menu';
 
 // Import Actions
-import { toggleAddPost } from './AppActions';
+import { toggleAddPost, toggleActiveMenu } from './AppActions';
 import { switchLanguage } from '../../modules/Intl/IntlActions';
 
 export class App extends Component {
   constructor(props) {
     super(props);
+    console.log('in app');
+    console.log(props);
     this.state = { isMounted: false };
   }
 
@@ -25,7 +28,12 @@ export class App extends Component {
   }
 
   toggleAddPostSection = () => {
-    this.props.dispatch(toggleAddPost());
+    this.props.toggleAddPost();
+  };
+
+  toggleActiveMenu = () => {
+
+    this.props.toggleActiveMenu();
   };
 
   render() {
@@ -34,7 +42,7 @@ export class App extends Component {
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
         <div>
           <Helmet
-            title="MERN Starter - Blog App"
+            title="Valentin Portillo"
             titleTemplate="%s - Blog App"
             meta={[
               { charset: 'utf-8' },
@@ -53,6 +61,10 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
+          <Menu 
+            toggleActiveMenu={this.toggleActiveMenu}
+            activeMenu={this.props.app.activeMenu}
+          />
           <div className={styles.container}>
             {this.props.children}
           </div>
@@ -65,7 +77,7 @@ export class App extends Component {
 
 App.propTypes = {
   children: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired,
+  //dispatch: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
 };
 
@@ -73,7 +85,19 @@ App.propTypes = {
 function mapStateToProps(store) {
   return {
     intl: store.intl,
+    app: store.app,
   };
 }
 
-export default connect(mapStateToProps)(App);
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleAddPost: () => {
+      dispatch(toggleAddPost())
+    },
+    toggleActiveMenu: () => {
+      dispatch(toggleActiveMenu())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
