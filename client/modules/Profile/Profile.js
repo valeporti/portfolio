@@ -8,6 +8,7 @@ import styles from './Profile.css';
 class Profile extends Component {
   render() {
     return (
+      <div>Profile</div>
     );
   }
 }
