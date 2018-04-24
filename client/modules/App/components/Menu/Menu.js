@@ -3,11 +3,11 @@ import React, { PropTypes } from 'react';
 import styles from './Menu.css';
 
 function Menu(props, context) {
-  console.log('onmenu');
-  console.log(props);
+  //console.log('onmenu');
+  //console.log(props);
   const activeMenu = props.activeMenu;
   let activeMenuClass = styles.menu;
-  console.log(styles);
+  //console.log(styles);
   (activeMenu) ? activeMenuClass = styles.menu : activeMenuClass = '';
 
   return (
