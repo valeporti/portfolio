@@ -1,5 +1,5 @@
 .header {
-  background: #eee url('../../header-bk.png') center;
+  background: #2A7B88 url('../../header-bk.png') center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
 }
@@ -41,7 +41,7 @@
   list-style: none;
   width: 980px;
   margin: auto;
-  text-align: right;
+  text-align: left;
 }
 
 .language-switcher li {

@@ -40,6 +40,9 @@ import posts from './routes/post.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
 
+//Other extensions
+//let favicon = require('serve-favicon');
+
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
 
@@ -60,6 +63,8 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
 app.use('/api', posts);
+//app.use(favicon(path.resolve(__dirname, '../client')));
+//console.log(path.resolve(__dirname, '../client'));
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {

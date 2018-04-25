@@ -4,6 +4,8 @@ import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './Header.css';
+//image
+//import logo1 from './logo1.png';
 
 export function Header(props, context) {
   const languageNodes = props.intl.enabledLanguages.map(
@@ -16,7 +18,9 @@ export function Header(props, context) {
           <li><FormattedMessage id="switchLanguage" /></li>
           {languageNodes}
         </ul>
+        {/* <img alt='logo' src={logo1} /> */}
       </div>
+      {/*
       <div className={styles.content}>
         <h1 className={styles['site-title']}>
           <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
@@ -27,6 +31,7 @@ export function Header(props, context) {
             : null
         }
       </div>
+      */}
     </div>
   );
 }
