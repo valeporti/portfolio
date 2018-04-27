@@ -18,8 +18,8 @@ import { switchLanguage } from '../../modules/Intl/IntlActions';
 export class App extends Component {
   constructor(props) {
     super(props);
-    console.log('in app');
-    console.log(props);
+    //console.log('in app');
+    //console.log(props);
     this.state = { isMounted: false };
   }
 

@@ -1,1 +1,12 @@
 /* Profile styles */
+.fastAbout {
+    display: block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+    background:  #2A7B88 url('../../images/code.jpg') center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}

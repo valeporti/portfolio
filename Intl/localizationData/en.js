@@ -28,5 +28,6 @@ export default {
     	  other {has # comments}
       } as of {date}`,
     aboutMe: 'I like to , Im....',
+    profileTitle: 'Profile',
   },
 };
