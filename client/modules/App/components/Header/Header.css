@@ -1,7 +1,22 @@
+
+.logoContainer {
+
+  margin: auto 2vw;
+  width: 40px;
+  height: 100%;
+}
+
+.logo {
+  /* background: #2A7B88 url('../../../../images/logo2.jpg') no-repeat; */
+  width: 100%;
+  height: auto;
+}
+
 .header {
-  background: #2A7B88 url('../../header-bk.png') center;
+  background: #08535E center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
+
 }
           
 .content {
@@ -37,6 +52,8 @@
 
 .language-switcher {
   background: rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  width: 100%
 }
 
 .language-switcher ul {

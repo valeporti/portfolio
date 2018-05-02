@@ -7,7 +7,7 @@
   right: 5vw;
   top: 2vw;
   text-align: center;
-  position: absolute;
+  position: fixed;
   background: #fff;
   overflow: hidden;
   transition: all 0.2s ease;
@@ -18,7 +18,7 @@
   right: 5vw;
   top: 2vw;
   text-align: center;
-  position: absolute;
+  position: fixed;
   background: #fff;
   overflow: hidden;
   transition: all 0.2s ease;
@@ -94,6 +94,7 @@
   right: 0px;
   left: 0px;
   text-align: center;
+  
 }
 .menuactive .menuContent * {
   opacity: 1;
@@ -114,7 +115,11 @@
   transition: opacity 0.3s ease 0.3s;
   cursor: pointer;
   position: relative;
-  font-size: 100%;
+  font-size: 100%; 
+}
+.menuContent ul li a {
+  text-decoration: none;
+  color: #2d3235;
 }
 .menuContent ul li:hover:before {
   opacity: 0.8;

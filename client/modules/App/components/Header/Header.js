@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 // Import Style
 import styles from './Header.css';
 //image
-//import logo1 from './logo1.png';
+import logo2 from '../../../../images/logo2.jpg';
 
 export function Header(props, context) {
   const languageNodes = props.intl.enabledLanguages.map(
@@ -13,7 +13,11 @@ export function Header(props, context) {
   );
   return (
     <div className={styles.header}>
+      
       <div className={styles['language-switcher']}>
+        <div className={styles.logoContainer}>
+          <img src={logo2} className={styles.logo} />
+        </div>
         <ul>
           <li><FormattedMessage id="switchLanguage" /></li>
           {languageNodes}

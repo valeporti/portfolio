@@ -19,10 +19,10 @@ function Menu(props, context) {
       </span>
       <div className={styles.menuContent}>
         <ul>
-          <li>About</li>
-          <li>Resume</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Resume">Resume</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Contact">Contact</a></li>
         </ul>
       </div>
     </div>

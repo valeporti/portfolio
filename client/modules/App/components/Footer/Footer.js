@@ -8,10 +8,11 @@ import styles from './Footer.css';
 import bg from '../../header-bk.png';
 
 export function Footer() {
+  //<div style={{ background: `#FFF url(${bg}) center` }} className={styles.footer}>
   return (
-    <div style={{ background: `#FFF url(${bg}) center` }} className={styles.footer}>
-      <p>&copy; 2016 &middot; Hashnode &middot; LinearBytes Inc.</p>
-      <p><FormattedMessage id="twitterMessage" /> : <a href="https://twitter.com/@mern_io" target="_Blank">@mern_io</a></p>
+    <div className={styles.footer}>
+      <p>&copy; 2018 &middot; V &middot; Valentin Portillo</p>
+      <p><a href="https://www.linkedin.com/in/valeporti/" target="_Blank"><i className="fa fa-linkedin"></i></a></p>
     </div>
   );
 }
