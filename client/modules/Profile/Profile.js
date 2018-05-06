@@ -4,15 +4,46 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 
+//Import Components
+import HardSkills from './components/HardSkills/HardSkills';
+import SoftSkills from './components/SoftSkills/SoftSkills';
+
 // Import Style
 import styles from './Profile.css';
 
 // Import Images
 import first_image from '../../images/code.jpg';
 
+
 class Profile extends Component {
-  //{/* <img src={first_image}  /> */}
+  constructor (props) {
+    super(props);
+  }
+
+  grow = () => {
+    var element = '.bar';
+    var i = 1;
+  
+    $(element).each(function(index,value){
+      var percent = $(this).attr('data-percent');
+      var timing = percent / 150;
+      setTimeout(function(){
+  
+        $(value).css('max-width',+ percent + '%').css('transition', timing + 's ease all');
+        $(value).append('<div class="num">'+percent+'%</div>');
+  
+      }, i * 50);
+      
+      i++;
+    });
+  }
+  
+
   render() {
+    let VisibilitySensor = require('react-visibility-sensor');
+    let whenVisible = (isVisible) => {
+      console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+    }
     return (
       <div>
         <a name="About">
@@ -34,7 +65,13 @@ class Profile extends Component {
               </div>
             </div>
           </div>  
-        </a>      
+        </a>  
+        <a name="Skills">
+          <div className={styles.skillsSec}>
+            <SoftSkills />
+            <HardSkills grow={this.grow} />
+          </div>
+        </a>    
       </div>
     );
   }

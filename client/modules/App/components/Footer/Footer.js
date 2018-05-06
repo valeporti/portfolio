@@ -12,7 +12,11 @@ export function Footer() {
   return (
     <div className={styles.footer}>
       <p>&copy; 2018 &middot; V &middot; Valentin Portillo</p>
-      <p><a href="https://www.linkedin.com/in/valeporti/" target="_Blank"><i className="fa fa-linkedin"></i></a></p>
+      <p className={styles.links}>
+        <a className={styles.link} href="https://www.linkedin.com/in/valeporti/" target="_Blank"><i className="fab fa-linkedin-in"></i></a>
+        <a className={styles.link} href="https://codepen.io/valeporti/" target="_Blank"><i className="fab fa-codepen"></i></a>
+        <a className={styles.link} href="https://github.com/valeporti/" target="_Blank"><i className="fab fa-github"></i></a>
+      </p>
     </div>
   );
 }

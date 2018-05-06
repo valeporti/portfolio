@@ -43,6 +43,11 @@
           "blueprint-path": "config/blueprints/functional-component.ejs",
           "parent-path": "client/modules/<%= helpers.capitalize(parent) %>",
           "target-path": "components/<%= helpers.capitalize(name) %>/<%= helpers.capitalize(name) %>.js"
+        },
+        {
+          "blueprint-path": "config/blueprints/module/module-styles.ejs",
+          "parent-path": "client/modules/<%= helpers.capitalize(parent) %>",
+          "target-path": "components/<%= helpers.capitalize(name) %>/<%= helpers.capitalize(name) %>.css"
         }
       ]
     },

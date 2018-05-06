@@ -19,6 +19,7 @@
     height: 335px;
     position: relative;
     color: white;
+    border-bottom: 1px solid #ccc;
     /*font-family: 'League Spartan Bold', arial;*/
 }
 

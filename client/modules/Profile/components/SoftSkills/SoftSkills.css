@@ -1,0 +1,78 @@
+/* SoftSkills styles */
+
+
+.softSkills {
+    background: white;
+    padding: 4% 4% 0 4%;
+    text-align: center;
+}
+
+.softSkill {
+    width: 240px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    display: inline-grid;
+}
+
+.softTtl {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px 0;
+}
+
+.ulSoft {
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.ulSoft li {
+    padding: 2px 0;
+}
+
+.octagonContent {
+    position: absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 60px;
+    z-index: 10;
+}
+
+
+.octagon {
+	width: 100px;
+	height: 100px;
+	background: tomato;
+    position: relative;
+    color: white;
+    margin: auto;
+}
+
+.octagon:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 29px solid tomato;
+	border-left: 29px solid white;
+	border-right: 29px solid white;
+	width: 42px;
+	height: 0;
+}
+
+.octagon:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 29px solid tomato;
+	border-left: 29px solid white;
+	border-right: 29px solid white;
+	width: 42px;
+	height: 0;
+}

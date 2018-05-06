@@ -1,0 +1,40 @@
+/* HardSkills styles */
+
+.hardSkills {
+    background: white;
+    padding: 4% 4% 0 4%;
+    text-align: center;
+}
+
+h1{
+    font-weight: normal;
+  }
+  
+.wrapper{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+  
+.bar{
+    background: white;
+    width: 100%;
+    max-width: 0;
+    height: 40px;
+    margin: 0 0 10px 0;
+}
+  
+.num{
+    line-height: 40px;
+    color: #1A414A;
+    padding: 0 10px;
+    text-align: right;
+}
+  
+@media screen and (min-width: 768px){
+    .wrapper{
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

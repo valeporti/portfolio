@@ -42,6 +42,7 @@ import serverConfig from './config';
 
 //Other extensions
 //let favicon = require('serve-favicon');
+import favicon from 'serve-favicon';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -62,7 +63,9 @@ app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
+app.use(favicon(path.resolve(__dirname, 'public', 'favicon.ico')))
 app.use('/api', posts);
+
 //app.use(favicon(path.resolve(__dirname, '../client')));
 //console.log(path.resolve(__dirname, '../client'));
 
@@ -73,7 +76,7 @@ const renderFullPage = (html, initialState) => {
   // Import Manifests
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
-
+//<link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />
   return `
     <!doctype html>
     <html>
@@ -86,7 +89,7 @@ const renderFullPage = (html, initialState) => {
 
         ${isProdMode ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
-        <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />
+      
       </head>
       <body>
         <div id="root">${html}</div>
