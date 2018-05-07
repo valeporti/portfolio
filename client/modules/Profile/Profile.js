@@ -14,12 +14,18 @@ import styles from './Profile.css';
 // Import Images
 import first_image from '../../images/code.jpg';
 
+//Other funcitonalities
+import VisibilitySensor from 'react-visibility-sensor';
+
+//Import Actions 
+import { toggleActiveHS } from './ProfileActions';
 
 class Profile extends Component {
   constructor (props) {
+    //console.log(props);
     super(props);
   }
-
+/*
   grow = () => {
     var element = '.bar';
     var i = 1;
@@ -37,13 +43,16 @@ class Profile extends Component {
       i++;
     });
   }
-  
+  */
+  toggleActiveHS = (isVisible) => {
+    this.props.toggleActiveHS(isVisible);
+  }
 
   render() {
-    let VisibilitySensor = require('react-visibility-sensor');
-    let whenVisible = (isVisible) => {
-      console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-    }
+    //let VisibilitySensor = require('react-visibility-sensor');
+    //let whenVisible = (isVisible) => {
+      //!this.props.activeHS;
+    //}
     return (
       <div>
         <a name="About">
@@ -69,7 +78,9 @@ class Profile extends Component {
         <a name="Skills">
           <div className={styles.skillsSec}>
             <SoftSkills />
-            <HardSkills grow={this.grow} />
+            <VisibilitySensor onChange={this.toggleActiveHS}>
+              <HardSkills isVisible={this.props.prof.activeHS} />
+            </VisibilitySensor>
           </div>
         </a>    
       </div>
@@ -78,17 +89,22 @@ class Profile extends Component {
 }
 
 const mapStateToProps = (state) => {
-  //console.log(state);
+  console.log(state);
   return {
-    //lol: state.lol
+    prof: state.prof,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    toggleActiveHS: (bool) => {
+      dispatch(toggleActiveHS(bool))
+    },
+  };
 };
 
 Profile.propTypes = {
+
 };
 
 export default connect(
