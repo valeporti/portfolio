@@ -4,58 +4,36 @@
     background: white;
     padding: 4% 4% 0 4%;
     text-align: center;
+    margin: 0 auto 20px auto;
 }
 
+.progLan {
+    width:360px;
+    height: 30px;
+    overflow: hidden;
+}
 
-.graphcont{
-    width: calc(100% - 40px);
-    width: 100%;
-    max-width: 800px;
+.progLanName {
+    width: 60px;
+    display: inline-block;
+    margin: auto;
+    background-color: #FFBBAF;
+    line-height: 30px;
+}
+
+.progLanBar{
+    height: 100%;
+    width: 300px;
     margin: 0 auto;
+    background-color: #B5E4EB;
+    display: inline-block;
   }
   
 .bar{
-    height: 30px;
-    max-width: 800px;
-    margin: 0 auto 10px auto;
     line-height: 30px;
     font-size: 16px;
-    color: black;
-    padding: 0 0 0 10px;
+    color: white;
     position: relative;
+    background-color: tomato;
+    transition: width 1.5s ease;
 }
-.bar::before{
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    height: 30px;
-    top: 0;
-    z-index: -2;
-    background: tomato;
-}
-.bar::after{
-    content: '';
-    background: #2ecc71;
-    height: 30px;
-    transition: 0.7s;
-    display: block;
-    width: 100%;
-    -webkit-animation: bar-before 1 1.8s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    max-width: 60%;
-}
-
-@-webkit-keyframes bar-before{
-    0%{
-      width: 0px;
-    }
-    100%{
-      width: 100%;
-    }
-  }
-  
-  

@@ -24,6 +24,7 @@ class Profile extends Component {
   constructor (props) {
     //console.log(props);
     super(props);
+    
   }
 /*
   grow = () => {
