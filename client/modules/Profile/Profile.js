@@ -27,6 +27,7 @@ class Profile extends Component {
     
   }
   toggleActiveHS = (isVisible) => {
+    console.log(isVisible);
     this.props.toggleActiveHS(isVisible);
   }
 
@@ -60,8 +61,8 @@ class Profile extends Component {
         <a name="Skills">
           <div className={styles.skillsSec}>
             <SoftSkills />
-            <VisibilitySensor onChange={this.toggleActiveHS}>
-              <HardSkills isVisible={this.props.prof.activeHS} />
+            <VisibilitySensor onChange={this.toggleActiveHS} partialVisibility={true} minTopValue={100}>
+            <HardSkills toggleActiveHS={this.toggleActiveHS} isVisible={this.props.prof.activeHS} />
             </VisibilitySensor>
           </div>
         </a>    

@@ -6,15 +6,17 @@ import styles from './HardSkills.css';
 //Import Components
 import SkillBar from '../SkillBar/SkillBar';
 
+//Other funcitonalities
+import VisibilitySensor from 'react-visibility-sensor';
+
 function HardSkills(props, context) {
   let isVisible = props.isVisible;
-  let width = 0
-  
   const hard_program_arr = [
-    {name: 'HTML', percentage: 90},
     {name: 'PHP', percentage: 90},
     {name: 'C', percentage: 60},
-    {name: 'JS', percentage: 90}
+    {name: 'JS', percentage: 90},
+    {name: 'VBA', percentage: 90},
+    {name: 'Python', percentage: 60},
   ];
   const hard_langs_arr = [
     {name: 'Français', percentage: 90},
@@ -26,13 +28,41 @@ function HardSkills(props, context) {
     {name: 'LARAVEL', percentage: 80},
     {name: 'MERN', percentage: 60},
   ];
+  const hard_frame_arr = [
+    {name: 'Node.js', percentage: 90},
+    {name: 'React', percentage: 90},
+    {name: 'Redux', percentage: 90},
+    {name: 'Express.js', percentage: 90},
+    {name: 'D3.js', percentage: 90},
+    {name: 'Mongoose', percentage: 90},
+  ];
+  const hard_others_arr = [
+    {name: 'HTML', percentage: 90},
+    {name: 'CSS', percentage: 70},
+    {name: 'SQL', percentage: 90},
+    {name: 'NoSQL', percentage: 90},
+    {name: 'Git', percentage: 90},
+    {name: 'NPM', percentage: 90},
+  ];
   let hard_programs;
   let hard_langs;
+  let hard_other;
+  let hard_frame;
+  let hard_stack;
   if (isVisible) {
     hard_programs = hard_program_arr.map((skill, index) =>
       <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
     );
     hard_langs = hard_langs_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
+    );
+    hard_other = hard_others_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
+    );
+    hard_frame = hard_frame_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
+    );
+    hard_stack = hard_stacks_arr.map((skill, index) =>
       <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
     );
   } else {
@@ -42,21 +72,42 @@ function HardSkills(props, context) {
     hard_langs = hard_langs_arr.map((skill, index) =>
       <SkillBar key={index} name={skill.name} percentage={0} />
     );
+    hard_other = hard_others_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={0} />
+    );
+    hard_frame = hard_frame_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={0} />
+    );
+    hard_stack = hard_stacks_arr.map((skill, index) =>
+      <SkillBar key={index} name={skill.name} percentage={0} />
+    );
   }
   
   return (
     <div className={styles.hardSkills}>
+   
       <div className={styles.hardLanguages}>
         <div className={styles.hardTitle}>Languages</div>
         {hard_langs}
       </div>
       <div className={styles.hardProgramming}>
-      <div className={styles.hardTitle}>Programming Languages</div>
+        <div className={styles.hardTitle}>Programming Languages</div>
         {hard_programs}
       </div>
       <div className={styles.hardStacks}>
-      
+        <div className={styles.hardTitle}>Stacks</div>
+        {hard_stack}
       </div>
+      <div className={styles.hardFrame}>
+        <div className={styles.hardTitle}>Frameworks</div>
+        {hard_frame}
+      </div>
+      <div className={styles.hardOther}>
+        <div className={styles.hardTitle}>Other</div>
+        
+        {hard_other}
+      </div>
+      
     </div>
   );
 }
