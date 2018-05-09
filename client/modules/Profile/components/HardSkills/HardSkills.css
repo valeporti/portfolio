@@ -3,37 +3,20 @@
 .hardSkills {
     background: white;
     padding: 4% 4% 0 4%;
-    text-align: center;
     margin: 0 auto 20px auto;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.progLan {
-    width:360px;
-    height: 30px;
-    overflow: hidden;
-}
-
-.progLanName {
-    width: 60px;
-    display: inline-block;
+.hardLanguages {
     margin: auto;
-    background-color: #FFBBAF;
-    line-height: 30px;
+}
+.hardProgramming {
+    margin: auto;
 }
 
-.progLanBar{
-    height: 100%;
-    width: 300px;
-    margin: 0 auto;
-    background-color: #B5E4EB;
-    display: inline-block;
-  }
-  
-.bar{
-    line-height: 30px;
-    font-size: 16px;
-    color: white;
-    position: relative;
-    background-color: tomato;
-    transition: width 1.5s ease;
+.hardTitle {
+    font-size: 20px;
+    font-weight: bold; 
 }

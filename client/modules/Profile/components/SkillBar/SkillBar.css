@@ -1,0 +1,31 @@
+/* SkillBar styles */
+.progLan {
+    width: 360px;
+    height: 30px;
+    margin: 4px auto;
+}
+
+.progLanName {
+    width: 60px;
+    display: inline-block;
+    margin: auto;
+    background-color: #FFBBAF;
+    line-height: 30px;
+}
+
+.progLanBar{
+    height: 100%;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #B5E4EB;
+    display: inline-block;
+  }
+  
+.bar{
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    background-color: tomato;
+    transition: width 1.5s ease;
+}

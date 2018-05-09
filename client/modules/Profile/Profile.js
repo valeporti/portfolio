@@ -26,25 +26,6 @@ class Profile extends Component {
     super(props);
     
   }
-/*
-  grow = () => {
-    var element = '.bar';
-    var i = 1;
-  
-    $(element).each(function(index,value){
-      var percent = $(this).attr('data-percent');
-      var timing = percent / 150;
-      setTimeout(function(){
-  
-        $(value).css('max-width',+ percent + '%').css('transition', timing + 's ease all');
-        $(value).append('<div class="num">'+percent+'%</div>');
-  
-      }, i * 50);
-      
-      i++;
-    });
-  }
-  */
   toggleActiveHS = (isVisible) => {
     this.props.toggleActiveHS(isVisible);
   }
