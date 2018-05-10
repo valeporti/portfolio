@@ -7,6 +7,7 @@ import { FormattedMessage } from 'react-intl';
 //Import Components
 import HardSkills from './components/HardSkills/HardSkills';
 import SoftSkills from './components/SoftSkills/SoftSkills';
+import Resume from './components/Resume/Resume';
 
 // Import Style
 import styles from './Profile.css';
@@ -62,10 +63,15 @@ class Profile extends Component {
           <div className={styles.skillsSec}>
             <SoftSkills />
             <VisibilitySensor onChange={this.toggleActiveHS} partialVisibility={true} minTopValue={100}>
-            <HardSkills toggleActiveHS={this.toggleActiveHS} isVisible={this.props.prof.activeHS} />
+              <HardSkills toggleActiveHS={this.toggleActiveHS} isVisible={this.props.prof.activeHS} />
             </VisibilitySensor>
           </div>
-        </a>    
+        </a>  
+        <a name="Resume">
+          <div className={styles.ResumeSec}>
+            <Resume />
+          </div>
+        </a>  
       </div>
     );
   }

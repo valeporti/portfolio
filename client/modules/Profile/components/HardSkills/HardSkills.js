@@ -29,20 +29,20 @@ function HardSkills(props, context) {
     {name: 'MERN', percentage: 60},
   ];
   const hard_frame_arr = [
-    {name: 'Node.js', percentage: 90},
+    {name: 'Node.js', percentage: 80},
     {name: 'React', percentage: 90},
-    {name: 'Redux', percentage: 90},
-    {name: 'Express.js', percentage: 90},
-    {name: 'D3.js', percentage: 90},
-    {name: 'Mongoose', percentage: 90},
+    {name: 'Redux', percentage: 80},
+    {name: 'Express.js', percentage: 80},
+    {name: 'D3.js', percentage: 80},
+    {name: 'Mongoose', percentage: 60},
   ];
   const hard_others_arr = [
     {name: 'HTML', percentage: 90},
     {name: 'CSS', percentage: 70},
-    {name: 'SQL', percentage: 90},
-    {name: 'NoSQL', percentage: 90},
-    {name: 'Git', percentage: 90},
-    {name: 'NPM', percentage: 90},
+    {name: 'SQL', percentage: 80},
+    {name: 'NoSQL', percentage: 70},
+    {name: 'Git', percentage: 80},
+    {name: 'NPM', percentage: 70},
   ];
   let hard_programs;
   let hard_langs;
@@ -104,7 +104,6 @@ function HardSkills(props, context) {
       </div>
       <div className={styles.hardOther}>
         <div className={styles.hardTitle}>Other</div>
-        
         {hard_other}
       </div>
       
