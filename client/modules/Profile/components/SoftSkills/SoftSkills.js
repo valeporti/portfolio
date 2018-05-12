@@ -5,6 +5,7 @@ import styles from './SoftSkills.css';
 function SoftSkills(props, context) {
   return (
     <div className={styles.softSkills}>
+      <div className={styles.title}>{'{'} Skills {'}'}</div>
       {/* Copy Paste for SoftSkill */}
       <div className={styles.softSkill}>
         <div className={styles.octagon}>

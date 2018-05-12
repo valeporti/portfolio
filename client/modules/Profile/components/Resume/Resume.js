@@ -49,7 +49,8 @@ function Resume(props, context) {
               <h3>2011</h3>
               <section>
                 <ul>
-                  <li> CICM Students Club Memeber</li>
+                  <li><a href="http://cicm.org.mx/" target="_blank"><img className={styles.logo} src='http://cicm.org.mx/wp-content/themes/CICM%20copia/img/logo_vector.png' /></a>
+                     CICM Students Club Memeber</li>
                 </ul>
               </section>
             </section>
@@ -117,9 +118,36 @@ function Resume(props, context) {
                   <li>Follow Up Automation</li>
                 </ul>
               </section>
+              <section>
+                <h4>December</h4>
+                <ul>
+                  <li className={styles.certificate}><a href="https://courses.edx.org/certificates/b99704bf002e444fbf37d4497b8d695a" target="_blank">
+                    TUDelft - TPM1x: Creative Problem Solving and Decision Making
+                  </a></li>
+                  <li className={styles.certificate}><a href="https://courses.edx.org/certificates/1fe3bc4a26ef40ca84be1cca1ad877f2" target="_blank">
+                    Harvard - CS50: Introduction to Computer Science
+                  </a></li>
+                </ul>
+              </section>
             </section>
             <section className={styles.year}>
               <h3>2017</h3>
+              <section>
+                <h4>March</h4>
+                <ul>
+                  <li className={styles.certificate}><a href="https://www.freecodecamp.org/valeporti/front-end-certification" target="_blank">
+                    FreeCodeCamp - Front End Certification
+                  </a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>September</h4>
+                <ul>
+                  <li className={styles.certificate}><a href="https://certificates.saylor.org/hd2657mm" target="_blank">
+                    Saylor Academy - CS401: Operating Systems
+                  </a></li>
+                </ul>
+              </section>
               <section>
                 <h4>September - to Date ({date.getMonth() + 1} / {date.getFullYear()})</h4>
                 <ul>
@@ -131,7 +159,27 @@ function Resume(props, context) {
                   <li>Projects Follow Up Automation, Scalability, Financial Projects</li>
                 </ul>
               </section>
+              <section>
+                <h4>October</h4>
+                <ul>
+                  <li className={styles.certificate}><a href="https://certificates.saylor.org/ft456bop" target="_blank">
+                    Saylor Academy - CS403: Introduction to Modern Databases
+                  </a></li>
+                </ul>
+              </section>
             </section>
+            <section className={styles.year}>
+              <h3>2018</h3>
+              <section>
+                <h4>February</h4>
+                <ul>
+                  <li className={styles.certificate}><a href="https://certificates.saylor.org/yh5jzfie" target="_blank">
+                    Saylor Academy - CS303: Algorithms
+                  </a></li>
+                </ul>
+              </section>
+            </section>
+            <div className={styles.spacing}></div>
           </div>
         </div>
       </div>

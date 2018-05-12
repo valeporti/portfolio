@@ -85,7 +85,6 @@ function HardSkills(props, context) {
   
   return (
     <div className={styles.hardSkills}>
-   
       <div className={styles.hardLanguages}>
         <div className={styles.hardTitle}>Languages</div>
         {hard_langs}

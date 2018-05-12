@@ -1,9 +1,20 @@
 /* SoftSkills styles */
 
 
+.title {
+    /* height: auto; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #253C4F;
+    /* padding: 2.3rem 1rem 2.3rem 1rem; */
+    position: relative;
+    margin: 0 0 30px 0;
+}
+
 .softSkills {
     background: white;
-    padding: 4% 4% 0 4%;
+    padding: 80px 4% 0 4%;
     text-align: center;
 }
 
