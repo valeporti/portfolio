@@ -1,0 +1,98 @@
+/* Contact styles */
+
+.Contact {
+    background-color: white;
+    padding: 80px 0 0 0;
+    text-align: center;
+    margin: auto auto 30px auto;
+}
+.title {
+    /* height: auto; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #253C4F;
+    /* padding: 2.3rem 1rem 2.3rem 1rem; */
+    position: relative;
+    margin: 0 0 30px 0;
+}
+
+.formMain {
+    width: 100%;
+    padding-top: 0px;
+}
+  
+.formDiv {
+    background-color: rgba(72, 72, 72, 0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 450px;
+    left: 50%;
+    margin: auto;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+  }
+
+.feedbackInput {
+    color: #A30026;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+  }
+  
+  .feedbackInput:focus {
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #A30026;
+    color: #A30026;
+    outline: none;
+    padding: 13px 13px 13px 54px;
+  }
+
+.inputIcon {
+    position: absolute;
+    font-size: 25px;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+    /* Center the icon */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    border: tomato solid 4px;
+    cursor: pointer;
+    background-color: tomato;
+    color: white;
+    font-size: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+  }
+  .button:hover {
+    background-color: #FFA595;
+    color: white;
+  }

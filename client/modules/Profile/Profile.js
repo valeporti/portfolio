@@ -8,6 +8,7 @@ import { FormattedMessage } from 'react-intl';
 import HardSkills from './components/HardSkills/HardSkills';
 import SoftSkills from './components/SoftSkills/SoftSkills';
 import Resume from './components/Resume/Resume';
+import Contact from './components/Contact/Contact';
 
 // Import Style
 import styles from './Profile.css';
@@ -19,24 +20,28 @@ import first_image from '../../images/code.jpg';
 import VisibilitySensor from 'react-visibility-sensor';
 
 //Import Actions 
-import { toggleActiveHS } from './ProfileActions';
+import { toggleActiveHS, contactNameInput, contactEmailInput, contactMessInput } from './ProfileActions';
 
 class Profile extends Component {
   constructor (props) {
-    //console.log(props);
+    console.log(props);
     super(props);
     
   }
   toggleActiveHS = (isVisible) => {
-    console.log(isVisible);
     this.props.toggleActiveHS(isVisible);
+  }
+  contactNameInput = (text) => {
+    this.props.contactNameInput(text);
+  }
+  contactEmailInput = (text) => {
+    this.props.contactEmailInput(text);
+  }
+  contactMessInput = (text) => {
+    this.props.contactMessInput(text);
   }
 
   render() {
-    //let VisibilitySensor = require('react-visibility-sensor');
-    //let whenVisible = (isVisible) => {
-      //!this.props.activeHS;
-    //}
     return (
       <div>
         <a name="About">
@@ -72,13 +77,25 @@ class Profile extends Component {
             <Resume />
           </div>
         </a>  
+        <a name="Contact">
+          <div className={styles.ContactSec}>
+            <Contact 
+              contactNameInput={this.contactNameInput} 
+              contactName={this.props.prof.contactName}
+              contactEmailInput={this.contactEmailInput} 
+              contactMail={this.props.prof.contactMail}
+              contactMessInput={this.contactMessInput}
+              contactMess={this.props.prof.contactMess}
+            />
+          </div>
+        </a>  
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  //console.log(state.prof);
   return {
     prof: state.prof,
   };
@@ -88,6 +105,15 @@ const mapDispatchToProps = (dispatch) => {
   return {
     toggleActiveHS: (bool) => {
       dispatch(toggleActiveHS(bool))
+    },
+    contactNameInput: (text) => {
+      dispatch(contactNameInput(text))
+    },
+    contactEmailInput: (text) => {
+      dispatch(contactEmailInput(text))
+    },
+    contactMessInput: (text) => {
+      dispatch(contactMessInput(text))
     },
   };
 };
