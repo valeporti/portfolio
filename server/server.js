@@ -37,8 +37,10 @@ import Helmet from 'react-helmet';
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
 import posts from './routes/post.routes';
+import profile from './routes/Profile.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
+require('dotenv').config(); //get all the env varibales available in variables
 
 //Other extensions
 //let favicon = require('serve-favicon');
@@ -65,6 +67,7 @@ app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
 app.use(favicon(path.resolve(__dirname, 'public', 'favicon.ico')))
 app.use('/api', posts);
+app.use('/profile', profile);
 
 //app.use(favicon(path.resolve(__dirname, '../client')));
 //console.log(path.resolve(__dirname, '../client'));
@@ -114,6 +117,8 @@ const renderError = err => {
   return renderFullPage(`Server Error${errTrace}`, {});
 };
 
+console.log('in server');
+console.log(routes);
 // Server Side Rendering based on routes matched by React-router.
 app.use((req, res, next) => {
   match({ routes, location: req.url }, (err, redirectLocation, renderProps) => {

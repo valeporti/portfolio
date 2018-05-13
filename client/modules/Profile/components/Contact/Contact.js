@@ -4,13 +4,13 @@ import React, { PropTypes } from 'react';
 import styles from './Contact.css';
 
 function Contact(props, context) {
-  console.log(props);
+  //console.log(props);
   return (
     <div className={styles.Contact}>
       <div className={styles.title}>{'{'} Contact {'}'}</div>
       <div className={styles.formMain}>
         <div className={styles.formDiv}>
-          <form className={styles.form}>
+          <form className={styles.form} action="/profile/sendMail" onSubmit={props.handleSentMail}>
             <p className={styles.inputCont}>
               <span className={styles.inputIcon}><i className="fas fa-user"></i></span>
               <input name="name" type="text" className={styles.feedbackInput} placeholder="Name" id="name" value={props.contactName} onChange={(event) => props.contactNameInput(event.target.value)} />
@@ -25,9 +25,9 @@ function Contact(props, context) {
             </p>
             <p className={styles.inputCont}>
               <span className={styles.inputIcon}><i className="far fa-hand-point-right"></i></span>
-              <textarea name="text" className={styles.feedbackInput} id="comment" placeholder="About Yourself and your Business" value={props.contactMess} onChange={(event) => props.contactMessInput(event.target.value)}></textarea>
+              <textarea name="text" className={styles.feedbackInput} id="comment" placeholder="Write to me :)" value={props.contactMess} onChange={(event) => props.contactMessInput(event.target.value)}></textarea>
             </p>
-            <div className="submit">
+            <div className={styles.submit}>
               <input type="submit" value="SEND" className={styles.button} />
               <div className="ease"></div>
             </div>

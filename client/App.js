@@ -8,6 +8,8 @@ import IntlWrapper from './modules/Intl/IntlWrapper';
 
 // Import Routes
 import routes from './routes';
+console.log('en app js, routes');
+console.log(routes);
 
 // Base stylesheet
 require('./main.css');

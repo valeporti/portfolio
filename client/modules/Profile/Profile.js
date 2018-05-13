@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
+import axios from 'axios';
 
 //Import Components
 import HardSkills from './components/HardSkills/HardSkills';
@@ -21,10 +22,11 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 //Import Actions 
 import { toggleActiveHS, contactNameInput, contactEmailInput, contactMessInput } from './ProfileActions';
+import { METHODS } from 'http';
 
 class Profile extends Component {
   constructor (props) {
-    console.log(props);
+    //console.log(props);
     super(props);
     
   }
@@ -39,6 +41,27 @@ class Profile extends Component {
   }
   contactMessInput = (text) => {
     this.props.contactMessInput(text);
+  }
+  handleSentMail = (event) => {
+    event.preventDefault();
+    const data = {
+      name: this.props.prof.contactName,
+      mail: this.props.prof.contactMail,
+      mess: this.props.prof.contactMess,
+    };
+    
+    axios({
+        method: 'get',
+        url: '/profile/sendMail',
+        params: data
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
   }
 
   render() {
@@ -86,6 +109,7 @@ class Profile extends Component {
               contactMail={this.props.prof.contactMail}
               contactMessInput={this.contactMessInput}
               contactMess={this.props.prof.contactMess}
+              handleSentMail={this.handleSentMail}
             />
           </div>
         </a>  
