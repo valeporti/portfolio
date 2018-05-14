@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import path from 'path';
 import IntlWrapper from '../client/modules/Intl/IntlWrapper';
+require('dotenv').config(); //get all the env varibales available in variables
 
 // Webpack Requirements
 import webpack from 'webpack';
@@ -40,7 +41,6 @@ import posts from './routes/post.routes';
 import profile from './routes/Profile.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
-require('dotenv').config(); //get all the env varibales available in variables
 
 //Other extensions
 //let favicon = require('serve-favicon');
