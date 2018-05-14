@@ -6,8 +6,11 @@ var cssnext = require('postcss-cssnext');
 var postcssFocus = require('postcss-focus');
 var postcssReporter = require('postcss-reporter');
 var cssnano = require('cssnano');
-/*
-entry: {
+
+module.exports = {
+  devtool: 'hidden-source-map',
+  
+  entry: {
     app: [
       './client/index.js',
     ],
@@ -16,11 +19,6 @@ entry: {
       'react-dom',
     ]
   },
-  */
-module.exports = {
-  devtool: 'hidden-source-map',
-  
-  entry: ['babel-polyfill', __dirname + "/client/index.js"] ,
 
   output: {
     path: __dirname + '/dist/client/',
