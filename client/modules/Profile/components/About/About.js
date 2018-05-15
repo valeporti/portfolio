@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './About.css';
@@ -6,7 +7,7 @@ import styles from './About.css';
 function About(props, context) {
   return (
     <div className={styles.about}>
-      <div className={styles.title}>{'{'} Resume {'}'}</div>
+      <div className={styles.title}>{'{'} <FormattedMessage id="menuAbout" /> {'}'}</div>
       <div className={styles.aboutCont}>
         <div className={styles.icon}>
           <i className="fas fa-terminal"></i>
@@ -15,13 +16,18 @@ function About(props, context) {
           <p className={styles.name}>Valentin Portillo Galvan</p>
           <p className={styles.intitle}>Software Developer</p>
           <div className={styles.smallDescription}>
-            <p>I'm a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.</p>
+            <p><FormattedMessage id="Me1" /></p>
             <p>
-              I've worked in Project Management, Business Analysis and Software Developement. 
-              Being Software Development my favorite and mainly working in back-end Developement.
+              <FormattedMessage id="Me2" />
             </p>
             <p>
-              Always interested in Computer Science deepening knowledge and challenges.
+              <FormattedMessage id="Me3" />
+            </p>
+          </div>
+          <p className={styles.intitle}><FormattedMessage id="KeyW" /></p>
+          <div className={styles.smallDescription}>
+            <p>
+              TDD, SCRUM, RPA
             </p>
           </div>
         </div>

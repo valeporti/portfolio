@@ -18,8 +18,8 @@ import { switchLanguage } from '../../modules/Intl/IntlActions';
 export class App extends Component {
   constructor(props) {
     super(props);
-    //console.log('in app');
-    //console.log(props);
+    console.log('in app');
+    console.log(props);
     this.state = { isMounted: false };
   }
 
@@ -32,7 +32,6 @@ export class App extends Component {
   };
 
   toggleActiveMenu = () => {
-
     this.props.toggleActiveMenu();
   };
 
@@ -43,7 +42,7 @@ export class App extends Component {
         <div>
           <Helmet
             title="Valentin Portillo"
-            titleTemplate="%s - Blog App"
+            titleTemplate="%s - Portfolio App"
             meta={[
               { charset: 'utf-8' },
               {
@@ -57,7 +56,7 @@ export class App extends Component {
             ]}
           />
           <Header
-            switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
+            switchLanguage={lang => this.props.switchLanguage(lang)}
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
@@ -96,6 +95,9 @@ function mapDispatchToProps(dispatch) {
     },
     toggleActiveMenu: () => {
       dispatch(toggleActiveMenu())
+    },
+    switchLanguage: (lang) => {
+      dispatch(switchLanguage(lang))
     }
   }
 }

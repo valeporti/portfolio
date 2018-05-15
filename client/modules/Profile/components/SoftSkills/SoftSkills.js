@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import styles from './SoftSkills.css';
 
 function SoftSkills(props, context) {
   return (
     <div className={styles.softSkills}>
-      <div className={styles.title}>{'{'} Skills {'}'}</div>
+      <div className={styles.title}>{'{'} <FormattedMessage id="menuSkills" /> {'}'}</div>
       {/* Copy Paste for SoftSkill */}
       <div className={styles.softSkill}>
         <div className={styles.octagon}>
@@ -13,10 +14,10 @@ function SoftSkills(props, context) {
             <i className="fas fa-code-branch"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Analytic</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS1" /></div>
         <ul className={styles.ulSoft}>
-          <li>Understand the requirements</li>
-          <li>Develop according to needs</li>
+          <li><FormattedMessage id="ss11" /></li>
+          <li><FormattedMessage id="ss12" /></li>
         </ul>
       </div>
       {/* Copy Paste for SoftSkill */}
@@ -26,9 +27,9 @@ function SoftSkills(props, context) {
             <i className="fas fa-thermometer-full"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Commitment</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS2" /></div>
         <ul className={styles.ulSoft}>
-          <li>Deliver Ended Products</li>
+          <li><FormattedMessage id="ss21" /></li>
         </ul>
       </div>
       {/* Copy Paste for SoftSkill */}
@@ -38,11 +39,11 @@ function SoftSkills(props, context) {
             <i className="fas fa-lightbulb"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Problem Solver</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS3" /></div>
         <ul className={styles.ulSoft}>
-          <li>Find the root</li>
-          <li>Develop a logical step-by-step</li>
-          <li>Deliver a system</li>
+          <li><FormattedMessage id="ss31" /></li>
+          <li><FormattedMessage id="ss32" /></li>
+          <li><FormattedMessage id="ss33" /></li>
         </ul>
       </div>
       {/* Copy Paste for SoftSkill */}
@@ -52,11 +53,11 @@ function SoftSkills(props, context) {
             <i className="fas fa-graduation-cap"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Learner</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS4" /></div>
         <ul className={styles.ulSoft}>
-          <li>Self-taught</li>
-          <li>Enthousiastic</li>
-          <li>Versatile</li>
+          <li><FormattedMessage id="ss41" /></li>
+          <li><FormattedMessage id="ss42" /></li>
+          <li><FormattedMessage id="ss43" /></li>
         </ul>
       </div>
       {/* Copy Paste for SoftSkill */}
@@ -66,11 +67,11 @@ function SoftSkills(props, context) {
             <i className="fas fa-users"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Team-Work</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS5" /></div>
         <ul className={styles.ulSoft}>
-          <li>Know How</li>
-          <li>Social</li>
-          <li>Ask & Answer</li>
+          <li><FormattedMessage id="ss51" /></li>
+          <li><FormattedMessage id="ss52" /></li>
+          <li><FormattedMessage id="ss53" /></li>
         </ul>
       </div>
       {/* Copy Paste for SoftSkill */}
@@ -80,10 +81,10 @@ function SoftSkills(props, context) {
             <i className="fas fa-chart-line"></i>
           </div>
         </div>
-        <div className={styles.softTtl}>Add Value</div>
+        <div className={styles.softTtl}><FormattedMessage id="SS6" /></div>
         <ul className={styles.ulSoft}>
-          <li>Proposals</li>
-          <li>Business / ethical directed reasoning</li>
+          <li><FormattedMessage id="ss61" /></li>
+          <li><FormattedMessage id="ss62" /></li>
         </ul>
       </div>
     </div>

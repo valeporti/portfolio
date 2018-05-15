@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './HardSkills.css';
@@ -86,23 +87,23 @@ function HardSkills(props, context) {
   return (
     <div className={styles.hardSkills}>
       <div className={styles.hardLanguages}>
-        <div className={styles.hardTitle}>Languages</div>
+        <div className={styles.hardTitle}><FormattedMessage id="ttLang" /></div>
         {hard_langs}
       </div>
       <div className={styles.hardProgramming}>
-        <div className={styles.hardTitle}>Programming Languages</div>
+        <div className={styles.hardTitle}><FormattedMessage id="ttProgLang" /></div>
         {hard_programs}
       </div>
       <div className={styles.hardStacks}>
-        <div className={styles.hardTitle}>Stacks</div>
+        <div className={styles.hardTitle}><FormattedMessage id="ttStacks" /></div>
         {hard_stack}
       </div>
       <div className={styles.hardFrame}>
-        <div className={styles.hardTitle}>Frameworks</div>
+        <div className={styles.hardTitle}><FormattedMessage id="ttFrameworks" /></div>
         {hard_frame}
       </div>
       <div className={styles.hardOther}>
-        <div className={styles.hardTitle}>Other</div>
+        <div className={styles.hardTitle}><FormattedMessage id="ttOther" /></div>
         {hard_other}
       </div>
       

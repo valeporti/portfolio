@@ -20,10 +20,10 @@ function Menu(props, context) {
       </span>
       <div className={styles.menuContent}>
         <ul>
-          <li><a href="#About"><FormattedMessage className={styles.formattedMenu} id="menuAbout" /></a></li>
-          <li><a href="#Skills">About</a></li>
-          <li><a href="#Resume"><FormattedMessage id="menuAbout" /></a></li>
-          <li><a href="#Contact"><FormattedMessage id="menuAbout" /></a></li>
+          <li><a href="#About"><FormattedMessage id="menuAbout" >{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
+          <li><a href="#Skills"><FormattedMessage id="menuSkills" >{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
+          <li><a href="#Resume"><FormattedMessage id="menuResume">{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
+          <li><a href="#Contact"><FormattedMessage id="menuContact">{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
         </ul>
       </div>
     </div>
