@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import styles from './Menu.css';
 
@@ -19,10 +20,10 @@ function Menu(props, context) {
       </span>
       <div className={styles.menuContent}>
         <ul>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Skills">Skills</a></li>
-          <li><a href="#Resume">Resume</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#About"><FormattedMessage className={styles.formattedMenu} id="menuAbout" /></a></li>
+          <li><a href="#Skills">About</a></li>
+          <li><a href="#Resume"><FormattedMessage id="menuAbout" /></a></li>
+          <li><a href="#Contact"><FormattedMessage id="menuAbout" /></a></li>
         </ul>
       </div>
     </div>

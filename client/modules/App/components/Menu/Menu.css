@@ -1,10 +1,15 @@
 /* Menu styles */
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700);
 
+
+.formattedMenu {
+  text-align: center;
+  margin: 0 0 50px 0;
+}
 .menu {
   height: 50px;
   width: 50px;
-  right: 50px;
+  right: 3vw;
   top: 2vw;
   text-align: center;
   position: fixed;
@@ -16,7 +21,7 @@
 }
 .menuactive {
   height: 50px;
-  right: 50px;
+  right: 3vw;
   top: 2vw;
   text-align: center;
   position: fixed;

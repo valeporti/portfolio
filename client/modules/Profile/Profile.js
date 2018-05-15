@@ -10,6 +10,7 @@ import HardSkills from './components/HardSkills/HardSkills';
 import SoftSkills from './components/SoftSkills/SoftSkills';
 import Resume from './components/Resume/Resume';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 
 // Import Style
 import styles from './Profile.css';
@@ -66,25 +67,10 @@ class Profile extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.Profile}>
         <a name="About">
           <div className={styles.fastAbout}>
-            <div className={styles.about}>
-            {/*<FormattedMessage id="profileTitle" />
-            <FormattedMessage id="aboutMe" />*/}
-              <p className={styles.name}>Valentin Portillo Galvan</p>
-              <p className={styles.intitle}>Software Developer</p>
-              <div className={styles.smallDescription}>
-                <p>I'm a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.</p>
-                <p>
-                  I've worked in Project Management, Business Analysis and Software Developement. 
-                  Being Software Development my favorite and mainly working in back-end Developement.
-                </p>
-                <p>
-                  Always interested in Computer Science deepening knowledge and challenges.
-                </p>
-              </div>
-            </div>
+            <About />
           </div>  
         </a>  
         <a name="Skills">

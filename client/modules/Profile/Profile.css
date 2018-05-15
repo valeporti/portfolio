@@ -2,8 +2,12 @@
 @import url(http://allfont.es/allfont.css?fonts=league-spartan);
 
 /* #074B54 */
+.Profile {
+    width: 100%;
+    background-color: white;
+}
+/* 
 
-/* Profile styles */
 .fastAbout {
     display: block;
 	overflow: hidden;
@@ -20,31 +24,6 @@
     position: relative;
     color: white;
     border-bottom: 1px solid #ccc;
-    /*font-family: 'League Spartan Bold', arial;*/
+    font-family: 'League Spartan Bold', arial;
 }
-
-.about {
-    padding: 0.3vw 0;
-    margin: auto;
-    width: 27%;
-    vertical-align: middle;
-    height: 100%;
-    /* font-family: 'League Spartan Bold'; */
-}
-
-.intitle {
-    font-size: larger;
-    letter-spacing: 3px;
-}
-
-.name {
-    margin: 2px;
-    color: #CECECE;
-}
-
-.smallDescription {
-    margin: 4px 0 0 0;
-    text-align: justify;
-    text-justify: inter-word;
-    text-indent: 1em;
-}
+*/

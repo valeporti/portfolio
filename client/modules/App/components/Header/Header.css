@@ -1,8 +1,8 @@
 
 .logoContainer {
-
   margin: auto 2vw;
-  width: 40px;
+  max-width: 40px;
+  width: 25vw;
   height: 100%;
 }
 

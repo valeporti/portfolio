@@ -29,5 +29,9 @@ export default {
       } as of {date}`,
     aboutMe: 'I like to , Im....',
     profileTitle: 'Profile',
+    menuAbout: 'About',
+    menuSkills: 'Skills',
+    menuResume: 'Resume',
+    menuContact: 'Contact',
   },
 };

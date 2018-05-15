@@ -1,6 +1,5 @@
 /* SkillBar styles */
 .progLan {
-    width: 360px;
     height: 30px;
     margin: 4px auto;
 }
@@ -15,7 +14,8 @@
 
 .progLanBar{
     height: 100%;
-    width: 280px;
+    max-width: 280px;
+    width: 40vw;
     margin: 0 auto;
     background-color: #B5E4EB;
     display: inline-block;
