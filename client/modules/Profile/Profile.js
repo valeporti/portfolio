@@ -22,7 +22,7 @@ import first_image from '../../images/code.jpg';
 import VisibilitySensor from 'react-visibility-sensor';
 
 //Import Actions 
-import { toggleActiveHS, contactNameInput, contactEmailInput, contactMessInput } from './ProfileActions';
+import { toggleActiveHS, contactNameInput, contactEmailInput, contactMessInput, contactInduInput, contactPurpInput } from './ProfileActions';
 import { METHODS } from 'http';
 
 class Profile extends Component {
@@ -43,23 +43,65 @@ class Profile extends Component {
   contactMessInput = (text) => {
     this.props.contactMessInput(text);
   }
+  contactInduInput = (text) => {
+    this.props.contactInduInput(text);
+  }
+  contactPurpInput = (text) => {
+    this.props.contactPurpInput(text);
+  }
+  pueba = (text) => {
+    console.log(text);
+  }
   handleSentMail = (event) => {
     event.preventDefault();
+    console.log('in handle');
+    console.log(this.props);
     const data = {
       name: this.props.prof.contactName,
       mail: this.props.prof.contactMail,
       mess: this.props.prof.contactMess,
+      indu: this.props.prof.contactIndu,
+      purp: this.props.prof.contactPurp,
     };
-    
+    const contactMessInput = this.props.contactMessInput;
+    const contactEmailInput = this.props.contactEmailInput;
+    const contactNameInput = this.props.contactNameInput;
+    const contactInduInput = this.props.contactInduInput;
+    const contactPurpInput = this.props.contactPurpInput;
     axios({
         method: 'get',
         url: '/profile/sendMail',
         params: data
       })
       .then(function (response) {
+        if (response.status == 200 && response.data.hasOwnProperty('success')) {
+          console.log('too bien');
+          contactMessInput('Message Sent!');
+          contactEmailInput('');
+          contactNameInput('');
+          contactInduInput('');
+          contactPurpInput('');
+        } else {
+          console.log('NOOOO');
+        }
         console.log(response);
       })
       .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log('Error', error.message);
+        }
         console.log(error);
       });
 
@@ -95,6 +137,10 @@ class Profile extends Component {
               contactMail={this.props.prof.contactMail}
               contactMessInput={this.contactMessInput}
               contactMess={this.props.prof.contactMess}
+              contactPurpInput={this.contactPurpInput}
+              contactPurp={this.props.prof.contactPurp}
+              contactInduInput={this.contactInduInput}
+              contactIndu={this.props.prof.contactIndu}
               handleSentMail={this.handleSentMail}
             />
           </div>
@@ -124,6 +170,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     contactMessInput: (text) => {
       dispatch(contactMessInput(text))
+    },
+    contactInduInput: (text) => {
+      dispatch(contactInduInput(text))
+    },
+    contactPurpInput: (text) => {
+      dispatch(contactPurpInput(text))
     },
   };
 };

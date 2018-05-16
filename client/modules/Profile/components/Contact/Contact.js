@@ -32,7 +32,15 @@ function Contact(props, context) {
               <span className={styles.inputIcon}><i className="fas fa-industry"></i></span>
               <FormattedMessage id="Industry">
               {
-                (txt) =>  (<input name="Industry" type="text" className={styles.feedbackInput} id="Industry" placeholder={txt}  /> )
+                (txt) =>  (<input name="industry" type="text" className={styles.feedbackInput} id="industry" placeholder={txt} value={props.contactIndu} onChange={(event) => props.contactInduInput(event.target.value)} /> )
+              }
+              </FormattedMessage>
+            </p>
+            <p className={styles.inputCont}>
+              <span className={styles.inputIcon}><i className="fas fa-thumbtack"></i></span>
+              <FormattedMessage id="Purpose">
+              {
+                (txt) =>  (<input name="purpose" type="text" className={styles.feedbackInput} id="purpose" placeholder={txt} value={props.contactPurp} onChange={(event) => props.contactPurpInput(event.target.value)} /> )
               }
               </FormattedMessage>
             </p>

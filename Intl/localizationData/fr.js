@@ -103,6 +103,7 @@ export default {
       Send: 'Envoyer',
       Email: 'Courrier électronique',
       Industry: 'Industrie',
+      Purpose: 'Objectif',
     
       WriteToMe: 'Écris-moi :)',
   

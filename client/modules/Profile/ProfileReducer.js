@@ -4,6 +4,8 @@ import {
   CONTACT_NAME,
   CONTACT_EMAIL,
   CONTACT_MESSAGE,
+  CONTACT_PURPOSE, 
+  CONTACT_INDUSTRY,
 } from './ProfileActions';
 
 // Initial State
@@ -12,6 +14,8 @@ const initialState = {
   contactName: '',
   contactMail: '',
   contactMess: '',
+  contactPurp: '',
+  contactIndu: '',
 };
 
 const ProfileReducer = (state = initialState, action) => {
@@ -25,6 +29,10 @@ const ProfileReducer = (state = initialState, action) => {
       return Object.assign({}, state, state.contactMail = action.text);
     case CONTACT_MESSAGE:
       return Object.assign({}, state, state.contactMess = action.text);
+    case CONTACT_INDUSTRY:
+      return Object.assign({}, state, state.contactIndu = action.text);
+    case CONTACT_PURPOSE:
+      return Object.assign({}, state, state.contactPurp = action.text);
     default:
       return state;
   }
