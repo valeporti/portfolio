@@ -37,7 +37,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 55);
+/******/ 	return __webpack_require__(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -125,17 +125,17 @@
 	
 	var _reactIntl = __webpack_require__(1);
 	
-	var _intl = __webpack_require__(60);
+	var _intl = __webpack_require__(61);
 	
 	var _intl2 = _interopRequireDefault(_intl);
 	
-	var _intlLocalesSupported = __webpack_require__(61);
+	var _intlLocalesSupported = __webpack_require__(62);
 	
 	var _intlLocalesSupported2 = _interopRequireDefault(_intlLocalesSupported);
 	
-	__webpack_require__(62);
+	__webpack_require__(63);
 	
-	var _en = __webpack_require__(70);
+	var _en = __webpack_require__(71);
 	
 	var _en2 = _interopRequireDefault(_en);
 	
@@ -143,9 +143,9 @@
 	
 	var _en4 = _interopRequireDefault(_en3);
 	
-	__webpack_require__(63);
+	__webpack_require__(64);
 	
-	var _fr = __webpack_require__(71);
+	var _fr = __webpack_require__(72);
 	
 	var _fr2 = _interopRequireDefault(_fr);
 	
@@ -260,13 +260,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reduxDevtools = __webpack_require__(72);
+	var _reduxDevtools = __webpack_require__(73);
 	
-	var _reduxDevtoolsLogMonitor = __webpack_require__(74);
+	var _reduxDevtoolsLogMonitor = __webpack_require__(75);
 	
 	var _reduxDevtoolsLogMonitor2 = _interopRequireDefault(_reduxDevtoolsLogMonitor);
 	
-	var _reduxDevtoolsDockMonitor = __webpack_require__(73);
+	var _reduxDevtoolsDockMonitor = __webpack_require__(74);
 	
 	var _reduxDevtoolsDockMonitor2 = _interopRequireDefault(_reduxDevtoolsDockMonitor);
 	
@@ -331,32 +331,32 @@
 	
 	var _reactIntl = __webpack_require__(1);
 	
-	var _axios = __webpack_require__(57);
+	var _axios = __webpack_require__(58);
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
-	var _HardSkills = __webpack_require__(46);
+	var _HardSkills = __webpack_require__(47);
 	
 	var _HardSkills2 = _interopRequireDefault(_HardSkills);
 	
-	var _SoftSkills = __webpack_require__(49);
+	var _SoftSkills = __webpack_require__(50);
 	
 	var _SoftSkills2 = _interopRequireDefault(_SoftSkills);
 	
-	var _Resume = __webpack_require__(47);
+	var _Resume = __webpack_require__(48);
 	
 	var _Resume2 = _interopRequireDefault(_Resume);
 	
-	var _Contact = __webpack_require__(45);
+	var _Contact = __webpack_require__(46);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
+	var _About = __webpack_require__(45);
+	
+	var _About2 = _interopRequireDefault(_About);
+	
 	var _Profile = {
-	  "fastAbout": "_1aMEBdKYJonTCBY_xYLlPB",
-	  "about": "_2J2zm8VcwhDeMFREsTQg5M",
-	  "intitle": "_3-EhJnFU3Ynd1NFOzmqAjw",
-	  "name": "_3WDzwpA-HWTQVCz28wN9Z1",
-	  "smallDescription": "_2eCNZEBc3tgyCXSrB9IwYE"
+	  "Profile": "g8aguRPlFsvVKJMLkJYe1"
 	};
 	
 	var _Profile2 = _interopRequireDefault(_Profile);
@@ -371,7 +371,7 @@
 	
 	var _ProfileActions = __webpack_require__(15);
 	
-	var _http = __webpack_require__(59);
+	var _http = __webpack_require__(60);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -396,15 +396,11 @@
 	//Import Actions 
 	
 	
-	var _ref = _jsx('p', {}, void 0, 'I\'m a Universidad Nacional Aut\xF3noma de M\xE9xico (UNAM) Graduate, right now looking for a master.');
+	var _ref = _jsx(_About2.default, {});
 	
-	var _ref2 = _jsx('p', {}, void 0, 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.');
+	var _ref2 = _jsx(_SoftSkills2.default, {});
 	
-	var _ref3 = _jsx('p', {}, void 0, 'Always interested in Computer Science deepening knowledge and challenges.');
-	
-	var _ref4 = _jsx(_SoftSkills2.default, {});
-	
-	var _ref5 = _jsx(_Resume2.default, {});
+	var _ref3 = _jsx(_Resume2.default, {});
 	
 	var Profile = function (_Component) {
 	  _inherits(Profile, _Component);
@@ -457,23 +453,17 @@
 	  _createClass(Profile, [{
 	    key: 'render',
 	    value: function render() {
-	      return _jsx('div', {}, void 0, _jsx('a', {
+	      return _jsx('div', {
+	        className: _Profile2.default.Profile
+	      }, void 0, _jsx('a', {
 	        name: 'About'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.fastAbout
-	      }, void 0, _jsx('div', {
-	        className: _Profile2.default.about
-	      }, void 0, _jsx('p', {
-	        className: _Profile2.default.name
-	      }, void 0, 'Valentin Portillo Galvan'), _jsx('p', {
-	        className: _Profile2.default.intitle
-	      }, void 0, 'Software Developer'), _jsx('div', {
-	        className: _Profile2.default.smallDescription
-	      }, void 0, _ref, _ref2, _ref3)))), _jsx('a', {
+	      }, void 0, _ref)), _jsx('a', {
 	        name: 'Skills'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.skillsSec
-	      }, void 0, _ref4, _jsx(_reactVisibilitySensor2.default, {
+	      }, void 0, _ref2, _jsx(_reactVisibilitySensor2.default, {
 	        onChange: this.toggleActiveHS,
 	        partialVisibility: true,
 	        minTopValue: 100
@@ -484,7 +474,7 @@
 	        name: 'Resume'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.ResumeSec
-	      }, void 0, _ref5)), _jsx('a', {
+	      }, void 0, _ref3)), _jsx('a', {
 	        name: 'Contact'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.ContactSec
@@ -721,7 +711,7 @@
 	
 	var _redux = __webpack_require__(6);
 	
-	var _reduxThunk = __webpack_require__(75);
+	var _reduxThunk = __webpack_require__(76);
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
@@ -729,7 +719,7 @@
 	
 	var _DevTools2 = _interopRequireDefault(_DevTools);
 	
-	var _reducers = __webpack_require__(50);
+	var _reducers = __webpack_require__(51);
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
@@ -814,7 +804,7 @@
 	
 	var _express = __webpack_require__(4);
 	
-	var _Profile = __webpack_require__(52);
+	var _Profile = __webpack_require__(53);
 	
 	var ProfileController = _interopRequireWildcard(_Profile);
 	
@@ -839,7 +829,7 @@
 	
 	var _express = __webpack_require__(4);
 	
-	var _post = __webpack_require__(53);
+	var _post = __webpack_require__(54);
 	
 	var PostController = _interopRequireWildcard(_post);
 	
@@ -873,7 +863,7 @@
 	});
 	exports.fetchComponentData = fetchComponentData;
 	
-	var _promiseUtils = __webpack_require__(56);
+	var _promiseUtils = __webpack_require__(57);
 	
 	function fetchComponentData(store, components, params) {
 	  var needs = components.reduce(function (prev, current) {
@@ -896,9 +886,9 @@
 	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
 	
 	var webpack = __webpack_require__(9);
-	var cssnext = __webpack_require__(67);
-	var postcssFocus = __webpack_require__(68);
-	var postcssReporter = __webpack_require__(69);
+	var cssnext = __webpack_require__(68);
+	var postcssFocus = __webpack_require__(69);
+	var postcssReporter = __webpack_require__(70);
 	
 	module.exports = {
 	  devtool: 'cheap-module-eval-source-map',
@@ -1037,8 +1027,94 @@
 	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t}',
 	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t}',
 	    nestedDateComment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n      } as of {date}',
-	    aboutMe: 'I like to , Im....',
-	    profileTitle: 'Profile'
+	    profileTitle: 'Profile',
+	    menuAbout: 'Main',
+	    menuSkills: 'Skills',
+	    menuResume: 'Resume',
+	    menuContact: 'Contact',
+	    Me1: 'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
+	    Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
+	    Me3: 'Always interested in Computer Science deepening knowledge and challenges.',
+	    KeyW: 'Key Words',
+	    //Soft Skills
+	    SS1: 'Analytic',
+	    SS2: 'Commitment',
+	    SS3: 'Problem Solver',
+	    SS4: 'Learner',
+	    SS5: 'Team-Work',
+	    SS6: 'Add Value',
+	    ss11: 'Understand the requirements',
+	    ss12: 'Develop according to needs',
+	    ss21: 'Deliver Ended Products',
+	    ss31: 'Find the root',
+	    ss32: 'Develop a logical step-by-step',
+	    ss33: 'Deliver a system',
+	    ss41: 'Self-taught',
+	    ss42: 'Enthousiastic',
+	    ss43: 'Versatile',
+	    ss51: 'Know How',
+	    ss52: 'Social',
+	    ss53: 'Ask & Answer',
+	    ss61: 'Proposals',
+	    ss62: 'Business / ethical directed reasoning',
+	    //hardSkills
+	    ttLang: 'Languages',
+	    ttProgLang: 'Programming Languages',
+	    ttStacks: 'Stacks',
+	    ttFrameworks: 'Frameworks',
+	    ttOther: 'Other',
+	    //Resume
+	    ResHighShool: ' Lycée Franco Mexicain (High School)',
+	    ResHighShoolSpe: 'Engineering Science Specialization',
+	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	    ResUnivSpe: 'Bachelor of Science in Civil Engineering',
+	    ResDiploIMEI: 'Intelligent Building Mexican Institute - IMEI',
+	    ResDiploIMEISpe: 'Speciality - Intelligent & Sustainable Buildings Technology',
+	    ResStudClubCICM: 'CICM Students Club Memeber',
+	    ResStageIUNAM: 'Traineeship at a InnovaUNAM (business incubator)',
+	    ResSolarDec: 'Solar Decathlon Europe 2014',
+	    ResSolarDecRole: 'Leader, Civil Engineering Responsible',
+	    ResSolarDecPrices: 'Won 3 prices (1° Engineering, 2° Urbanism, 3° Sustainability)',
+	    ResThesis: 'Author and Expositor of an article regarding my bachelor thesis (\'Analysis, Design and Construction of the CASA TEAM project\')',
+	    ResICAF: 'ICA FLUOR',
+	    ResICAFRole: 'Project Engineer',
+	    ResICAFDesc: 'Program follow up, alerts, recovery plan, management level reports, forecasts, productivity.',
+	    ResICAFAchi: 'Follow Up Automation',
+	    ResJacEng: 'Jacobs Engineering',
+	    ResJacEngRole: 'Project Scheduler',
+	    ResJacEngDesc: 'Interactive planning, Master Plan and WBS creation, program follow up, alerts, forecasts, productivity, recovery plan, management level reports, and resources graph.',
+	    ResJacEngAchi: 'Follow Up Automation',
+	    ResCitiB: 'Citi Banamex',
+	    ResCitiBRole: 'Project Manager Jr. / IT Business Analyst',
+	    ResCitiBDesc: 'Intermediary between business, software developers and specialists. IT BA SDLC deliverables. Data Qty & Project Controls RPA, data analysis and visualization. Requirements and solutions analysis.',
+	    ResCitiBAchi: 'Follow Up Automation',
+	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	    ResMutuo: 'Mutuo Financiera',
+	    ResMutuoRole: 'Software Developer',
+	    ResMutuoDesc: 'Internal software development (MVC) and API, RPA for different projects (get/analyze and deduce from data) using Laravel framework mainly and VBA.',
+	    ResMutuoAchi: 'Projects Follow Up Automation, Scalability, Financial Projects',
+	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	    //Form
+	    Name: 'Name',
+	    Send: 'Send',
+	    Email: 'Email',
+	    Industry: 'Industry',
+	
+	    WriteToMe: 'Write to me :)',
+	
+	    //Time
+	    January: 'January',
+	    February: 'February',
+	    March: 'March',
+	    June: 'June',
+	    September: 'September',
+	    October: 'October',
+	    December: 'December',
+	    ToDate: 'To Date'
 	  }
 	};
 
@@ -1068,7 +1144,95 @@
 	    submit: 'Soumettre',
 	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
 	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
-	    nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n  \t\t} as of {date} (in real app this would be translated to French)'
+	    nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
+	    profileTitle: 'Profil',
+	    menuAbout: 'Main',
+	    menuSkills: 'Compétences',
+	    menuResume: 'Resumé',
+	    menuContact: 'Contacter',
+	    Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
+	    Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
+	    Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
+	    KeyW: 'Mots Clés',
+	    //Soft Skills
+	    SS1: 'Analytique',
+	    SS2: 'Engagé',
+	    SS3: 'Résolveur de problèmes',
+	    SS4: 'Apprenant',
+	    SS5: 'Travail en équipe',
+	    SS6: 'Ajouter de la valeur',
+	    ss11: 'Comprendre les requis',
+	    ss12: 'Développer en fonction des besoins',
+	    ss21: 'Délivrer des produits finis',
+	    ss31: 'Trouver la cause',
+	    ss32: 'Développer un processus logique',
+	    ss33: 'Délivrer un système',
+	    ss41: 'Autodidacte',
+	    ss42: 'Enthousiaste',
+	    ss43: 'Polyvalent',
+	    ss51: 'Savoir faire',
+	    ss52: 'Social',
+	    ss53: 'Demander & Répondre',
+	    ss61: 'Propositions',
+	    ss62: 'Raisonement étique et vers le commerce',
+	    //hardSkills
+	    ttLang: 'Langues',
+	    ttProgLang: 'Langues de programmation',
+	    ttStacks: 'Stacks',
+	    ttFrameworks: 'Frameworks',
+	    ttOther: 'Autres',
+	    //Resume
+	    ResHighShool: ' Lycée Franco Mexicain',
+	    ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
+	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	    ResUnivSpe: 'Licence en Sciences Génie Civil',
+	    ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
+	    ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
+	    ResStudClubCICM: 'CICM Membre du club d\'étudiants',
+	    ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
+	    ResSolarDec: 'Solar Decathlon Europe 2014',
+	    ResSolarDecRole: 'Leader, Responsable Génie Civil',
+	    ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
+	    ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
+	    ResICAF: 'ICA FLUOR',
+	    ResICAFRole: 'Ingénieur de Projet',
+	    ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
+	    ResICAFAchi: 'Automatisation du suivi du programme',
+	    ResJacEng: 'Jacobs Engineering',
+	    ResJacEngRole: 'Planificateur de Projet',
+	    ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
+	    ResJacEngAchi: 'Automatisation du suivi du programme',
+	    ResCitiB: 'Citi Banamex',
+	    ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
+	    ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
+	    ResCitiBAchi: 'Automatisation du suivi du programme',
+	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	    ResMutuo: 'Mutuo Financiera',
+	    ResMutuoRole: 'Software Developer',
+	    ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
+	    ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
+	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	    //Form
+	    Name: 'Prénom',
+	    Send: 'Envoyer',
+	    Email: 'Courrier électronique',
+	    Industry: 'Industrie',
+	
+	    WriteToMe: 'Écris-moi :)',
+	
+	    //Time
+	    January: 'Janvier',
+	    February: 'Février',
+	    March: 'Mars',
+	    June: 'Juin',
+	    September: 'Septembre',
+	    October: 'Octobre',
+	    December: 'Décembre',
+	    ToDate: 'Á aujourd\'hui'
 	  }
 	};
 
@@ -1151,8 +1315,6 @@
 	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    //console.log('in app');
-	    //console.log(props);
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.toggleAddPostSection = function () {
@@ -1160,10 +1322,11 @@
 	    };
 	
 	    _this.toggleActiveMenu = function () {
-	
 	      _this.props.toggleActiveMenu();
 	    };
 	
+	    console.log('in app');
+	    console.log(props);
 	    _this.state = { isMounted: false };
 	    return _this;
 	  }
@@ -1180,7 +1343,7 @@
 	
 	      return _jsx('div', {}, void 0, this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && _ref, _jsx('div', {}, void 0, _jsx(_reactHelmet2.default, {
 	        title: 'Valentin Portillo',
-	        titleTemplate: '%s - Blog App',
+	        titleTemplate: '%s - Portfolio App',
 	        meta: [{ charset: 'utf-8' }, {
 	          'http-equiv': 'X-UA-Compatible',
 	          content: 'IE=edge'
@@ -1190,7 +1353,7 @@
 	        }]
 	      }), _jsx(_Header2.default, {
 	        switchLanguage: function switchLanguage(lang) {
-	          return _this2.props.dispatch((0, _IntlActions.switchLanguage)(lang));
+	          return _this2.props.switchLanguage(lang);
 	        },
 	        intl: this.props.intl,
 	        toggleAddPost: this.toggleAddPostSection
@@ -1221,6 +1384,9 @@
 	    },
 	    toggleActiveMenu: function toggleActiveMenu() {
 	      dispatch((0, _AppActions.toggleActiveMenu)());
+	    },
+	    switchLanguage: function switchLanguage(lang) {
+	      dispatch((0, _IntlActions.switchLanguage)(lang));
 	    }
 	  };
 	}
@@ -1448,6 +1614,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactIntl = __webpack_require__(1);
+	
 	var _Menu = {
 	  "menu": "xofNtDw5hAIknDfdV8cn",
 	  "menuactive": "_2tEManmJIhxQfp-fwpF3Go",
@@ -1464,16 +1632,6 @@
 	
 	var _ref3 = _jsx('i', {});
 	
-	var _ref4 = _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
-	  href: '#About'
-	}, void 0, 'About')), _jsx('li', {}, void 0, _jsx('a', {
-	  href: '#Skills'
-	}, void 0, 'Skills')), _jsx('li', {}, void 0, _jsx('a', {
-	  href: '#Resume'
-	}, void 0, 'Resume')), _jsx('li', {}, void 0, _jsx('a', {
-	  href: '#Contact'
-	}, void 0, 'Contact')));
-	
 	function Menu(props, context) {
 	  //console.log('onmenu');
 	  //console.log(props);
@@ -1488,7 +1646,31 @@
 	    onClick: props.toggleActiveMenu
 	  }, void 0, _ref, _ref2, _ref3), _jsx('div', {
 	    className: _Menu2.default.menuContent
-	  }, void 0, _ref4));
+	  }, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	    href: '#About'
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'menuAbout'
+	  }, void 0, function (txt) {
+	    return _jsx('div', {}, void 0, txt);
+	  }))), _jsx('li', {}, void 0, _jsx('a', {
+	    href: '#Skills'
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'menuSkills'
+	  }, void 0, function (txt) {
+	    return _jsx('div', {}, void 0, txt);
+	  }))), _jsx('li', {}, void 0, _jsx('a', {
+	    href: '#Resume'
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'menuResume'
+	  }, void 0, function (txt) {
+	    return _jsx('div', {}, void 0, txt);
+	  }))), _jsx('li', {}, void 0, _jsx('a', {
+	    href: '#Contact'
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'menuContact'
+	  }, void 0, function (txt) {
+	    return _jsx('div', {}, void 0, txt);
+	  }))))));
 	}
 	
 	exports.default = Menu;
@@ -1559,7 +1741,7 @@
 	exports.deletePost = deletePost;
 	exports.deletePostRequest = deletePostRequest;
 	
-	var _apiCaller = __webpack_require__(51);
+	var _apiCaller = __webpack_require__(52);
 	
 	var _apiCaller2 = _interopRequireDefault(_apiCaller);
 	
@@ -1756,6 +1938,97 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactIntl = __webpack_require__(1);
+	
+	var _About = {
+	  "title": "_1uhaiz6yzDy745eZSQLcdK",
+	  "about": "_3bMuzY67GqXHi5lkXbR9P8",
+	  "aboutCont": "_1mwUAj2BeLqRxt3HKoj3wF",
+	  "icon": "_2JfvMC0Inqc0zBq2oPeFbB",
+	  "presentation": "_2pYINd4tQeZtMHQFoa25mQ",
+	  "intitle": "_1fDy25OOTvfJRf0profTm6",
+	  "name": "_3pDFDIwZmXL6FQABXbjYBZ",
+	  "smallDescription": "_2NlirkAfNcRJDCMwMYfvqx"
+	};
+	
+	var _About2 = _interopRequireDefault(_About);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var _ref = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'menuAbout'
+	});
+	
+	var _ref2 = _jsx('i', {
+	  className: 'fas fa-terminal'
+	});
+	
+	var _ref3 = _jsx('p', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'Me1'
+	}));
+	
+	var _ref4 = _jsx('p', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'Me2'
+	}));
+	
+	var _ref5 = _jsx('p', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'Me3'
+	}));
+	
+	var _ref6 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'KeyW'
+	});
+	
+	var _ref7 = _jsx('p', {}, void 0, 'TDD, SCRUM, RPA');
+	
+	function About(props, context) {
+	  return _jsx('div', {
+	    className: _About2.default.about
+	  }, void 0, _jsx('div', {
+	    className: _About2.default.title
+	  }, void 0, '{', ' ', _ref, ' ', '}'), _jsx('div', {
+	    className: _About2.default.aboutCont
+	  }, void 0, _jsx('div', {
+	    className: _About2.default.icon
+	  }, void 0, _ref2), _jsx('div', {
+	    className: _About2.default.presentation
+	  }, void 0, _jsx('p', {
+	    className: _About2.default.name
+	  }, void 0, 'Valentin Portillo Galvan'), _jsx('p', {
+	    className: _About2.default.intitle
+	  }, void 0, 'Software Developer'), _jsx('div', {
+	    className: _About2.default.smallDescription
+	  }, void 0, _ref3, _ref4, _ref5), _jsx('p', {
+	    className: _About2.default.intitle
+	  }, void 0, _ref6), _jsx('div', {
+	    className: _About2.default.smallDescription
+	  }, void 0, _ref7))));
+	}
+	
+	exports.default = About;
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+	
+	// Import Style
+	
+	
+	var _react = __webpack_require__(0);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactIntl = __webpack_require__(1);
+	
 	var _Contact = {
 	  "Contact": "PoK3HVlDnId_B7p9ECX6b",
 	  "title": "nTzZMG3ferwBjvQQkehP7",
@@ -1770,23 +2043,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var _ref = _jsx('i', {
-	  className: 'fas fa-user'
+	var _ref = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'menuContact'
 	});
 	
 	var _ref2 = _jsx('i', {
-	  className: 'fas fa-at'
+	  className: 'fas fa-user'
 	});
 	
 	var _ref3 = _jsx('i', {
-	  className: 'fas fa-industry'
+	  className: 'fas fa-at'
 	});
 	
 	var _ref4 = _jsx('i', {
+	  className: 'fas fa-industry'
+	});
+	
+	var _ref5 = _jsx('i', {
 	  className: 'far fa-hand-point-right'
 	});
 	
-	var _ref5 = _jsx('div', {
+	var _ref6 = _jsx('div', {
 	  className: 'ease'
 	});
 	
@@ -1796,7 +2073,7 @@
 	    className: _Contact2.default.Contact
 	  }, void 0, _jsx('div', {
 	    className: _Contact2.default.title
-	  }, void 0, '{', ' Contact ', '}'), _jsx('div', {
+	  }, void 0, '{', ' ', _ref, ' ', '}'), _jsx('div', {
 	    className: _Contact2.default.formMain
 	  }, void 0, _jsx('div', {
 	    className: _Contact2.default.formDiv
@@ -1808,66 +2085,86 @@
 	    className: _Contact2.default.inputCont
 	  }, void 0, _jsx('span', {
 	    className: _Contact2.default.inputIcon
-	  }, void 0, _ref), _jsx('input', {
-	    name: 'name',
-	    type: 'text',
-	    className: _Contact2.default.feedbackInput,
-	    placeholder: 'Name',
-	    id: 'name',
-	    value: props.contactName,
-	    onChange: function onChange(event) {
-	      return props.contactNameInput(event.target.value);
-	    }
+	  }, void 0, _ref2), _jsx(_reactIntl.FormattedMessage, {
+	    id: 'Name'
+	  }, void 0, function (txt) {
+	    return _jsx('input', {
+	      name: 'name',
+	      type: 'text',
+	      className: _Contact2.default.feedbackInput,
+	      placeholder: txt,
+	      id: 'name',
+	      value: props.contactName,
+	      onChange: function onChange(event) {
+	        return props.contactNameInput(event.target.value);
+	      }
+	    });
 	  })), _jsx('p', {
 	    className: _Contact2.default.inputCont
 	  }, void 0, _jsx('span', {
 	    className: _Contact2.default.inputIcon
-	  }, void 0, _ref2), _jsx('input', {
-	    name: 'email',
-	    type: 'text',
-	    className: _Contact2.default.feedbackInput,
-	    id: 'email',
-	    placeholder: 'Email',
-	    value: props.contactMail,
-	    onChange: function onChange(event) {
-	      return props.contactEmailInput(event.target.value);
-	    }
+	  }, void 0, _ref3), _jsx(_reactIntl.FormattedMessage, {
+	    id: 'Email'
+	  }, void 0, function (txt) {
+	    return _jsx('input', {
+	      name: 'email',
+	      type: 'text',
+	      className: _Contact2.default.feedbackInput,
+	      id: 'email',
+	      placeholder: txt,
+	      value: props.contactMail,
+	      onChange: function onChange(event) {
+	        return props.contactEmailInput(event.target.value);
+	      }
+	    });
 	  })), _jsx('p', {
 	    className: _Contact2.default.inputCont
 	  }, void 0, _jsx('span', {
 	    className: _Contact2.default.inputIcon
-	  }, void 0, _ref3), _jsx('input', {
-	    name: 'Industry',
-	    type: 'text',
-	    className: _Contact2.default.feedbackInput,
-	    id: 'Industry',
-	    placeholder: 'Industry'
+	  }, void 0, _ref4), _jsx(_reactIntl.FormattedMessage, {
+	    id: 'Industry'
+	  }, void 0, function (txt) {
+	    return _jsx('input', {
+	      name: 'Industry',
+	      type: 'text',
+	      className: _Contact2.default.feedbackInput,
+	      id: 'Industry',
+	      placeholder: txt
+	    });
 	  })), _jsx('p', {
 	    className: _Contact2.default.inputCont
 	  }, void 0, _jsx('span', {
 	    className: _Contact2.default.inputIcon
-	  }, void 0, _ref4), _jsx('textarea', {
-	    name: 'text',
-	    className: _Contact2.default.feedbackInput,
-	    id: 'comment',
-	    placeholder: 'Write to me :)',
-	    value: props.contactMess,
-	    onChange: function onChange(event) {
-	      return props.contactMessInput(event.target.value);
-	    }
+	  }, void 0, _ref5), _jsx(_reactIntl.FormattedMessage, {
+	    id: 'WriteToMe'
+	  }, void 0, function (txt) {
+	    return _jsx('textarea', {
+	      name: 'text',
+	      className: _Contact2.default.feedbackInput,
+	      id: 'comment',
+	      placeholder: txt,
+	      value: props.contactMess,
+	      onChange: function onChange(event) {
+	        return props.contactMessInput(event.target.value);
+	      }
+	    });
 	  })), _jsx('div', {
 	    className: _Contact2.default.submit
-	  }, void 0, _jsx('input', {
-	    type: 'submit',
-	    value: 'SEND',
-	    className: _Contact2.default.button
-	  }), _ref5)))));
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'Send'
+	  }, void 0, function (txt) {
+	    return _jsx('input', {
+	      type: 'submit',
+	      value: txt,
+	      className: _Contact2.default.button
+	    });
+	  }), _ref6)))));
 	}
 	
 	exports.default = Contact;
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1892,6 +2189,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactIntl = __webpack_require__(1);
+	
 	var _HardSkills = {
 	  "hardSkills": "_3jK1CTRwtFVprKe0EfZPrU",
 	  "hardLanguages": "_2dg_InDz61q4_igQRSLp2h",
@@ -1904,7 +2203,7 @@
 	
 	var _HardSkills2 = _interopRequireDefault(_HardSkills);
 	
-	var _SkillBar = __webpack_require__(48);
+	var _SkillBar = __webpack_require__(49);
 	
 	var _SkillBar2 = _interopRequireDefault(_SkillBar);
 	
@@ -1913,6 +2212,26 @@
 	var _reactVisibilitySensor2 = _interopRequireDefault(_reactVisibilitySensor);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var _ref = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ttLang'
+	});
+	
+	var _ref2 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ttProgLang'
+	});
+	
+	var _ref3 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ttStacks'
+	});
+	
+	var _ref4 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ttFrameworks'
+	});
+	
+	var _ref5 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ttOther'
+	});
 	
 	function HardSkills(props, context) {
 	  var isVisible = props.isVisible;
@@ -1996,29 +2315,29 @@
 	    className: _HardSkills2.default.hardLanguages
 	  }, void 0, _jsx('div', {
 	    className: _HardSkills2.default.hardTitle
-	  }, void 0, 'Languages'), hard_langs), _jsx('div', {
+	  }, void 0, _ref), hard_langs), _jsx('div', {
 	    className: _HardSkills2.default.hardProgramming
 	  }, void 0, _jsx('div', {
 	    className: _HardSkills2.default.hardTitle
-	  }, void 0, 'Programming Languages'), hard_programs), _jsx('div', {
+	  }, void 0, _ref2), hard_programs), _jsx('div', {
 	    className: _HardSkills2.default.hardStacks
 	  }, void 0, _jsx('div', {
 	    className: _HardSkills2.default.hardTitle
-	  }, void 0, 'Stacks'), hard_stack), _jsx('div', {
+	  }, void 0, _ref3), hard_stack), _jsx('div', {
 	    className: _HardSkills2.default.hardFrame
 	  }, void 0, _jsx('div', {
 	    className: _HardSkills2.default.hardTitle
-	  }, void 0, 'Frameworks'), hard_frame), _jsx('div', {
+	  }, void 0, _ref4), hard_frame), _jsx('div', {
 	    className: _HardSkills2.default.hardOther
 	  }, void 0, _jsx('div', {
 	    className: _HardSkills2.default.hardTitle
-	  }, void 0, 'Other'), hard_other));
+	  }, void 0, _ref5), hard_other));
 	}
 	
 	exports.default = HardSkills;
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2039,6 +2358,8 @@
 	var _react = __webpack_require__(0);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactIntl = __webpack_require__(1);
 	
 	var _Resume = {
 	  "Resume": "_1Lx-TgykcEBiRsWS2zalRs",
@@ -2062,111 +2383,229 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var _ref = _jsx('h3', {}, void 0, '2006');
+	var _ref = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'menuResume'
+	});
 	
-	var _ref2 = _jsx('li', {}, void 0, ' Engineering Science Specialization');
+	var _ref2 = _jsx('h3', {}, void 0, '2006');
 	
-	var _ref3 = _jsx('h3', {}, void 0, '2009');
+	var _ref3 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResHighShool'
+	});
 	
-	var _ref4 = _jsx('h4', {}, void 0, '2009 - 2014');
+	var _ref4 = _jsx('li', {}, void 0, ' ', _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResHighShoolSpe'
+	}));
 	
-	var _ref5 = _jsx('li', {}, void 0, ' Bachelor of Science in Civil Engineering');
+	var _ref5 = _jsx('h3', {}, void 0, '2009');
 	
-	var _ref6 = _jsx('h3', {}, void 0, '2010');
+	var _ref6 = _jsx('h4', {}, void 0, '2009 - 2014');
 	
-	var _ref7 = _jsx('h4', {}, void 0, 'June - September');
+	var _ref7 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResUniv'
+	});
 	
-	var _ref8 = _jsx('li', {}, void 0, ' Speciality - Intelligent & Sustainable Buildings Technology');
+	var _ref8 = _jsx('li', {}, void 0, ' ', _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResUnivSpe'
+	}));
 	
-	var _ref9 = _jsx('h3', {}, void 0, '2011');
+	var _ref9 = _jsx('h3', {}, void 0, '2010');
 	
-	var _ref10 = _jsx('h3', {}, void 0, '2013');
+	var _ref10 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'June'
+	}), ' - ', _jsx(_reactIntl.FormattedMessage, {
+	  id: 'September'
+	}));
 	
-	var _ref11 = _jsx('h4', {}, void 0, ' 2013 - 2014');
+	var _ref11 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploIMEI'
+	});
 	
-	var _ref12 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, 'Leader, Civil Engineering Responsible'));
+	var _ref12 = _jsx('li', {}, void 0, ' ', _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploIMEISpe'
+	}));
 	
-	var _ref13 = _jsx('li', {}, void 0, 'Won 3 prices (1\xB0 Engineering, 2\xB0 Urbanism, 3\xB0 Sustainability)');
+	var _ref13 = _jsx('h3', {}, void 0, '2011');
 	
-	var _ref14 = _jsx('h3', {}, void 0, '2014');
+	var _ref14 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResStudClubCICM'
+	});
 	
-	var _ref15 = _jsx('h4', {}, void 0, '2014 - 2015');
+	var _ref15 = _jsx('h3', {}, void 0, '2013');
 	
-	var _ref16 = _jsx('h4', {}, void 0, '2014 - 2015');
+	var _ref16 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResStageIUNAM'
+	});
 	
-	var _ref17 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, 'Project Engineer'));
+	var _ref17 = _jsx('h4', {}, void 0, ' 2013 - 2014');
 	
-	var _ref18 = _jsx('li', {}, void 0, 'Program follow up, alerts, recovery plan, management level reports, forecasts, productivity. ');
+	var _ref18 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResSolarDec'
+	});
 	
-	var _ref19 = _jsx('li', {}, void 0, 'Follow Up Automation');
+	var _ref19 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResSolarDecRole'
+	})));
 	
-	var _ref20 = _jsx('h3', {}, void 0, '2016');
+	var _ref20 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResSolarDecPrices'
+	}));
 	
-	var _ref21 = _jsx('h4', {}, void 0, 'January');
+	var _ref21 = _jsx('h3', {}, void 0, '2014');
 	
-	var _ref22 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, 'Project Scheduler '));
+	var _ref22 = _jsx('h4', {}, void 0, '2014 - 2015');
 	
-	var _ref23 = _jsx('li', {}, void 0, 'Interactive planning, Master Plan and WBS creation, program follow up, alerts, forecasts, productivity, recovery plan, management level reports, and resources graph. ');
+	var _ref23 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResThesis'
+	});
 	
-	var _ref24 = _jsx('li', {}, void 0, 'Follow Up Automation');
+	var _ref24 = _jsx('h4', {}, void 0, '2014 - 2015');
 	
-	var _ref25 = _jsx('h4', {}, void 0, 'July');
+	var _ref25 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResICAF'
+	});
 	
-	var _ref26 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, 'Project Manager Jr. / IT Business Analyst '));
+	var _ref26 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResICAFRole'
+	})));
 	
-	var _ref27 = _jsx('li', {}, void 0, 'Intermediary between business, software developers and specialists. IT BA SDLC deliverables. Data Qty & Project Controls RPA, data analysis and visualization. Requirements and solutions analysis. ');
+	var _ref27 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResICAFDesc'
+	}));
 	
-	var _ref28 = _jsx('li', {}, void 0, 'Follow Up Automation');
+	var _ref28 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResICAFAchi'
+	}));
 	
-	var _ref29 = _jsx('h4', {}, void 0, 'December');
+	var _ref29 = _jsx('h3', {}, void 0, '2016');
 	
-	var _ref30 = _jsx('a', {
-	  href: 'https://courses.edx.org/certificates/b99704bf002e444fbf37d4497b8d695a',
-	  target: '_blank'
-	}, void 0, 'TUDelft - TPM1x: Creative Problem Solving and Decision Making');
+	var _ref30 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'January'
+	}));
 	
-	var _ref31 = _jsx('a', {
-	  href: 'https://courses.edx.org/certificates/1fe3bc4a26ef40ca84be1cca1ad877f2',
-	  target: '_blank'
-	}, void 0, 'Harvard - CS50: Introduction to Computer Science');
+	var _ref31 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'January'
+	});
 	
-	var _ref32 = _jsx('h3', {}, void 0, '2017');
+	var _ref32 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResJacEngRole'
+	})));
 	
-	var _ref33 = _jsx('h4', {}, void 0, 'March');
+	var _ref33 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResJacEngDesc'
+	}));
 	
-	var _ref34 = _jsx('a', {
-	  href: 'https://www.freecodecamp.org/valeporti/front-end-certification',
-	  target: '_blank'
-	}, void 0, 'FreeCodeCamp - Front End Certification');
+	var _ref34 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResJacEngAchi'
+	}));
 	
-	var _ref35 = _jsx('h4', {}, void 0, 'September');
+	var _ref35 = _jsx('h4', {}, void 0, 'July');
 	
-	var _ref36 = _jsx('a', {
-	  href: 'https://certificates.saylor.org/hd2657mm',
-	  target: '_blank'
-	}, void 0, 'Saylor Academy - CS401: Operating Systems');
+	var _ref36 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResCitiB'
+	});
 	
-	var _ref37 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, 'Software Developer '));
+	var _ref37 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResCitiBRole'
+	})));
 	
-	var _ref38 = _jsx('li', {}, void 0, 'Internal software development (MVC) and API, RPA for different projects (get/analyze and deduce from data) using Laravel framework mainly and VBA.');
+	var _ref38 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResCitiBDesc'
+	}));
 	
-	var _ref39 = _jsx('li', {}, void 0, 'Projects Follow Up Automation, Scalability, Financial Projects');
+	var _ref39 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResCitiBAchi'
+	}));
 	
-	var _ref40 = _jsx('h4', {}, void 0, 'October');
+	var _ref40 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'December'
+	}));
 	
 	var _ref41 = _jsx('a', {
+	  href: 'https://courses.edx.org/certificates/b99704bf002e444fbf37d4497b8d695a',
+	  target: '_blank'
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploTUDelft'
+	}));
+	
+	var _ref42 = _jsx('a', {
+	  href: 'https://courses.edx.org/certificates/1fe3bc4a26ef40ca84be1cca1ad877f2',
+	  target: '_blank'
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploHarv'
+	}));
+	
+	var _ref43 = _jsx('h3', {}, void 0, '2017');
+	
+	var _ref44 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'March'
+	}));
+	
+	var _ref45 = _jsx('a', {
+	  href: 'https://www.freecodecamp.org/valeporti/front-end-certification',
+	  target: '_blank'
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploFCCFront'
+	}));
+	
+	var _ref46 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'September'
+	}));
+	
+	var _ref47 = _jsx('a', {
+	  href: 'https://certificates.saylor.org/hd2657mm',
+	  target: '_blank'
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploSAOpSys'
+	}));
+	
+	var _ref48 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'September'
+	});
+	
+	var _ref49 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ToDate'
+	});
+	
+	var _ref50 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResMutuo'
+	});
+	
+	var _ref51 = _jsx('li', {}, void 0, _jsx('strong', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResMutuoRole'
+	})));
+	
+	var _ref52 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResMutuoDesc'
+	}));
+	
+	var _ref53 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResMutuoAchi'
+	}));
+	
+	var _ref54 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'October'
+	}));
+	
+	var _ref55 = _jsx('a', {
 	  href: 'https://certificates.saylor.org/ft456bop',
 	  target: '_blank'
-	}, void 0, 'Saylor Academy - CS403: Introduction to Modern Databases');
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploSAIntroDB'
+	}));
 	
-	var _ref42 = _jsx('h3', {}, void 0, '2018');
+	var _ref56 = _jsx('h3', {}, void 0, '2018');
 	
-	var _ref43 = _jsx('h4', {}, void 0, 'February');
+	var _ref57 = _jsx('h4', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'February'
+	}));
 	
-	var _ref44 = _jsx('a', {
+	var _ref58 = _jsx('a', {
 	  href: 'https://certificates.saylor.org/yh5jzfie',
 	  target: '_blank'
-	}, void 0, 'Saylor Academy - CS303: Algorithms');
+	}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ResDiploSAAlgorithm'
+	}));
 	
 	function Resume(props, context) {
 	  var date = new Date();
@@ -2175,7 +2614,7 @@
 	    className: _Resume2.default.Resume
 	  }, void 0, _jsx('div', {
 	    className: _Resume2.default.title
-	  }, void 0, '{', ' Resume ', '}'), _jsx('div', {
+	  }, void 0, '{', ' ', _ref, ' ', '}'), _jsx('div', {
 	    className: _Resume2.default.header
 	  }), _jsx('div', {
 	    className: _Resume2.default.item
@@ -2183,107 +2622,107 @@
 	    className: _Resume2.default.timeline
 	  }, void 0, _jsx('div', {}, void 0, _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref2, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'http://www.lfm.edu.mx',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'https://upload.wikimedia.org/wikipedia/commons/6/64/LogoLFMcirc.jpg'
-	  })), ' Lyc\xE9e Franco Mexicain (High School)'), _ref2))), _jsx('section', {
+	  })), ' ', _ref3), _ref4))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref3, _jsx('section', {}, void 0, _ref4, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref5, _jsx('section', {}, void 0, _ref6, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://www.unam.mx/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://arquitectura.unam.mx/uploads/8/1/1/0/8110907/_2634437_orig.png'
-	  })), ' Universidad Nacional Aut\xF3noma de M\xE9xico - UNAM'), _ref5))), _jsx('section', {
+	  })), ' ', _ref7), _ref8))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref6, _jsx('section', {}, void 0, _ref7, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref9, _jsx('section', {}, void 0, _ref10, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://imei.org.mx/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://www.mundohvacr.com.mx/wp-content/uploads/2014/07/A00075883.jpg'
-	  })), ' Intelligent Building Mexican Institute - IMEI'), _ref8))), _jsx('section', {
+	  })), ' ', _ref11), _ref12))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref9, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref13, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'http://cicm.org.mx/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://cicm.org.mx/wp-content/themes/CICM%20copia/img/logo_vector.png'
-	  })), 'CICM Students Club Memeber')))), _jsx('section', {
+	  })), _ref14)))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref10, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref15, _jsx('section', {}, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'http://www.innovacion.unam.mx/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://thawing-coast-2960.herokuapp.com/images/InnovaUNAM.jpg'
-	  })), ' Traineeship at a InnovaUNAM (business incubator)'))), _jsx('section', {}, void 0, _ref11, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  })), _ref16, ' '))), _jsx('section', {}, void 0, _ref17, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'http://www.solardecathlon2014.fr/en/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://blog.polylogis.fr/wp-content/uploads/2014/07/Banni%C3%A8re_sde2014.png'
-	  })), 'Solar Decathlon Europe 2014', _jsx('a', {
+	  })), _ref18, _jsx('a', {
 	    href: 'http://arquitectura.unam.mx/casa.html',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://arquitectura.unam.mx/uploads/8/1/1/0/8110907/4548697_orig.png'
-	  }))), _ref12, _ref13))), _jsx('section', {
+	  }))), _ref19, _ref20))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref14, _jsx('section', {}, void 0, _ref15, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref21, _jsx('section', {}, void 0, _ref22, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://es.calameo.com/read/0047443879e7a02232cf6',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: _tridisap2.default
-	  })), 'Author and Expositor of an article regarding my bachelor thesis (\'Analysis, Design and Construction of the CASA TEAM project\')'))), _jsx('section', {}, void 0, _ref16, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  })), _ref23))), _jsx('section', {}, void 0, _ref24, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://www.linkedin.com/company/ica-fluor/?originalSubdomain=mx',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'http://www.gulfdiving.com.mx/wp-content/uploads/2017/09/ica-fluor.png'
-	  })), 'ICA FLUOR'), _ref17, _ref18, _ref19))), _jsx('section', {
+	  })), _ref25), _ref26, _ref27, _ref28))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref20, _jsx('section', {}, void 0, _ref21, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref29, _jsx('section', {}, void 0, _ref30, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'http://www.jacobs.com/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'https://miningconnection.com/images/logos/jacobs_logo.jpg'
-	  })), 'Jacobs Engineering'), _ref22, _ref23, _ref24)), _jsx('section', {}, void 0, _ref25, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  })), _ref31), _ref32, _ref33, _ref34)), _jsx('section', {}, void 0, _ref35, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://www.banamex.com/citibanamex/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'https://www.banamex.com/assets/img/citibanamex-logo.png'
-	  })), 'Citi Banamex'), _ref26, _ref27, _ref28)), _jsx('section', {}, void 0, _ref29, _jsx('ul', {}, void 0, _jsx('li', {
+	  })), _ref36), _ref37, _ref38, _ref39)), _jsx('section', {}, void 0, _ref40, _jsx('ul', {}, void 0, _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref30), _jsx('li', {
+	  }, void 0, _ref41), _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref31)))), _jsx('section', {
+	  }, void 0, _ref42)))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref32, _jsx('section', {}, void 0, _ref33, _jsx('ul', {}, void 0, _jsx('li', {
+	  }, void 0, _ref43, _jsx('section', {}, void 0, _ref44, _jsx('ul', {}, void 0, _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref34))), _jsx('section', {}, void 0, _ref35, _jsx('ul', {}, void 0, _jsx('li', {
+	  }, void 0, _ref45))), _jsx('section', {}, void 0, _ref46, _jsx('ul', {}, void 0, _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref36))), _jsx('section', {}, void 0, _jsx('h4', {}, void 0, 'September - to Date (', date.getMonth() + 1, ' / ', date.getFullYear(), ')'), _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  }, void 0, _ref47))), _jsx('section', {}, void 0, _jsx('h4', {}, void 0, _ref48, ' - ', _ref49, ' (', date.getMonth() + 1, ' / ', date.getFullYear(), ')'), _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
 	    href: 'https://mutuofinanciera.com/',
 	    target: '_blank'
 	  }, void 0, _jsx('img', {
 	    className: _Resume2.default.logo,
 	    src: 'https://mutuofinanciera.com/images/Logo.jpg'
-	  })), 'Mutuo Financiera'), _ref37, _ref38, _ref39)), _jsx('section', {}, void 0, _ref40, _jsx('ul', {}, void 0, _jsx('li', {
+	  })), _ref50), _ref51, _ref52, _ref53)), _jsx('section', {}, void 0, _ref54, _jsx('ul', {}, void 0, _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref41)))), _jsx('section', {
+	  }, void 0, _ref55)))), _jsx('section', {
 	    className: _Resume2.default.year
-	  }, void 0, _ref42, _jsx('section', {}, void 0, _ref43, _jsx('ul', {}, void 0, _jsx('li', {
+	  }, void 0, _ref56, _jsx('section', {}, void 0, _ref57, _jsx('ul', {}, void 0, _jsx('li', {
 	    className: _Resume2.default.certificate
-	  }, void 0, _ref44)))), _jsx('div', {
+	  }, void 0, _ref58)))), _jsx('div', {
 	    className: _Resume2.default.spacing
 	  })))), _jsx('div', {
 	    className: _Resume2.default.footer
@@ -2293,7 +2732,7 @@
 	exports.default = Resume;
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2339,7 +2778,7 @@
 	exports.default = SkillBar;
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2355,6 +2794,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactIntl = __webpack_require__(1);
+	
 	var _SoftSkills = {
 	  "title": "_2S8zpYD3L_sMYWx9rnAzvd",
 	  "softSkills": "_2RZC4T8mZFmui_IDXo5Ty3",
@@ -2369,84 +2810,130 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var _ref = _jsx('i', {
+	var _ref = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'menuSkills'
+	});
+	
+	var _ref2 = _jsx('i', {
 	  className: 'fas fa-code-branch'
 	});
 	
-	var _ref2 = _jsx('li', {}, void 0, 'Understand the requirements');
+	var _ref3 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS1'
+	});
 	
-	var _ref3 = _jsx('li', {}, void 0, 'Develop according to needs');
+	var _ref4 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss11'
+	}));
 	
-	var _ref4 = _jsx('i', {
+	var _ref5 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss12'
+	}));
+	
+	var _ref6 = _jsx('i', {
 	  className: 'fas fa-thermometer-full'
 	});
 	
-	var _ref5 = _jsx('li', {}, void 0, 'Deliver Ended Products');
+	var _ref7 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS2'
+	});
 	
-	var _ref6 = _jsx('i', {
+	var _ref8 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss21'
+	}));
+	
+	var _ref9 = _jsx('i', {
 	  className: 'fas fa-lightbulb'
 	});
 	
-	var _ref7 = _jsx('li', {}, void 0, 'Find the root');
+	var _ref10 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS3'
+	});
 	
-	var _ref8 = _jsx('li', {}, void 0, 'Develop a logical step-by-step');
+	var _ref11 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss31'
+	}));
 	
-	var _ref9 = _jsx('li', {}, void 0, 'Deliver a system');
+	var _ref12 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss32'
+	}));
 	
-	var _ref10 = _jsx('i', {
+	var _ref13 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss33'
+	}));
+	
+	var _ref14 = _jsx('i', {
 	  className: 'fas fa-graduation-cap'
 	});
 	
-	var _ref11 = _jsx('li', {}, void 0, 'Self-taught');
+	var _ref15 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS4'
+	});
 	
-	var _ref12 = _jsx('li', {}, void 0, 'Enthousiastic');
+	var _ref16 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss41'
+	}));
 	
-	var _ref13 = _jsx('li', {}, void 0, 'Versatile');
+	var _ref17 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss42'
+	}));
 	
-	var _ref14 = _jsx('i', {
+	var _ref18 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss43'
+	}));
+	
+	var _ref19 = _jsx('i', {
 	  className: 'fas fa-users'
 	});
 	
-	var _ref15 = _jsx('li', {}, void 0, 'Know How');
+	var _ref20 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS5'
+	});
 	
-	var _ref16 = _jsx('li', {}, void 0, 'Social');
+	var _ref21 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss51'
+	}));
 	
-	var _ref17 = _jsx('li', {}, void 0, 'Ask & Answer');
+	var _ref22 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss52'
+	}));
 	
-	var _ref18 = _jsx('i', {
+	var _ref23 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss53'
+	}));
+	
+	var _ref24 = _jsx('i', {
 	  className: 'fas fa-chart-line'
 	});
 	
-	var _ref19 = _jsx('li', {}, void 0, 'Proposals');
+	var _ref25 = _jsx(_reactIntl.FormattedMessage, {
+	  id: 'SS6'
+	});
 	
-	var _ref20 = _jsx('li', {}, void 0, 'Business / ethical directed reasoning');
+	var _ref26 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss61'
+	}));
+	
+	var _ref27 = _jsx('li', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'ss62'
+	}));
 	
 	function SoftSkills(props, context) {
 	  return _jsx('div', {
 	    className: _SoftSkills2.default.softSkills
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.title
-	  }, void 0, '{', ' Skills ', '}'), _jsx('div', {
+	  }, void 0, '{', ' ', _ref, ' ', '}'), _jsx('div', {
 	    className: _SoftSkills2.default.softSkill
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagon
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagonContent
-	  }, void 0, _ref)), _jsx('div', {
+	  }, void 0, _ref2)), _jsx('div', {
 	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Analytic'), _jsx('ul', {
+	  }, void 0, _ref3), _jsx('ul', {
 	    className: _SoftSkills2.default.ulSoft
-	  }, void 0, _ref2, _ref3)), _jsx('div', {
-	    className: _SoftSkills2.default.softSkill
-	  }, void 0, _jsx('div', {
-	    className: _SoftSkills2.default.octagon
-	  }, void 0, _jsx('div', {
-	    className: _SoftSkills2.default.octagonContent
-	  }, void 0, _ref4)), _jsx('div', {
-	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Commitment'), _jsx('ul', {
-	    className: _SoftSkills2.default.ulSoft
-	  }, void 0, _ref5)), _jsx('div', {
+	  }, void 0, _ref4, _ref5)), _jsx('div', {
 	    className: _SoftSkills2.default.softSkill
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagon
@@ -2454,17 +2941,17 @@
 	    className: _SoftSkills2.default.octagonContent
 	  }, void 0, _ref6)), _jsx('div', {
 	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Problem Solver'), _jsx('ul', {
+	  }, void 0, _ref7), _jsx('ul', {
 	    className: _SoftSkills2.default.ulSoft
-	  }, void 0, _ref7, _ref8, _ref9)), _jsx('div', {
+	  }, void 0, _ref8)), _jsx('div', {
 	    className: _SoftSkills2.default.softSkill
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagon
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagonContent
-	  }, void 0, _ref10)), _jsx('div', {
+	  }, void 0, _ref9)), _jsx('div', {
 	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Learner'), _jsx('ul', {
+	  }, void 0, _ref10), _jsx('ul', {
 	    className: _SoftSkills2.default.ulSoft
 	  }, void 0, _ref11, _ref12, _ref13)), _jsx('div', {
 	    className: _SoftSkills2.default.softSkill
@@ -2474,25 +2961,35 @@
 	    className: _SoftSkills2.default.octagonContent
 	  }, void 0, _ref14)), _jsx('div', {
 	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Team-Work'), _jsx('ul', {
+	  }, void 0, _ref15), _jsx('ul', {
 	    className: _SoftSkills2.default.ulSoft
-	  }, void 0, _ref15, _ref16, _ref17)), _jsx('div', {
+	  }, void 0, _ref16, _ref17, _ref18)), _jsx('div', {
 	    className: _SoftSkills2.default.softSkill
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagon
 	  }, void 0, _jsx('div', {
 	    className: _SoftSkills2.default.octagonContent
-	  }, void 0, _ref18)), _jsx('div', {
+	  }, void 0, _ref19)), _jsx('div', {
 	    className: _SoftSkills2.default.softTtl
-	  }, void 0, 'Add Value'), _jsx('ul', {
+	  }, void 0, _ref20), _jsx('ul', {
 	    className: _SoftSkills2.default.ulSoft
-	  }, void 0, _ref19, _ref20)));
+	  }, void 0, _ref21, _ref22, _ref23)), _jsx('div', {
+	    className: _SoftSkills2.default.softSkill
+	  }, void 0, _jsx('div', {
+	    className: _SoftSkills2.default.octagon
+	  }, void 0, _jsx('div', {
+	    className: _SoftSkills2.default.octagonContent
+	  }, void 0, _ref24)), _jsx('div', {
+	    className: _SoftSkills2.default.softTtl
+	  }, void 0, _ref25), _jsx('ul', {
+	    className: _SoftSkills2.default.ulSoft
+	  }, void 0, _ref26, _ref27)));
 	}
 	
 	exports.default = SoftSkills;
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2536,7 +3033,7 @@
 	     */
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2548,7 +3045,7 @@
 	exports.API_URL = undefined;
 	exports.default = callApi;
 	
-	var _isomorphicFetch = __webpack_require__(64);
+	var _isomorphicFetch = __webpack_require__(65);
 	
 	var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 	
@@ -2589,7 +3086,7 @@
 	}
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2601,11 +3098,11 @@
 	exports.getSomething = getSomething;
 	exports.sendMail = sendMail;
 	
-	var _Profile = __webpack_require__(54);
+	var _Profile = __webpack_require__(55);
 	
 	var _Profile2 = _interopRequireDefault(_Profile);
 	
-	var _nodemailer = __webpack_require__(66);
+	var _nodemailer = __webpack_require__(67);
 	
 	var _nodemailer2 = _interopRequireDefault(_nodemailer);
 	
@@ -2662,7 +3159,7 @@
 	}
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2680,15 +3177,15 @@
 	
 	var _post2 = _interopRequireDefault(_post);
 	
-	var _cuid = __webpack_require__(58);
+	var _cuid = __webpack_require__(59);
 	
 	var _cuid2 = _interopRequireDefault(_cuid);
 	
-	var _limax = __webpack_require__(65);
+	var _limax = __webpack_require__(66);
 	
 	var _limax2 = _interopRequireDefault(_limax);
 	
-	var _sanitizeHtml = __webpack_require__(76);
+	var _sanitizeHtml = __webpack_require__(77);
 	
 	var _sanitizeHtml2 = _interopRequireDefault(_sanitizeHtml);
 	
@@ -2771,7 +3268,7 @@
 	}
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2794,7 +3291,7 @@
 	exports.default = _mongoose2.default.model('Profile', ProfileSchema);
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3005,7 +3502,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, "server"))
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3036,121 +3533,121 @@
 	}
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = require("axios");
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = require("cuid");
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = require("http");
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl");
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl-locales-supported");
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl/locale-data/jsonp/en");
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl/locale-data/jsonp/fr");
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = require("isomorphic-fetch");
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = require("limax");
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = require("nodemailer");
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-cssnext");
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-focus");
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-reporter");
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-intl/locale-data/en");
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-intl/locale-data/fr");
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools");
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools-dock-monitor");
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools-log-monitor");
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-thunk");
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = require("sanitize-html");

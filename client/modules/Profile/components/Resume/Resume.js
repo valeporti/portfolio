@@ -80,7 +80,7 @@ function Resume(props, context) {
                 <h4>2014 - 2015</h4>
                 <ul>
                   <li><a href="https://es.calameo.com/read/0047443879e7a02232cf6" target="_blank"><img className={styles.logo} src={tridisap} /></a> 
-                    <FormattedMessage id="ResSolarDecPrices" />
+                    <FormattedMessage id="ResThesis" />
                   </li>
                 </ul>
               </section>

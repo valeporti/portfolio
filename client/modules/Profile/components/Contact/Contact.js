@@ -14,7 +14,7 @@ function Contact(props, context) {
           <form className={styles.form} action="/profile/sendMail" onSubmit={props.handleSentMail}>
             <p className={styles.inputCont}>
               <span className={styles.inputIcon}><i className="fas fa-user"></i></span>
-              <FormattedMessage id="menuContact">
+              <FormattedMessage id="Name">
               {
                 (txt) =>  (<input name="name" type="text" className={styles.feedbackInput} placeholder={txt} id="name" value={props.contactName} onChange={(event) => props.contactNameInput(event.target.value)} /> )
               }

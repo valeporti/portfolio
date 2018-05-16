@@ -10,6 +10,7 @@
     "dev": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=development nodemon index.js",
     "start": "cross-env NODE_ENV=production node index.js",
     "start:prod": "cross-env NODE_ENV=production node index.js",
+    "herokuBuild": "npm run clean && npm run build && npm run build:server",
     "bs": "npm run clean && npm run build && npm run build:server && npm run start:prod",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.config.server.js",
@@ -57,6 +58,8 @@
     "redux-thunk": "^2.1.0",
     "sanitize-html": "^1.11.4",
     "serve-favicon": "^2.5.0",
+
+
     "rimraf": "^2.5.2",
     "webpack": "2.1.0-beta.8",
     "url-loader": "^0.5.7",
