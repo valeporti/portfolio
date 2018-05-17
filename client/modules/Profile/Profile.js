@@ -68,25 +68,32 @@ class Profile extends Component {
     const contactNameInput = this.props.contactNameInput;
     const contactInduInput = this.props.contactInduInput;
     const contactPurpInput = this.props.contactPurpInput;
+    const messageSent = this.props.intl.messages.SentMessage;
+    const messageNotSent = this.props.intl.messages.MessageSentFail;
     axios({
         method: 'get',
         url: '/profile/sendMail',
         params: data
       })
       .then(function (response) {
+        contactEmailInput('');
+        contactNameInput('');
+        contactInduInput('');
+        contactPurpInput('');
         if (response.status == 200 && response.data.hasOwnProperty('success')) {
-          console.log('too bien');
-          contactMessInput('Message Sent!');
-          contactEmailInput('');
-          contactNameInput('');
-          contactInduInput('');
-          contactPurpInput('');
+          contactMessInput(messageSent);
+          setTimeout(() => { contactMessInput('') }, 10000);
         } else {
-          console.log('NOOOO');
+          contactMessInput(messageNotSent);
+          setTimeout(() => { contactMessInput('') }, 3000);
         }
         console.log(response);
       })
       .catch(function (error) {
+        contactEmailInput('');
+        contactNameInput('');
+        contactInduInput('');
+        contactPurpInput('');
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
@@ -103,6 +110,8 @@ class Profile extends Component {
           console.log('Error', error.message);
         }
         console.log(error);
+        contactMessInput(messageNotSent);
+        setTimeout(() => { contactMessInput('') }, 3000);
       });
 
   }
@@ -154,6 +163,7 @@ const mapStateToProps = (state) => {
   //console.log(state.prof);
   return {
     prof: state.prof,
+    intl: state.intl,
   };
 };
 

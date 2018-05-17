@@ -31,12 +31,13 @@
     max-width: 450px;
     left: 50%;
     margin: auto;
+    border-radius: 7px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
   }
 
 .feedbackInput {
-    color: #A30026;
+    color: #FF6447;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -56,8 +57,8 @@
   .feedbackInput:focus {
     background: #fff;
     box-shadow: 0;
-    border: 3px solid #A30026;
-    color: #A30026;
+    border: 3px solid #FF6447;
+    color: #FF6447;
     outline: none;
     padding: 13px 13px 13px 54px;
   }
@@ -68,6 +69,7 @@
     margin: auto;
     width: 55px;
     height: 55px;
+    color: #253C4F;
     /* Center the icon */
     margin: auto;
     text-align: center;

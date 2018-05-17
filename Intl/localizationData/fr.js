@@ -104,8 +104,9 @@ export default {
       Email: 'Courrier électronique',
       Industry: 'Industrie',
       Purpose: 'Objectif',
-    
       WriteToMe: 'Écris-moi :)',
+      SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
+      MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
   
       //Time
       January: 'Janvier',

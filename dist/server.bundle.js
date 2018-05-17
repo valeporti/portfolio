@@ -428,22 +428,82 @@
 	      _this.props.contactMessInput(text);
 	    };
 	
+	    _this.contactInduInput = function (text) {
+	      _this.props.contactInduInput(text);
+	    };
+	
+	    _this.contactPurpInput = function (text) {
+	      _this.props.contactPurpInput(text);
+	    };
+	
+	    _this.pueba = function (text) {
+	      console.log(text);
+	    };
+	
 	    _this.handleSentMail = function (event) {
 	      event.preventDefault();
+	      console.log('in handle');
+	      console.log(_this.props);
 	      var data = {
 	        name: _this.props.prof.contactName,
 	        mail: _this.props.prof.contactMail,
-	        mess: _this.props.prof.contactMess
+	        mess: _this.props.prof.contactMess,
+	        indu: _this.props.prof.contactIndu,
+	        purp: _this.props.prof.contactPurp
 	      };
-	
+	      var contactMessInput = _this.props.contactMessInput;
+	      var contactEmailInput = _this.props.contactEmailInput;
+	      var contactNameInput = _this.props.contactNameInput;
+	      var contactInduInput = _this.props.contactInduInput;
+	      var contactPurpInput = _this.props.contactPurpInput;
+	      var messageSent = _this.props.intl.messages.SentMessage;
+	      var messageNotSent = _this.props.intl.messages.MessageSentFail;
 	      (0, _axios2.default)({
 	        method: 'get',
 	        url: '/profile/sendMail',
 	        params: data
 	      }).then(function (response) {
+	        contactEmailInput('');
+	        contactNameInput('');
+	        contactInduInput('');
+	        contactPurpInput('');
+	        if (response.status == 200 && response.data.hasOwnProperty('success')) {
+	          contactMessInput(messageSent);
+	          setTimeout(function () {
+	            contactMessInput('');
+	          }, 10000);
+	        } else {
+	          contactMessInput(messageNotSent);
+	          setTimeout(function () {
+	            contactMessInput('');
+	          }, 3000);
+	        }
 	        console.log(response);
 	      }).catch(function (error) {
+	        contactEmailInput('');
+	        contactNameInput('');
+	        contactInduInput('');
+	        contactPurpInput('');
+	        if (error.response) {
+	          // The request was made and the server responded with a status code
+	          // that falls out of the range of 2xx
+	          console.log(error.response.data);
+	          console.log(error.response.status);
+	          console.log(error.response.headers);
+	        } else if (error.request) {
+	          // The request was made but no response was received
+	          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+	          // http.ClientRequest in node.js
+	          console.log(error.request);
+	        } else {
+	          // Something happened in setting up the request that triggered an Error
+	          console.log('Error', error.message);
+	        }
 	        console.log(error);
+	        contactMessInput(messageNotSent);
+	        setTimeout(function () {
+	          contactMessInput('');
+	        }, 3000);
 	      });
 	    };
 	
@@ -485,6 +545,10 @@
 	        contactMail: this.props.prof.contactMail,
 	        contactMessInput: this.contactMessInput,
 	        contactMess: this.props.prof.contactMess,
+	        contactPurpInput: this.contactPurpInput,
+	        contactPurp: this.props.prof.contactPurp,
+	        contactInduInput: this.contactInduInput,
+	        contactIndu: this.props.prof.contactIndu,
 	        handleSentMail: this.handleSentMail
 	      }))));
 	    }
@@ -496,7 +560,8 @@
 	var mapStateToProps = function mapStateToProps(state) {
 	  //console.log(state.prof);
 	  return {
-	    prof: state.prof
+	    prof: state.prof,
+	    intl: state.intl
 	  };
 	};
 	
@@ -513,6 +578,12 @@
 	    },
 	    contactMessInput: function contactMessInput(text) {
 	      dispatch((0, _ProfileActions.contactMessInput)(text));
+	    },
+	    contactInduInput: function contactInduInput(text) {
+	      dispatch((0, _ProfileActions.contactInduInput)(text));
+	    },
+	    contactPurpInput: function contactPurpInput(text) {
+	      dispatch((0, _ProfileActions.contactPurpInput)(text));
 	    }
 	  };
 	};
@@ -533,11 +604,15 @@
 	exports.contactNameInput = contactNameInput;
 	exports.contactEmailInput = contactEmailInput;
 	exports.contactMessInput = contactMessInput;
+	exports.contactInduInput = contactInduInput;
+	exports.contactPurpInput = contactPurpInput;
 	// Export Constants
 	var TOGGLE_ACTIVE_HARDSKILLS = exports.TOGGLE_ACTIVE_HARDSKILLS = 'TOGGLE_ACTIVE_HARDSKILLS';
 	var CONTACT_NAME = exports.CONTACT_NAME = 'CONTACT_NAME';
 	var CONTACT_EMAIL = exports.CONTACT_EMAIL = 'CONTACT_EMAIL';
 	var CONTACT_MESSAGE = exports.CONTACT_MESSAGE = 'CONTACT_MESSAGE';
+	var CONTACT_PURPOSE = exports.CONTACT_PURPOSE = 'CONTACT_PURPOSE';
+	var CONTACT_INDUSTRY = exports.CONTACT_INDUSTRY = 'CONTACT_INDUSTRY';
 	
 	// Export Actions
 	function toggleActiveHS(bool) {
@@ -561,6 +636,18 @@
 	function contactMessInput(text) {
 	    return {
 	        type: CONTACT_MESSAGE,
+	        text: text
+	    };
+	}
+	function contactInduInput(text) {
+	    return {
+	        type: CONTACT_INDUSTRY,
+	        text: text
+	    };
+	}
+	function contactPurpInput(text) {
+	    return {
+	        type: CONTACT_PURPOSE,
 	        text: text
 	    };
 	}
@@ -1103,8 +1190,10 @@
 	    Send: 'Send',
 	    Email: 'Email',
 	    Industry: 'Industry',
-	
-	    WriteToMe: 'Write to me :)',
+	    Purpose: 'Purpose',
+	    WriteToMe: 'Write me :)',
+	    SentMessage: 'Message Sent!! :). Thank you for contacting me, I\'ll respond ASAP. Have a nice day!',
+	    MessageSentFail: 'Mesage NOT Sent :(, please. try later or contact me directly to my e-mail: valentin.pg@outlook.com. Thanks!',
 	
 	    //Time
 	    January: 'January',
@@ -1126,114 +1215,116 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	exports.default = {
-	  locale: 'fr',
-	  messages: {
-	    siteTitle: 'MERN blog de démarrage',
-	    addPost: 'Ajouter Poster',
-	    switchLanguage: 'Changer de langue',
-	    twitterMessage: 'Nous sommes sur Twitter',
-	    by: 'Par',
-	    deletePost: 'Supprimer le message',
-	    createNewPost: 'Créer un nouveau message',
-	    authorName: 'Nom de l\'auteur',
-	    postTitle: 'Titre de l\'article',
-	    postContent: 'Contenu après',
-	    submit: 'Soumettre',
-	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
-	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
-	    nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
-	    profileTitle: 'Profil',
-	    menuAbout: 'Main',
-	    menuSkills: 'Compétences',
-	    menuResume: 'Resumé',
-	    menuContact: 'Contacter',
-	    Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
-	    Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
-	    Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
-	    KeyW: 'Mots Clés',
-	    //Soft Skills
-	    SS1: 'Analytique',
-	    SS2: 'Engagé',
-	    SS3: 'Résolveur de problèmes',
-	    SS4: 'Apprenant',
-	    SS5: 'Travail en équipe',
-	    SS6: 'Ajouter de la valeur',
-	    ss11: 'Comprendre les requis',
-	    ss12: 'Développer en fonction des besoins',
-	    ss21: 'Délivrer des produits finis',
-	    ss31: 'Trouver la cause',
-	    ss32: 'Développer un processus logique',
-	    ss33: 'Délivrer un système',
-	    ss41: 'Autodidacte',
-	    ss42: 'Enthousiaste',
-	    ss43: 'Polyvalent',
-	    ss51: 'Savoir faire',
-	    ss52: 'Social',
-	    ss53: 'Demander & Répondre',
-	    ss61: 'Propositions',
-	    ss62: 'Raisonement étique et vers le commerce',
-	    //hardSkills
-	    ttLang: 'Langues',
-	    ttProgLang: 'Langues de programmation',
-	    ttStacks: 'Stacks',
-	    ttFrameworks: 'Frameworks',
-	    ttOther: 'Autres',
-	    //Resume
-	    ResHighShool: ' Lycée Franco Mexicain',
-	    ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
-	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
-	    ResUnivSpe: 'Licence en Sciences Génie Civil',
-	    ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
-	    ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
-	    ResStudClubCICM: 'CICM Membre du club d\'étudiants',
-	    ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
-	    ResSolarDec: 'Solar Decathlon Europe 2014',
-	    ResSolarDecRole: 'Leader, Responsable Génie Civil',
-	    ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
-	    ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
-	    ResICAF: 'ICA FLUOR',
-	    ResICAFRole: 'Ingénieur de Projet',
-	    ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
-	    ResICAFAchi: 'Automatisation du suivi du programme',
-	    ResJacEng: 'Jacobs Engineering',
-	    ResJacEngRole: 'Planificateur de Projet',
-	    ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
-	    ResJacEngAchi: 'Automatisation du suivi du programme',
-	    ResCitiB: 'Citi Banamex',
-	    ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
-	    ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
-	    ResCitiBAchi: 'Automatisation du suivi du programme',
-	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
-	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
-	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
-	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
-	    ResMutuo: 'Mutuo Financiera',
-	    ResMutuoRole: 'Software Developer',
-	    ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
-	    ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
-	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
-	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
-	    //Form
-	    Name: 'Prénom',
-	    Send: 'Envoyer',
-	    Email: 'Courrier électronique',
-	    Industry: 'Industrie',
+	    locale: 'fr',
+	    messages: {
+	        siteTitle: 'MERN blog de démarrage',
+	        addPost: 'Ajouter Poster',
+	        switchLanguage: 'Changer de langue',
+	        twitterMessage: 'Nous sommes sur Twitter',
+	        by: 'Par',
+	        deletePost: 'Supprimer le message',
+	        createNewPost: 'Créer un nouveau message',
+	        authorName: 'Nom de l\'auteur',
+	        postTitle: 'Titre de l\'article',
+	        postContent: 'Contenu après',
+	        submit: 'Soumettre',
+	        comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
+	        HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
+	        nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
+	        profileTitle: 'Profil',
+	        menuAbout: 'Main',
+	        menuSkills: 'Compétences',
+	        menuResume: 'Resumé',
+	        menuContact: 'Contacter',
+	        Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
+	        Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
+	        Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
+	        KeyW: 'Mots Clés',
+	        //Soft Skills
+	        SS1: 'Analytique',
+	        SS2: 'Engagé',
+	        SS3: 'Résolveur de problèmes',
+	        SS4: 'Apprenant',
+	        SS5: 'Travail en équipe',
+	        SS6: 'Ajouter de la valeur',
+	        ss11: 'Comprendre les requis',
+	        ss12: 'Développer en fonction des besoins',
+	        ss21: 'Délivrer des produits finis',
+	        ss31: 'Trouver la cause',
+	        ss32: 'Développer un processus logique',
+	        ss33: 'Délivrer un système',
+	        ss41: 'Autodidacte',
+	        ss42: 'Enthousiaste',
+	        ss43: 'Polyvalent',
+	        ss51: 'Savoir faire',
+	        ss52: 'Social',
+	        ss53: 'Demander & Répondre',
+	        ss61: 'Propositions',
+	        ss62: 'Raisonement étique et vers le commerce',
+	        //hardSkills
+	        ttLang: 'Langues',
+	        ttProgLang: 'Langues de programmation',
+	        ttStacks: 'Stacks',
+	        ttFrameworks: 'Frameworks',
+	        ttOther: 'Autres',
+	        //Resume
+	        ResHighShool: ' Lycée Franco Mexicain',
+	        ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
+	        ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	        ResUnivSpe: 'Licence en Sciences Génie Civil',
+	        ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
+	        ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
+	        ResStudClubCICM: 'CICM Membre du club d\'étudiants',
+	        ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
+	        ResSolarDec: 'Solar Decathlon Europe 2014',
+	        ResSolarDecRole: 'Leader, Responsable Génie Civil',
+	        ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
+	        ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
+	        ResICAF: 'ICA FLUOR',
+	        ResICAFRole: 'Ingénieur de Projet',
+	        ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
+	        ResICAFAchi: 'Automatisation du suivi du programme',
+	        ResJacEng: 'Jacobs Engineering',
+	        ResJacEngRole: 'Planificateur de Projet',
+	        ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
+	        ResJacEngAchi: 'Automatisation du suivi du programme',
+	        ResCitiB: 'Citi Banamex',
+	        ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
+	        ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
+	        ResCitiBAchi: 'Automatisation du suivi du programme',
+	        ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	        ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	        ResMutuo: 'Mutuo Financiera',
+	        ResMutuoRole: 'Software Developer',
+	        ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
+	        ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
+	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	        ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	        //Form
+	        Name: 'Prénom',
+	        Send: 'Envoyer',
+	        Email: 'Courrier électronique',
+	        Industry: 'Industrie',
+	        Purpose: 'Objectif',
+	        WriteToMe: 'Écris-moi :)',
+	        SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
+	        MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
 	
-	    WriteToMe: 'Écris-moi :)',
-	
-	    //Time
-	    January: 'Janvier',
-	    February: 'Février',
-	    March: 'Mars',
-	    June: 'Juin',
-	    September: 'Septembre',
-	    October: 'Octobre',
-	    December: 'Décembre',
-	    ToDate: 'Á aujourd\'hui'
-	  }
+	        //Time
+	        January: 'Janvier',
+	        February: 'Février',
+	        March: 'Mars',
+	        June: 'Juin',
+	        September: 'Septembre',
+	        October: 'Octobre',
+	        December: 'Décembre',
+	        ToDate: 'Á aujourd\'hui'
+	    }
 	};
 
 /***/ },
@@ -1893,7 +1984,9 @@
 	  activeHS: false,
 	  contactName: '',
 	  contactMail: '',
-	  contactMess: ''
+	  contactMess: '',
+	  contactPurp: '',
+	  contactIndu: ''
 	}; // Import Actions
 	
 	
@@ -1911,6 +2004,10 @@
 	      return Object.assign({}, state, state.contactMail = action.text);
 	    case _ProfileActions.CONTACT_MESSAGE:
 	      return Object.assign({}, state, state.contactMess = action.text);
+	    case _ProfileActions.CONTACT_INDUSTRY:
+	      return Object.assign({}, state, state.contactIndu = action.text);
+	    case _ProfileActions.CONTACT_PURPOSE:
+	      return Object.assign({}, state, state.contactPurp = action.text);
 	    default:
 	      return state;
 	  }
@@ -2060,10 +2157,14 @@
 	});
 	
 	var _ref5 = _jsx('i', {
+	  className: 'fas fa-thumbtack'
+	});
+	
+	var _ref6 = _jsx('i', {
 	  className: 'far fa-hand-point-right'
 	});
 	
-	var _ref6 = _jsx('div', {
+	var _ref7 = _jsx('div', {
 	  className: 'ease'
 	});
 	
@@ -2125,17 +2226,39 @@
 	    id: 'Industry'
 	  }, void 0, function (txt) {
 	    return _jsx('input', {
-	      name: 'Industry',
+	      name: 'industry',
 	      type: 'text',
 	      className: _Contact2.default.feedbackInput,
-	      id: 'Industry',
-	      placeholder: txt
+	      id: 'industry',
+	      placeholder: txt,
+	      value: props.contactIndu,
+	      onChange: function onChange(event) {
+	        return props.contactInduInput(event.target.value);
+	      }
 	    });
 	  })), _jsx('p', {
 	    className: _Contact2.default.inputCont
 	  }, void 0, _jsx('span', {
 	    className: _Contact2.default.inputIcon
 	  }, void 0, _ref5), _jsx(_reactIntl.FormattedMessage, {
+	    id: 'Purpose'
+	  }, void 0, function (txt) {
+	    return _jsx('input', {
+	      name: 'purpose',
+	      type: 'text',
+	      className: _Contact2.default.feedbackInput,
+	      id: 'purpose',
+	      placeholder: txt,
+	      value: props.contactPurp,
+	      onChange: function onChange(event) {
+	        return props.contactPurpInput(event.target.value);
+	      }
+	    });
+	  })), _jsx('p', {
+	    className: _Contact2.default.inputCont
+	  }, void 0, _jsx('span', {
+	    className: _Contact2.default.inputIcon
+	  }, void 0, _ref6), _jsx(_reactIntl.FormattedMessage, {
 	    id: 'WriteToMe'
 	  }, void 0, function (txt) {
 	    return _jsx('textarea', {
@@ -2158,7 +2281,7 @@
 	      value: txt,
 	      className: _Contact2.default.button
 	    });
-	  }), _ref6)))));
+	  }), _ref7)))));
 	}
 	
 	exports.default = Contact;
@@ -3117,11 +3240,12 @@
 	    var name = req.query.name;
 	    var mess = req.query.mess;
 	    var mail = req.query.mail;
+	    var indu = req.query.indu;
+	    var purp = req.query.purp;
 	
 	    _nodemailer2.default.createTestAccount(function (err, account) {
 	        // create reusable transporter object using the default SMTP transport
-	        console.log('process0');
-	        console.log(process.env.MAIL_NAME);
+	
 	        var transporter = _nodemailer2.default.createTransport({
 	            host: process.env.MAIL_HOST,
 	            port: process.env.MAIL_PORT,
@@ -3137,25 +3261,25 @@
 	            from: '"' + process.env.MAIL_NAME + '" <' + process.env.MAIL_USERNAME + '>', // sender address
 	            to: process.env.MAIL_MINE, // list of receivers
 	            subject: 'Hello ✔', // Subject line
-	            text: 'Hello world?', // plain text body
-	            html: '<b>Hello world?</b>' // html body
+	            text: 'Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess, // plain text body
+	            html: '<b>Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess + '</b>' // html body
 	        };
 	        // send mail with defined transport object
 	        transporter.sendMail(mailOptions, function (error, info) {
 	            if (error) {
-	                return console.log(error);
+	                console.log(error);
+	                return res.status(500).json({ error: 'Mail not sent!!' });
 	            }
 	            console.log('Message sent: %s', info.messageId);
 	            // Preview only available when sending through an Ethereal account
 	            console.log('Preview URL: %s', _nodemailer2.default.getTestMessageUrl(info));
 	
-	            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-	            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+	            return res.status(200).json({ success: 'Mail Sent!!' });
 	        });
 	    });
 	
-	    console.log(req.query);
-	    return res.send('lol');
+	    //console.log(req.query);
+	    //return res.send('lol');
 	}
 
 /***/ },

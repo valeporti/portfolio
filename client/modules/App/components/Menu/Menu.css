@@ -14,6 +14,7 @@
   transition: all 0.2s ease;
   z-index: 999;
   opacity: 0.9;
+  outline: 2px solid #FF6447;
 }
 .menuactive {
   height: 50px;
@@ -27,6 +28,7 @@
   z-index: 999;
   width: calc(100% - 10vw);
   opacity: 0.9;
+  outline: 2px solid #074B54;
 }
 .menuactive span i:nth-child(1) {
   transform: rotate(-45deg) translate(-50%, -50%);
@@ -62,7 +64,7 @@
   position: absolute;
   transform-origin: 50% 50%;
   width: 45%;
-  height: 2px;
+  height: 3px;
   left: 0;
   right: 0;
   margin: auto;
@@ -73,7 +75,7 @@
   position: absolute;
   transform-origin: 50% 50%;
   width: 45%;
-  height: 2px;
+  height: 3px;
   left: 0;
   right: 0;
   margin: auto;
@@ -123,6 +125,8 @@
 .menuContent ul li a {
   text-decoration: none;
   color: #2d3235;
+  font-weight: bold;
+  font-size: 20px;
 }
 .menuContent ul li:hover:before {
   opacity: 0.8;
@@ -138,7 +142,7 @@
   content: "";
   position: absolute;
   width: 20px;
-  height: 2px;
+  height: 3px;
   background: #ccc;
   transition: all 0.3s ease;
 }
