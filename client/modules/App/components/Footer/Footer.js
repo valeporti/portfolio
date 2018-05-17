@@ -16,6 +16,7 @@ export function Footer() {
         <a className={styles.link} href="https://www.linkedin.com/in/valeporti/" target="_Blank"><i className="fab fa-linkedin-in"></i></a>
         <a className={styles.link} href="https://codepen.io/valeporti/" target="_Blank"><i className="fab fa-codepen"></i></a>
         <a className={styles.link} href="https://github.com/valeporti/" target="_Blank"><i className="fab fa-github"></i></a>
+        <a className={styles.link} href="https://www.freecodecamp.org/valeporti/" target="_Blank"><i className="fab fa-free-code-camp"></i></a>
       </p>
     </div>
   );

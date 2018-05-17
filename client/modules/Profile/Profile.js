@@ -70,16 +70,17 @@ class Profile extends Component {
     const contactPurpInput = this.props.contactPurpInput;
     const messageSent = this.props.intl.messages.SentMessage;
     const messageNotSent = this.props.intl.messages.MessageSentFail;
+    contactEmailInput('');
+    contactNameInput('');
+    contactInduInput('');
+    contactPurpInput('');
+    contactMessInput(WaitForIt);
     axios({
         method: 'get',
         url: '/profile/sendMail',
         params: data
       })
       .then(function (response) {
-        contactEmailInput('');
-        contactNameInput('');
-        contactInduInput('');
-        contactPurpInput('');
         if (response.status == 200 && response.data.hasOwnProperty('success')) {
           contactMessInput(messageSent);
           setTimeout(() => { contactMessInput('') }, 10000);

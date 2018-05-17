@@ -107,6 +107,7 @@ export default {
     WriteToMe: 'Write me :)',
     SentMessage: 'Message Sent!! :). Thank you for contacting me, I\'ll respond ASAP. Have a nice day!',
     MessageSentFail: 'Mesage NOT Sent :(, please. try later or contact me directly to my e-mail: valentin.pg@outlook.com. Thanks!',
+    WaitForIt: 'Wait for it ...',
 
     //Time
     January: 'January',

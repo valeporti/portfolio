@@ -458,15 +458,16 @@
 	      var contactPurpInput = _this.props.contactPurpInput;
 	      var messageSent = _this.props.intl.messages.SentMessage;
 	      var messageNotSent = _this.props.intl.messages.MessageSentFail;
+	      contactEmailInput('');
+	      contactNameInput('');
+	      contactInduInput('');
+	      contactPurpInput('');
+	      contactMessInput(WaitForIt);
 	      (0, _axios2.default)({
 	        method: 'get',
 	        url: '/profile/sendMail',
 	        params: data
 	      }).then(function (response) {
-	        contactEmailInput('');
-	        contactNameInput('');
-	        contactInduInput('');
-	        contactPurpInput('');
 	        if (response.status == 200 && response.data.hasOwnProperty('success')) {
 	          contactMessInput(messageSent);
 	          setTimeout(function () {
@@ -1194,6 +1195,7 @@
 	    WriteToMe: 'Write me :)',
 	    SentMessage: 'Message Sent!! :). Thank you for contacting me, I\'ll respond ASAP. Have a nice day!',
 	    MessageSentFail: 'Mesage NOT Sent :(, please. try later or contact me directly to my e-mail: valentin.pg@outlook.com. Thanks!',
+	    WaitForIt: 'Wait for it ...',
 	
 	    //Time
 	    January: 'January',
@@ -1215,116 +1217,116 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.default = {
-	    locale: 'fr',
-	    messages: {
-	        siteTitle: 'MERN blog de démarrage',
-	        addPost: 'Ajouter Poster',
-	        switchLanguage: 'Changer de langue',
-	        twitterMessage: 'Nous sommes sur Twitter',
-	        by: 'Par',
-	        deletePost: 'Supprimer le message',
-	        createNewPost: 'Créer un nouveau message',
-	        authorName: 'Nom de l\'auteur',
-	        postTitle: 'Titre de l\'article',
-	        postContent: 'Contenu après',
-	        submit: 'Soumettre',
-	        comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
-	        HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
-	        nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
-	        profileTitle: 'Profil',
-	        menuAbout: 'Main',
-	        menuSkills: 'Compétences',
-	        menuResume: 'Resumé',
-	        menuContact: 'Contacter',
-	        Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
-	        Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
-	        Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
-	        KeyW: 'Mots Clés',
-	        //Soft Skills
-	        SS1: 'Analytique',
-	        SS2: 'Engagé',
-	        SS3: 'Résolveur de problèmes',
-	        SS4: 'Apprenant',
-	        SS5: 'Travail en équipe',
-	        SS6: 'Ajouter de la valeur',
-	        ss11: 'Comprendre les requis',
-	        ss12: 'Développer en fonction des besoins',
-	        ss21: 'Délivrer des produits finis',
-	        ss31: 'Trouver la cause',
-	        ss32: 'Développer un processus logique',
-	        ss33: 'Délivrer un système',
-	        ss41: 'Autodidacte',
-	        ss42: 'Enthousiaste',
-	        ss43: 'Polyvalent',
-	        ss51: 'Savoir faire',
-	        ss52: 'Social',
-	        ss53: 'Demander & Répondre',
-	        ss61: 'Propositions',
-	        ss62: 'Raisonement étique et vers le commerce',
-	        //hardSkills
-	        ttLang: 'Langues',
-	        ttProgLang: 'Langues de programmation',
-	        ttStacks: 'Stacks',
-	        ttFrameworks: 'Frameworks',
-	        ttOther: 'Autres',
-	        //Resume
-	        ResHighShool: ' Lycée Franco Mexicain',
-	        ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
-	        ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
-	        ResUnivSpe: 'Licence en Sciences Génie Civil',
-	        ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
-	        ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
-	        ResStudClubCICM: 'CICM Membre du club d\'étudiants',
-	        ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
-	        ResSolarDec: 'Solar Decathlon Europe 2014',
-	        ResSolarDecRole: 'Leader, Responsable Génie Civil',
-	        ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
-	        ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
-	        ResICAF: 'ICA FLUOR',
-	        ResICAFRole: 'Ingénieur de Projet',
-	        ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
-	        ResICAFAchi: 'Automatisation du suivi du programme',
-	        ResJacEng: 'Jacobs Engineering',
-	        ResJacEngRole: 'Planificateur de Projet',
-	        ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
-	        ResJacEngAchi: 'Automatisation du suivi du programme',
-	        ResCitiB: 'Citi Banamex',
-	        ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
-	        ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
-	        ResCitiBAchi: 'Automatisation du suivi du programme',
-	        ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
-	        ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
-	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
-	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
-	        ResMutuo: 'Mutuo Financiera',
-	        ResMutuoRole: 'Software Developer',
-	        ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
-	        ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
-	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
-	        ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
-	        //Form
-	        Name: 'Prénom',
-	        Send: 'Envoyer',
-	        Email: 'Courrier électronique',
-	        Industry: 'Industrie',
-	        Purpose: 'Objectif',
-	        WriteToMe: 'Écris-moi :)',
-	        SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
-	        MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
-	
-	        //Time
-	        January: 'Janvier',
-	        February: 'Février',
-	        March: 'Mars',
-	        June: 'Juin',
-	        September: 'Septembre',
-	        October: 'Octobre',
-	        December: 'Décembre',
-	        ToDate: 'Á aujourd\'hui'
-	    }
+	  locale: 'fr',
+	  messages: {
+	    siteTitle: 'MERN blog de démarrage',
+	    addPost: 'Ajouter Poster',
+	    switchLanguage: 'Changer de langue',
+	    twitterMessage: 'Nous sommes sur Twitter',
+	    by: 'Par',
+	    deletePost: 'Supprimer le message',
+	    createNewPost: 'Créer un nouveau message',
+	    authorName: 'Nom de l\'auteur',
+	    postTitle: 'Titre de l\'article',
+	    postContent: 'Contenu après',
+	    submit: 'Soumettre',
+	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
+	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
+	    nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
+	    profileTitle: 'Profil',
+	    menuAbout: 'Main',
+	    menuSkills: 'Compétences',
+	    menuResume: 'Resumé',
+	    menuContact: 'Contacter',
+	    Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
+	    Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
+	    Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
+	    KeyW: 'Mots Clés',
+	    //Soft Skills
+	    SS1: 'Analytique',
+	    SS2: 'Engagé',
+	    SS3: 'Résolveur de problèmes',
+	    SS4: 'Apprenant',
+	    SS5: 'Travail en équipe',
+	    SS6: 'Ajouter de la valeur',
+	    ss11: 'Comprendre les requis',
+	    ss12: 'Développer en fonction des besoins',
+	    ss21: 'Délivrer des produits finis',
+	    ss31: 'Trouver la cause',
+	    ss32: 'Développer un processus logique',
+	    ss33: 'Délivrer un système',
+	    ss41: 'Autodidacte',
+	    ss42: 'Enthousiaste',
+	    ss43: 'Polyvalent',
+	    ss51: 'Savoir faire',
+	    ss52: 'Social',
+	    ss53: 'Demander & Répondre',
+	    ss61: 'Propositions',
+	    ss62: 'Raisonement étique et vers le commerce',
+	    //hardSkills
+	    ttLang: 'Langues',
+	    ttProgLang: 'Langues de programmation',
+	    ttStacks: 'Stacks',
+	    ttFrameworks: 'Frameworks',
+	    ttOther: 'Autres',
+	    //Resume
+	    ResHighShool: ' Lycée Franco Mexicain',
+	    ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
+	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	    ResUnivSpe: 'Licence en Sciences Génie Civil',
+	    ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
+	    ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
+	    ResStudClubCICM: 'CICM Membre du club d\'étudiants',
+	    ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
+	    ResSolarDec: 'Solar Decathlon Europe 2014',
+	    ResSolarDecRole: 'Leader, Responsable Génie Civil',
+	    ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
+	    ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
+	    ResICAF: 'ICA FLUOR',
+	    ResICAFRole: 'Ingénieur de Projet',
+	    ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
+	    ResICAFAchi: 'Automatisation du suivi du programme',
+	    ResJacEng: 'Jacobs Engineering',
+	    ResJacEngRole: 'Planificateur de Projet',
+	    ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
+	    ResJacEngAchi: 'Automatisation du suivi du programme',
+	    ResCitiB: 'Citi Banamex',
+	    ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
+	    ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
+	    ResCitiBAchi: 'Automatisation du suivi du programme',
+	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	    ResMutuo: 'Mutuo Financiera',
+	    ResMutuoRole: 'Software Developer',
+	    ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
+	    ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
+	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	    //Form
+	    Name: 'Prénom',
+	    Send: 'Envoyer',
+	    Email: 'Courrier électronique',
+	    Industry: 'Industrie',
+	    Purpose: 'Objectif',
+	    WriteToMe: 'Écris-moi :)',
+	    SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
+	    MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
+	    WaitForIt: 'Wait for it ...',
+	    //Time
+	    January: 'Janvier',
+	    February: 'Février',
+	    March: 'Mars',
+	    June: 'Juin',
+	    September: 'Septembre',
+	    October: 'Octobre',
+	    December: 'Décembre',
+	    ToDate: 'Á aujourd\'hui'
+	  }
 	};
 
 /***/ },
@@ -1587,6 +1589,10 @@
 	  className: 'fab fa-github'
 	});
 	
+	var _ref5 = _jsx('i', {
+	  className: 'fab fa-free-code-camp'
+	});
+	
 	function Footer() {
 	  //<div style={{ background: `#FFF url(${bg}) center` }} className={styles.footer}>
 	  return _jsx('div', {
@@ -1605,7 +1611,11 @@
 	    className: _Footer2.default.link,
 	    href: 'https://github.com/valeporti/',
 	    target: '_Blank'
-	  }, void 0, _ref4)));
+	  }, void 0, _ref4), _jsx('a', {
+	    className: _Footer2.default.link,
+	    href: 'https://www.freecodecamp.org/valeporti/',
+	    target: '_Blank'
+	  }, void 0, _ref5)));
 	}
 	
 	exports.default = Footer;

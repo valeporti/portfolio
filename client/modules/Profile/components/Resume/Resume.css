@@ -12,6 +12,7 @@
 
 .item::-webkit-scrollbar-track
 {
+    box-shadow: inset 0 0 6px #253C4F;
 	-webkit-box-shadow: inset 0 0 6px #253C4F;
 	border-radius: 10px;
 	background-color: #F5F5F5;
@@ -25,7 +26,8 @@
 
 .item::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px #253C4F;
 	-webkit-box-shadow: inset 0 0 6px #253C4F;
 	background-color: #253C4F;
 }
