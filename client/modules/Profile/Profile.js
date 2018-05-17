@@ -70,6 +70,7 @@ class Profile extends Component {
     const contactPurpInput = this.props.contactPurpInput;
     const messageSent = this.props.intl.messages.SentMessage;
     const messageNotSent = this.props.intl.messages.MessageSentFail;
+    const WaitForIt = this.props.intl.messages.WaitForIt;
     contactEmailInput('');
     contactNameInput('');
     contactInduInput('');
