@@ -458,6 +458,7 @@
 	      var contactPurpInput = _this.props.contactPurpInput;
 	      var messageSent = _this.props.intl.messages.SentMessage;
 	      var messageNotSent = _this.props.intl.messages.MessageSentFail;
+	      var WaitForIt = _this.props.intl.messages.WaitForIt;
 	      contactEmailInput('');
 	      contactNameInput('');
 	      contactInduInput('');
