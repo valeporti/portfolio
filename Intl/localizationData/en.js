@@ -98,6 +98,8 @@ export default {
     ResMutuoAchi: 'Projects Follow Up Automation, Scalability, Financial Projects',
     ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
     ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+    ResIMT: 'Institut Mines Télécom - IMT',
+    ResIMTSpe: 'Master of Science in Data Science',
     //Form
     Name: 'Name',
     Send: 'Send',

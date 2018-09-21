@@ -58,12 +58,9 @@
     "redux-thunk": "^2.1.0",
     "sanitize-html": "^1.11.4",
     "serve-favicon": "^2.5.0",
-
-
     "rimraf": "^2.5.2",
     "webpack": "2.1.0-beta.8",
     "url-loader": "^0.5.7",
-
     "ava": "^0.15.2",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
@@ -113,16 +110,13 @@
     "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
     "supertest": "^1.2.0",
-    
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-externals-plugin": "^1.0.0",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-manifest-plugin": "^1.0.1"
   },
-  "devDependencies": {
-    
-  },
+  "devDependencies": {},
   "engines": {
     "node": "8.10.0",
     "npm": "5.8.0"

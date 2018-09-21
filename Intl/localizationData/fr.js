@@ -98,6 +98,8 @@ export default {
       ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
       ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
       ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+      ResIMT: 'Institut Mines Télécom - IMT',
+      ResIMTSpe: 'Master of Science en Sciences des Données',
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',
