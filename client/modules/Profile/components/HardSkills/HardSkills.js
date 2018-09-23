@@ -13,21 +13,21 @@ import VisibilitySensor from 'react-visibility-sensor';
 function HardSkills(props, context) {
   let isVisible = props.isVisible;
   const hard_program_arr = [
-    {name: 'PHP', percentage: 90},
+    {name: 'PHP', percentage: 100},
     {name: 'C', percentage: 60},
-    {name: 'JS', percentage: 90},
-    {name: 'VBA', percentage: 90},
+    {name: 'JS', percentage: 100},
+    {name: 'VBA', percentage: 100},
     {name: 'Python', percentage: 60},
   ];
   const hard_langs_arr = [
-    {name: 'Français', percentage: 90},
-    {name: 'English', percentage: 90},
-    {name: 'Español', percentage: 90},
+    {name: 'Français', percentage: 100},
+    {name: 'English', percentage: 100},
+    {name: 'Español', percentage: 100},
     {name: 'Italiano', percentage: 60},
   ];
   const hard_stacks_arr = [
-    {name: 'LARAVEL', percentage: 80},
-    {name: 'MERN', percentage: 60},
+    {name: 'LARAVEL', percentage: 90},
+    {name: 'MERN', percentage: 70},
   ];
   const hard_frame_arr = [
     {name: 'Node.js', percentage: 80},
@@ -38,12 +38,12 @@ function HardSkills(props, context) {
     {name: 'Mongoose', percentage: 60},
   ];
   const hard_others_arr = [
-    {name: 'HTML', percentage: 90},
-    {name: 'CSS', percentage: 70},
-    {name: 'SQL', percentage: 80},
-    {name: 'NoSQL', percentage: 70},
-    {name: 'Git', percentage: 80},
-    {name: 'NPM', percentage: 70},
+    {name: 'HTML', percentage: 100},
+    {name: 'CSS', percentage: 80},
+    {name: 'SQL', percentage: 100},
+    {name: 'NoSQL', percentage: 90},
+    {name: 'Git', percentage: 100},
+    {name: 'NPM', percentage: 80},
   ];
   let hard_programs;
   let hard_langs;

@@ -33,26 +33,14 @@ export default (
           });
         }}
       />
-      {/*<IndexRoute
+      <Route 
+        path="/projects"
         getComponent={(nextState, cb) => {
           require.ensure([], require => {
-            cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
-          });
-        }}
-      />   
-      <Route
-        path="/posts/:slug-:cuid"
-        getComponent={(nextState, cb) => {
-          require.ensure([], require => {
-            cb(null, require('./modules/Post/pages/PostDetailPage/PostDetailPage').default);
+            cb(null, require('./modules/Profile/pages/Projects/ProfileProjects').default);
           });
         }}
       />
-      <Route
-          path="/profile/sendMail"
-          //component={App}
-      />
-      */}
     </Route>
     
     
