@@ -32,6 +32,7 @@ export default {
       menuSkills: 'Compétences',
       menuResume: 'Resumé',
       menuContact: 'Contacter',
+      menuProjects: 'Projets',
       Me1:'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
       Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
       Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',

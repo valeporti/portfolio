@@ -1,0 +1,73 @@
+/* Projects styles */
+
+.Projects {
+    width: 100%;
+    background-color: white;
+    margin: 2em auto;
+    width: 80%;
+}
+
+.project_display {
+    width: 20em;
+    height: 19.5em;
+    position: relative;
+}
+.project_display:hover {
+    opacity: 0.5;
+}
+
+.project_alert {
+    background-color: #B5E4EB;
+    width: 20em;
+    height: 19.5em;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.project_alert:hover {
+    opacity: 0.9;
+}
+.project_status {
+    margin: 1em 0;
+}
+.project_status_icon {
+    color: tomato;
+    text-align: center;
+    justify-content: center;
+    font-size: 10em;
+}
+.project_status_text {
+    margin: auto;
+    width: 70%;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.project_content {
+    padding: 0.5em;
+}
+
+.project_photo {
+    width: 19em;
+}
+
+.technologies {
+    
+}
+
+.description {
+    font-size: small;
+    text-align: center;
+    justify-content: center;
+}
+
+.worked_as {
+
+}
+
+.context {
+
+}
+

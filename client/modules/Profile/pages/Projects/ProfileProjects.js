@@ -9,10 +9,13 @@ import { FormattedMessage } from 'react-intl';
 
 // Import Selectors
 
+// Import Components
+import Projects from '../../components/Projects/Projects'
+
 function ProfileProjects(props) {
     return (
         <div>
-            Hola
+            <Projects />
         </div>
     );
 }

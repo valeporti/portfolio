@@ -32,6 +32,7 @@ export default {
     menuSkills: 'Skills',
     menuResume: 'Resume',
     menuContact: 'Contact',
+    menuProjects: 'Projects',
     Me1:'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
     Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
     Me3: 'Always interested in Computer Science deepening knowledge and challenges.',

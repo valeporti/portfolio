@@ -24,6 +24,7 @@ function Menu(props, context) {
           <li><a href="/#Skills"><FormattedMessage id="menuSkills" >{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
           <li><a href="/#Resume"><FormattedMessage id="menuResume">{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
           <li><a href="/#Contact"><FormattedMessage id="menuContact">{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
+          <li><a href="/projects"><FormattedMessage id="menuProjects">{(txt) => <div>{txt}</div>}</FormattedMessage></a></li>
         </ul>
       </div>
     </div>
