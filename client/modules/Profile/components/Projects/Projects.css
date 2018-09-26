@@ -3,23 +3,24 @@
 .Projects {
     width: 100%;
     background-color: white;
-    margin: 2em auto;
-    width: 80%;
+    margin: auto;
+    padding: 2em 0 0 0;
+    width: 90%;
+    text-align: center;
 }
 
 .project_display {
     width: 20em;
-    height: 19.5em;
+    height: 21.5em;
     position: relative;
-}
-.project_display:hover {
-    opacity: 0.5;
+    display: inline-flex;
+    margin: 2%;
 }
 
 .project_alert {
     background-color: #B5E4EB;
     width: 20em;
-    height: 19.5em;
+    height: 21.5em;
     position: absolute;
     opacity: 0;
     transition: all 0.4s ease;
@@ -30,8 +31,14 @@
 .project_status {
     margin: 1em 0;
 }
-.project_status_icon {
+.project_status_icon_neg {
     color: tomato;
+    text-align: center;
+    justify-content: center;
+    font-size: 10em;
+}
+.project_status_icon_pos {
+    color: #074B54;
     text-align: center;
     justify-content: center;
     font-size: 10em;
@@ -47,15 +54,27 @@
 
 .project_content {
     padding: 0.5em;
+    color: #253C4F;
+}
+
+.project_title {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    font-weight: bold;
+    color: #253C4F;
+    position: relative;
+    margin: 0 0 1em 0;
+}
+.title_link:link, .title_link:visited {
+    text-decoration: none;
+    color: #253C4F;
 }
 
 .project_photo {
     width: 19em;
 }
 
-.technologies {
-    
-}
 
 .description {
     font-size: small;
@@ -63,11 +82,4 @@
     justify-content: center;
 }
 
-.worked_as {
-
-}
-
-.context {
-
-}
 
