@@ -2,6 +2,12 @@
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
+/******/ 	// object to store loaded chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	var installedChunks = {
+/******/ 		0: 0
+/******/ 	};
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -26,6 +32,21 @@
 /******/ 		return module.exports;
 /******/ 	}
 /******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		// "0" is the signal for "already loaded"
+/******/ 		if(installedChunks[chunkId] !== 0) {
+/******/ 			var chunk = require("./" + chunkId + ".server.bundle.js");
+/******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
+/******/ 			for(var moduleId in moreModules) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 			for(var i = 0; i < chunkIds.length; i++)
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 		}
+/******/ 		return Promise.resolve();
+/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -35,6 +56,16 @@
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// on error function for async loading
+/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
+/******/
+/******/ 	// uncatched error handler for webpack runtime
+/******/ 	__webpack_require__.oe = function(err) {
+/******/ 		process.nextTick(function() {
+/******/ 			throw err; // catch this error by using System.import().catch()
+/******/ 		});
+/******/ 	};
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 56);
@@ -80,10 +111,16 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = require("redux");
+	module.exports = require("react-helmet");
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	module.exports = require("redux");
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -98,12 +135,6 @@
 	};
 	
 	exports.default = config;
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	module.exports = require("react-helmet");
 
 /***/ },
 /* 9 */
@@ -325,7 +356,7 @@
 	
 	var _reactRedux = __webpack_require__(2);
 	
-	var _redux = __webpack_require__(6);
+	var _redux = __webpack_require__(7);
 	
 	var _reactRouter = __webpack_require__(3);
 	
@@ -784,6 +815,13 @@
 	      cb(null, __webpack_require__(14).default);
 	    }).bind(null, __webpack_require__));
 	  }
+	}), _jsx(_reactRouter.Route, {
+	  path: '/projects',
+	  getComponent: function getComponent(nextState, cb) {
+	    __webpack_require__.e/* nsure */(1).catch(function(err) { __webpack_require__.oe(err); }).then((function (require) {
+	      cb(null, __webpack_require__(78).default);
+	    }).bind(null, __webpack_require__));
+	  }
 	}));
 
 /***/ },
@@ -798,7 +836,7 @@
 	});
 	exports.configureStore = configureStore;
 	
-	var _redux = __webpack_require__(6);
+	var _redux = __webpack_require__(7);
 	
 	var _reduxThunk = __webpack_require__(76);
 	
@@ -1097,119 +1135,175 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-	exports.default = {
-	  locale: 'en',
-	  messages: {
-	    siteTitle: 'Valentin Portillo Portfolio',
-	    addPost: 'Add Post',
-	    switchLanguage: 'Switch Language',
-	    twitterMessage: 'We are on Twitter',
-	    by: 'By',
-	    deletePost: 'Delete Post',
-	    createNewPost: 'Create new post',
-	    authorName: 'Author\'s Name',
-	    postTitle: 'Post Title',
-	    postContent: 'Post Content',
-	    submit: 'Submit',
-	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t}',
-	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t}',
-	    nestedDateComment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n      } as of {date}',
-	    profileTitle: 'Profile',
-	    menuAbout: 'Main',
-	    menuSkills: 'Skills',
-	    menuResume: 'Resume',
-	    menuContact: 'Contact',
-	    Me1: 'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
-	    Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
-	    Me3: 'Always interested in Computer Science deepening knowledge and challenges.',
-	    KeyW: 'Key Words',
-	    //Soft Skills
-	    SS1: 'Analytic',
-	    SS2: 'Commitment',
-	    SS3: 'Problem Solver',
-	    SS4: 'Learner',
-	    SS5: 'Team-Work',
-	    SS6: 'Add Value',
-	    ss11: 'Understand the requirements',
-	    ss12: 'Develop according to needs',
-	    ss21: 'Deliver Ended Products',
-	    ss31: 'Find the root',
-	    ss32: 'Develop a logical step-by-step',
-	    ss33: 'Deliver a system',
-	    ss41: 'Self-taught',
-	    ss42: 'Enthousiastic',
-	    ss43: 'Versatile',
-	    ss51: 'Know How',
-	    ss52: 'Social',
-	    ss53: 'Ask & Answer',
-	    ss61: 'Proposals',
-	    ss62: 'Business / ethical directed reasoning',
-	    //hardSkills
-	    ttLang: 'Languages',
-	    ttProgLang: 'Programming Languages',
-	    ttStacks: 'Stacks',
-	    ttFrameworks: 'Frameworks',
-	    ttOther: 'Other',
-	    //Resume
-	    ResHighShool: ' Lycée Franco Mexicain (High School)',
-	    ResHighShoolSpe: 'Engineering Science Specialization',
-	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
-	    ResUnivSpe: 'Bachelor of Science in Civil Engineering',
-	    ResDiploIMEI: 'Intelligent Building Mexican Institute - IMEI',
-	    ResDiploIMEISpe: 'Speciality - Intelligent & Sustainable Buildings Technology',
-	    ResStudClubCICM: 'CICM Students Club Memeber',
-	    ResStageIUNAM: 'Traineeship at a InnovaUNAM (business incubator)',
-	    ResSolarDec: 'Solar Decathlon Europe 2014',
-	    ResSolarDecRole: 'Leader, Civil Engineering Responsible',
-	    ResSolarDecPrices: 'Won 3 prices (1° Engineering, 2° Urbanism, 3° Sustainability)',
-	    ResThesis: 'Author and Expositor of an article regarding my bachelor thesis (\'Analysis, Design and Construction of the CASA TEAM project\')',
-	    ResICAF: 'ICA FLUOR',
-	    ResICAFRole: 'Project Engineer',
-	    ResICAFDesc: 'Program follow up, alerts, recovery plan, management level reports, forecasts, productivity.',
-	    ResICAFAchi: 'Follow Up Automation',
-	    ResJacEng: 'Jacobs Engineering',
-	    ResJacEngRole: 'Project Scheduler',
-	    ResJacEngDesc: 'Interactive planning, Master Plan and WBS creation, program follow up, alerts, forecasts, productivity, recovery plan, management level reports, and resources graph.',
-	    ResJacEngAchi: 'Follow Up Automation',
-	    ResCitiB: 'Citi Banamex',
-	    ResCitiBRole: 'Project Manager Jr. / IT Business Analyst',
-	    ResCitiBDesc: 'Intermediary between business, software developers and specialists. IT BA SDLC deliverables. Data Qty & Project Controls RPA, data analysis and visualization. Requirements and solutions analysis.',
-	    ResCitiBAchi: 'Follow Up Automation',
-	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
-	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
-	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
-	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
-	    ResMutuo: 'Mutuo Financiera',
-	    ResMutuoRole: 'Software Developer',
-	    ResMutuoDesc: 'Internal software development (MVC) and API, RPA for different projects (get/analyze and deduce from data) using Laravel framework mainly and VBA.',
-	    ResMutuoAchi: 'Projects Follow Up Automation, Scalability, Financial Projects',
-	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
-	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
-	    ResIMT: 'Institut Mines Télécom - IMT',
-	    ResIMTSpe: 'Master of Science in Data Science',
-	    //Form
-	    Name: 'Name',
-	    Send: 'Send',
-	    Email: 'Email',
-	    Industry: 'Industry',
-	    Purpose: 'Purpose',
-	    WriteToMe: 'Write me :)',
-	    SentMessage: 'Message Sent!! :). Thank you for contacting me, I\'ll respond ASAP. Have a nice day!',
-	    MessageSentFail: 'Mesage NOT Sent :(, please. try later or contact me directly to my e-mail: valentin.pg@outlook.com. Thanks!',
-	    WaitForIt: 'Wait for it ...',
 	
-	    //Time
-	    January: 'January',
-	    February: 'February',
-	    March: 'March',
-	    June: 'June',
-	    September: 'September',
-	    October: 'October',
-	    December: 'December',
-	    ToDate: 'To Date'
-	  }
+	var _messages;
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	exports.default = {
+	    locale: 'en',
+	    messages: (_messages = {
+	        siteTitle: 'Valentin Portillo Portfolio',
+	        addPost: 'Add Post',
+	        switchLanguage: 'Switch Language',
+	        twitterMessage: 'We are on Twitter',
+	        by: 'By',
+	        deletePost: 'Delete Post',
+	        createNewPost: 'Create new post',
+	        authorName: 'Author\'s Name',
+	        postTitle: 'Post Title',
+	        postContent: 'Post Content',
+	        submit: 'Submit',
+	        comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t}',
+	        HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t}',
+	        nestedDateComment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n      } as of {date}',
+	        profileTitle: 'Profile',
+	        menuAbout: 'Main',
+	        menuSkills: 'Skills',
+	        menuResume: 'Resume',
+	        menuContact: 'Contact',
+	        menuProjects: 'Projects',
+	        Me1: 'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
+	        Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
+	        Me3: 'Always interested in Computer Science deepening knowledge and challenges.',
+	        KeyW: 'Key Words',
+	        //Soft Skills
+	        SS1: 'Analytic',
+	        SS2: 'Commitment',
+	        SS3: 'Problem Solver',
+	        SS4: 'Learner',
+	        SS5: 'Team-Work',
+	        SS6: 'Add Value',
+	        ss11: 'Understand the requirements',
+	        ss12: 'Develop according to needs',
+	        ss21: 'Deliver Ended Products',
+	        ss31: 'Find the root',
+	        ss32: 'Develop a logical step-by-step',
+	        ss33: 'Deliver a system',
+	        ss41: 'Self-taught',
+	        ss42: 'Enthousiastic',
+	        ss43: 'Versatile',
+	        ss51: 'Know How',
+	        ss52: 'Social',
+	        ss53: 'Ask & Answer',
+	        ss61: 'Proposals',
+	        ss62: 'Business / ethical directed reasoning',
+	        //hardSkills
+	        ttLang: 'Languages',
+	        ttProgLang: 'Programming Languages',
+	        ttStacks: 'Stacks',
+	        ttFrameworks: 'Frameworks',
+	        ttOther: 'Other',
+	        //Resume
+	        ResHighShool: ' Lycée Franco Mexicain (High School)',
+	        ResHighShoolSpe: 'Engineering Science Specialization',
+	        ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	        ResUnivSpe: 'Bachelor of Science in Civil Engineering',
+	        ResDiploIMEI: 'Intelligent Building Mexican Institute - IMEI',
+	        ResDiploIMEISpe: 'Speciality - Intelligent & Sustainable Buildings Technology',
+	        ResStudClubCICM: 'CICM Students Club Memeber',
+	        ResStageIUNAM: 'Traineeship at a InnovaUNAM (business incubator)',
+	        ResSolarDec: 'Solar Decathlon Europe 2014',
+	        ResSolarDecRole: 'Leader, Civil Engineering Responsible',
+	        ResSolarDecPrices: 'Won 3 prices (1° Engineering, 2° Urbanism, 3° Sustainability)',
+	        ResThesis: 'Author and Expositor of an article regarding my bachelor thesis (\'Analysis, Design and Construction of the CASA TEAM project\')',
+	        ResICAF: 'ICA FLUOR',
+	        ResICAFRole: 'Project Engineer',
+	        ResICAFDesc: 'Program follow up, alerts, recovery plan, management level reports, forecasts, productivity.',
+	        ResICAFAchi: 'Follow Up Automation',
+	        ResJacEng: 'Jacobs Engineering',
+	        ResJacEngRole: 'Project Scheduler',
+	        ResJacEngDesc: 'Interactive planning, Master Plan and WBS creation, program follow up, alerts, forecasts, productivity, recovery plan, management level reports, and resources graph.',
+	        ResJacEngAchi: 'Follow Up Automation',
+	        ResCitiB: 'Citi Banamex',
+	        ResCitiBRole: 'Project Manager Jr. / IT Business Analyst',
+	        ResCitiBDesc: 'Intermediary between business, software developers and specialists. IT BA SDLC deliverables. Data Qty & Project Controls RPA, data analysis and visualization. Requirements and solutions analysis.',
+	        ResCitiBAchi: 'Follow Up Automation',
+	        ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	        ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	        ResMutuo: 'Mutuo Financiera',
+	        ResMutuoRole: 'Software Developer',
+	        ResMutuoDesc: 'Internal software development (MVC) and API, RPA for different projects (get/analyze and deduce from data) using Laravel framework mainly and VBA.',
+	        ResMutuoAchi: 'Projects Follow Up Automation, Scalability, Financial Projects',
+	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	        ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	        ResIMT: 'Institut Mines Télécom - IMT',
+	        ResIMTSpe: 'Master of Science in Data Science',
+	        //Form
+	        Name: 'Name',
+	        Send: 'Send',
+	        Email: 'Email',
+	        Industry: 'Industry',
+	        Purpose: 'Purpose',
+	        WriteToMe: 'Write me :)',
+	        SentMessage: 'Message Sent!! :). Thank you for contacting me, I\'ll respond ASAP. Have a nice day!',
+	        MessageSentFail: 'Mesage NOT Sent :(, please. try later or contact me directly to my e-mail: valentin.pg@outlook.com. Thanks!',
+	        WaitForIt: 'Wait for it ...',
+	
+	        //Time
+	        January: 'January',
+	        February: 'February',
+	        March: 'March',
+	        June: 'June',
+	        September: 'September',
+	        October: 'October',
+	        December: 'December',
+	        ToDate: 'To Date',
+	
+	        //Projects
+	        project_valhalla_status: 'Sorry, "Valhalla" is private, but you can click and access to the public page :)',
+	        project_valhalla_title: 'Fintech Core Banking System (ERP)',
+	        project_valhalla_role: 'Software Engineer',
+	        project_valhalla_context: 'Fintech / RPA',
+	        project_valhalla_description: 'We wanted to create our own software in order to model every product and financial products as we wanted. So, there you will find a huge related database, clients, products, financial products and all you can imagine to automate and help business ...',
+	
+	        project_datavis_status: 'Click on the links :)',
+	        project_datavis_title: 'Data Visualization',
+	        project_datavis_role: 'Student',
+	        project_datavis_context: 'Data Visualization',
+	        project_datavis_description: 'Data is one of the most valuable things for business and, one of the most enlightening tools on decision making, so it was a must.',
+	
+	        project_pm_status: "Sorry, private projects because of sensitive information, but there's a video :)",
+	        project_pm_title: 'Project Management Tool Dev.',
+	        project_pm_role: 'Project Manager / Software Engineer',
+	        project_pm_context: 'Project / Product Management / RPA',
+	        project_pm_description: 'In order to avoid errors and excel on projects follow up, I created in ICA FLUOR, Jacobs, Citi Banamex, and Mutuo Financiera files like this one for myself as PM or to the PMOffice.',
+	
+	        project_ttt_status: "Click to Play :)",
+	        project_ttt_title: 'Tic-Tac-Toe Game',
+	        project_ttt_role: 'Student',
+	        project_ttt_context: 'Artificial Inteligence Principles',
+	        project_ttt_description: 'When studing the AI principles, this was a project to preactice and understand better this example.',
+	
+	        project_cs50final_status: "Click to See :)",
+	        project_cs50final_title: 'CS50 Final - Final Project',
+	        project_cs50final_role: 'Student',
+	        project_cs50final_context: 'Web development',
+	        project_cs50final_description: 'The final project, I chose to do a coffee management software. If you want to understand its functionaliity, watch the video, click in the title.',
+	
+	        project_cs50p8_status: "Click to See :)",
+	        project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',
+	        project_cs50p8_role: 'Student',
+	        project_cs50p8_context: 'Web development',
+	        project_cs50p8_description: 'A project left for the Pset8 during the CS50 course.',
+	
+	        project_cs50p7_status: "Click to See :)",
+	        project_cs50p7_title: 'CS50 Pset7 - Stock Exchange',
+	        project_cs50p7_role: 'Student',
+	        project_cs50p7_context: 'Web development',
+	        project_cs50p7_description: ' A project left for the Pset7 during the CS50 course.',
+	
+	        project_fccback_status: "Click on the links :)",
+	        project_fccback_title: 'Some Back-End projects',
+	        project_fccback_role: 'Student',
+	        project_fccback_context: 'Learning NodeJS mainly and some frameworks',
+	        project_fccback_description: 'Learning the principles of a server, using Node as javascript in the backend, learning about security and frameworks related.'
+	
+	    }, _defineProperty(_messages, 'project_fccback_status', "Click To See the whole :)"), _defineProperty(_messages, 'project_fccback_title', 'Some Front-End projects'), _defineProperty(_messages, 'project_fccback_role', 'Student'), _defineProperty(_messages, 'project_fccback_context', 'Learning UI / UX and software engineering'), _defineProperty(_messages, 'project_fccback_description', 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.'), _messages)
 	};
 
 /***/ },
@@ -1220,118 +1314,174 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
+	
+	var _messages;
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
 	exports.default = {
-	  locale: 'fr',
-	  messages: {
-	    siteTitle: 'MERN blog de démarrage',
-	    addPost: 'Ajouter Poster',
-	    switchLanguage: 'Changer de langue',
-	    twitterMessage: 'Nous sommes sur Twitter',
-	    by: 'Par',
-	    deletePost: 'Supprimer le message',
-	    createNewPost: 'Créer un nouveau message',
-	    authorName: 'Nom de l\'auteur',
-	    postTitle: 'Titre de l\'article',
-	    postContent: 'Contenu après',
-	    submit: 'Soumettre',
-	    comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
-	    HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
-	    nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
-	    profileTitle: 'Profil',
-	    menuAbout: 'Main',
-	    menuSkills: 'Compétences',
-	    menuResume: 'Resumé',
-	    menuContact: 'Contacter',
-	    Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
-	    Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
-	    Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
-	    KeyW: 'Mots Clés',
-	    //Soft Skills
-	    SS1: 'Analytique',
-	    SS2: 'Engagé',
-	    SS3: 'Résolveur de problèmes',
-	    SS4: 'Apprenant',
-	    SS5: 'Travail en équipe',
-	    SS6: 'Ajouter de la valeur',
-	    ss11: 'Comprendre les requis',
-	    ss12: 'Développer en fonction des besoins',
-	    ss21: 'Délivrer des produits finis',
-	    ss31: 'Trouver la cause',
-	    ss32: 'Développer un processus logique',
-	    ss33: 'Délivrer un système',
-	    ss41: 'Autodidacte',
-	    ss42: 'Enthousiaste',
-	    ss43: 'Polyvalent',
-	    ss51: 'Savoir faire',
-	    ss52: 'Social',
-	    ss53: 'Demander & Répondre',
-	    ss61: 'Propositions',
-	    ss62: 'Raisonement étique et vers le commerce',
-	    //hardSkills
-	    ttLang: 'Langues',
-	    ttProgLang: 'Langues de programmation',
-	    ttStacks: 'Stacks',
-	    ttFrameworks: 'Frameworks',
-	    ttOther: 'Autres',
-	    //Resume
-	    ResHighShool: ' Lycée Franco Mexicain',
-	    ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
-	    ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
-	    ResUnivSpe: 'Licence en Sciences Génie Civil',
-	    ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
-	    ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
-	    ResStudClubCICM: 'CICM Membre du club d\'étudiants',
-	    ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
-	    ResSolarDec: 'Solar Decathlon Europe 2014',
-	    ResSolarDecRole: 'Leader, Responsable Génie Civil',
-	    ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
-	    ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
-	    ResICAF: 'ICA FLUOR',
-	    ResICAFRole: 'Ingénieur de Projet',
-	    ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
-	    ResICAFAchi: 'Automatisation du suivi du programme',
-	    ResJacEng: 'Jacobs Engineering',
-	    ResJacEngRole: 'Planificateur de Projet',
-	    ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
-	    ResJacEngAchi: 'Automatisation du suivi du programme',
-	    ResCitiB: 'Citi Banamex',
-	    ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
-	    ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
-	    ResCitiBAchi: 'Automatisation du suivi du programme',
-	    ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
-	    ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
-	    ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
-	    ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
-	    ResMutuo: 'Mutuo Financiera',
-	    ResMutuoRole: 'Software Developer',
-	    ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
-	    ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
-	    ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
-	    ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
-	    ResIMT: 'Institut Mines Télécom - IMT',
-	    ResIMTSpe: 'Master of Science en Sciences des Données',
-	    //Form
-	    Name: 'Prénom',
-	    Send: 'Envoyer',
-	    Email: 'Courrier électronique',
-	    Industry: 'Industrie',
-	    Purpose: 'Objectif',
-	    WriteToMe: 'Écris-moi :)',
-	    SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
-	    MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
-	    WaitForIt: 'Wait for it ...',
-	    //Time
-	    January: 'Janvier',
-	    February: 'Février',
-	    March: 'Mars',
-	    June: 'Juin',
-	    September: 'Septembre',
-	    October: 'Octobre',
-	    December: 'Décembre',
-	    ToDate: 'Á aujourd\'hui'
-	  }
+	    locale: 'fr',
+	    messages: (_messages = {
+	        siteTitle: 'MERN blog de démarrage',
+	        addPost: 'Ajouter Poster',
+	        switchLanguage: 'Changer de langue',
+	        twitterMessage: 'Nous sommes sur Twitter',
+	        by: 'Par',
+	        deletePost: 'Supprimer le message',
+	        createNewPost: 'Créer un nouveau message',
+	        authorName: 'Nom de l\'auteur',
+	        postTitle: 'Titre de l\'article',
+	        postContent: 'Contenu après',
+	        submit: 'Soumettre',
+	        comment: 'user {name} {value, plural,\n    \t  =0 {does not have any comments}\n    \t  =1 {has # comment}\n    \t  other {has # comments}\n    \t} (in real app this would be translated to French)',
+	        HTMLComment: 'user <b style=\'font-weight: bold\'>{name} </b> {value, plural,\n    \t  =0 {does not have <i style=\'font-style: italic\'>any</i> comments}\n    \t  =1 {has <i style=\'font-style: italic\'>#</i> comment}\n    \t  other {has <i style=\'font-style: italic\'>#</i> comments}\n    \t} (in real app this would be translated to French)',
+	        nestedDateComment: 'user {name} {value, plural,\n  \t\t  =0 {does not have any comments}\n  \t\t  =1 {has # comment}\n  \t\t  other {has # comments}\n      } as of {date} (in real app this would be translated to French)',
+	        profileTitle: 'Profil',
+	        menuAbout: 'Main',
+	        menuSkills: 'Compétences',
+	        menuResume: 'Resumé',
+	        menuContact: 'Contacter',
+	        menuProjects: 'Projets',
+	        Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
+	        Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
+	        Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
+	        KeyW: 'Mots Clés',
+	        //Soft Skills
+	        SS1: 'Analytique',
+	        SS2: 'Engagé',
+	        SS3: 'Résolveur de problèmes',
+	        SS4: 'Apprenant',
+	        SS5: 'Travail en équipe',
+	        SS6: 'Ajouter de la valeur',
+	        ss11: 'Comprendre les requis',
+	        ss12: 'Développer en fonction des besoins',
+	        ss21: 'Délivrer des produits finis',
+	        ss31: 'Trouver la cause',
+	        ss32: 'Développer un processus logique',
+	        ss33: 'Délivrer un système',
+	        ss41: 'Autodidacte',
+	        ss42: 'Enthousiaste',
+	        ss43: 'Polyvalent',
+	        ss51: 'Savoir faire',
+	        ss52: 'Social',
+	        ss53: 'Demander & Répondre',
+	        ss61: 'Propositions',
+	        ss62: 'Raisonement étique et vers le commerce',
+	        //hardSkills
+	        ttLang: 'Langues',
+	        ttProgLang: 'Langues de programmation',
+	        ttStacks: 'Stacks',
+	        ttFrameworks: 'Frameworks',
+	        ttOther: 'Autres',
+	        //Resume
+	        ResHighShool: ' Lycée Franco Mexicain',
+	        ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
+	        ResUniv: 'Universidad Nacional Autónoma de México - UNAM',
+	        ResUnivSpe: 'Licence en Sciences Génie Civil',
+	        ResDiploIMEI: 'Institut Mexicain du Bâtiment Intelligent - IMEI',
+	        ResDiploIMEISpe: 'Spécialité - Technologie des Bâtiments Intelligents et Durables',
+	        ResStudClubCICM: 'CICM Membre du club d\'étudiants',
+	        ResStageIUNAM: 'Stage en InnovaUNAM (incubateur d\'entreprises)',
+	        ResSolarDec: 'Solar Decathlon Europe 2014',
+	        ResSolarDecRole: 'Leader, Responsable Génie Civil',
+	        ResSolarDecPrices: 'Gagné 3 prix (1° Ingénierie, 2° Urbanisme, 3° Durabilité)',
+	        ResThesis: 'Auteur et Expositeur de l\'article concernant ma thèse (Analyse, Conception et Construction du projet CASA UNAM)',
+	        ResICAF: 'ICA FLUOR',
+	        ResICAFRole: 'Ingénieur de Projet',
+	        ResICAFDesc: 'Suivi du programme, alertes, plan de récupération, prévisions, productivité, rapports niveau gestion.',
+	        ResICAFAchi: 'Automatisation du suivi du programme',
+	        ResJacEng: 'Jacobs Engineering',
+	        ResJacEngRole: 'Planificateur de Projet',
+	        ResJacEngDesc: 'Planification interactive, plan directeur, création du WBS, suivi du programme, alertes, prévisions, productivité. Plan de récupération, rapports niveau gestion.',
+	        ResJacEngAchi: 'Automatisation du suivi du programme',
+	        ResCitiB: 'Citi Banamex',
+	        ResCitiBRole: 'Chef de projet Junior. / IT Business Analyst',
+	        ResCitiBDesc: 'Intermédiaire entre la partie commerciale/d\'affaires, développeurs de logiciel, et spécialistes. IT BA SDLC livrables, qualité des données et contrôle de projet RPA, analyse des données et visualisation. Analyse des exigences et des solutions. Méthode : SDLC.',
+	        ResCitiBAchi: 'Automatisation du suivi du programme',
+	        ResDiploTUDelft: 'TUDelft - TPM1x: Creative Problem Solving and Decision Making',
+	        ResDiploHarv: 'Harvard - CS50: Introduction to Computer Science',
+	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
+	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
+	        ResMutuo: 'Mutuo Financiera',
+	        ResMutuoRole: 'Software Developer',
+	        ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
+	        ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
+	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
+	        ResDiploSAAlgorithm: 'Saylor Academy - CS303: Algorithms',
+	        ResIMT: 'Institut Mines Télécom - IMT',
+	        ResIMTSpe: 'Master of Science en Sciences des Données',
+	        //Form
+	        Name: 'Prénom',
+	        Send: 'Envoyer',
+	        Email: 'Courrier électronique',
+	        Industry: 'Industrie',
+	        Purpose: 'Objectif',
+	        WriteToMe: 'Écris-moi :)',
+	        SentMessage: 'Message envoyé!! :). Merci de me contacter, je me mettrai en contact avec vous. Bonne journée!',
+	        MessageSentFail: 'Message PAS envoyé :(, essayez de nouveau plus tard s-v-p, ou contactez moi directement à mon courrier électronique: valentin.pg@outlook.com. Merci!',
+	        WaitForIt: 'Wait for it ...',
+	        //Time
+	        January: 'Janvier',
+	        February: 'Février',
+	        March: 'Mars',
+	        June: 'Juin',
+	        September: 'Septembre',
+	        October: 'Octobre',
+	        December: 'Décembre',
+	        ToDate: 'Á aujourd\'hui',
+	
+	        //Projects
+	        project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
+	        project_valhalla_title: 'Fintech Core Banking System (ERP)',
+	        project_valhalla_role: 'Software Engineer',
+	        project_valhalla_context: 'Fintech / RPA',
+	        project_valhalla_description: 'Nous voulions créer notre propre logiciel pour modeler chaque produit et produit financier. Alors, vous y trouveriez une énorme structure de base de données, clients, products, financial products, et tout ce que vous pouvez imaginer pour automatiser et aider le business ...',
+	
+	        project_datavis_status: 'Cliquez sur les links :)',
+	        project_datavis_title: 'Visualisasion des données',
+	        project_datavis_role: 'Étudiant',
+	        project_datavis_context: 'Visualisasion des données',
+	        project_datavis_description: "Les données sont une des choses les plus précieuses pour le commerce et, une des outils les plus révélateurs pour la prise de décisions, alors, c'était à faire.",
+	
+	        project_pm_status: "Désolé, projets privés à cause d'information sensible, mais il y a une vidéo :)",
+	        project_pm_title: 'Outil de Suivi de Projets',
+	        project_pm_role: 'Project Manager / Software Engineer',
+	        project_pm_context: 'Gestion du Projet / Produit / RPA',
+	        project_pm_description: "Pour éviter des erreurs et briller au suivi de projet, j'ai créé en ICA FLUOR, Jacobs, Citi Banamex, et Mutuo Financiera des fichiers comme celui ci pour moi comme PM ou pour le PMOffice.",
+	
+	        project_ttt_status: "Cliquez pour jouer :)",
+	        project_ttt_title: 'Jeu Tic-Tac-Toe',
+	        project_ttt_role: 'Étudiant',
+	        project_ttt_context: "Principes de l'Intéligence Artificielle",
+	        project_ttt_description: "En étudiant les principes de l'IA, c'est un projet pour pratiquer et bien comprendre cet exemple.",
+	
+	        project_cs50final_status: "Cliquez pour voir :)",
+	        project_cs50final_title: 'CS50 Final - Projet Final',
+	        project_cs50final_role: 'Étudiant',
+	        project_cs50final_context: 'Développement Web',
+	        project_cs50final_description: "Pour le projet final, j'ai choisi de faire un logiciel pour la gestion d'une cafétéria. Si vous voulez comprendre son fonctionnement, regardez la vidéo ou cliquez sur le titre.",
+	
+	        project_cs50p8_status: "Cliquez pour voir :)",
+	        project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',
+	        project_cs50p8_role: 'Étudiant',
+	        project_cs50p8_context: 'Développement Web',
+	        project_cs50p8_description: 'Un projet fait pour le TP8 pendant le cours CS50.',
+	
+	        project_cs50p7_status: "Cliquez pour voir :)",
+	        project_cs50p7_title: 'CS50 Pset7 - Stock Exchange',
+	        project_cs50p7_role: 'Étudiant',
+	        project_cs50p7_context: 'Développement Web',
+	        project_cs50p7_description: 'Un projet fait pour le TP7 pendant le cours CS50.',
+	
+	        project_fccback_status: "Cliquez sur les links :)",
+	        project_fccback_title: 'Quelques projets Back-End',
+	        project_fccback_role: 'Étudiant',
+	        project_fccback_context: 'Apprenant principalement NodeJS et quelques frameworks',
+	        project_fccback_description: "J'ai appris les principes d'un serveur avec Node comme javascript en Back End, la sécurité et d'autres 'frameworks' liés."
+	
+	    }, _defineProperty(_messages, 'project_fccback_status', "Cliquez pour voir plusieurs examples :)"), _defineProperty(_messages, 'project_fccback_title', 'Quelques projets Front-End'), _defineProperty(_messages, 'project_fccback_role', 'Étudiant'), _defineProperty(_messages, 'project_fccback_context', 'Apprenant UI / UX et software engineering'), _defineProperty(_messages, 'project_fccback_description', "En faisant ces projets, j'ai dû poursuivre des histoires d'utilisateur, utiliser des algorithmes pour créer ce qu¿on me demandait."), _messages)
 	};
 
 /***/ },
@@ -1362,7 +1512,7 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _reactHelmet = __webpack_require__(8);
+	var _reactHelmet = __webpack_require__(6);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -1413,6 +1563,8 @@
 	  function App(props) {
 	    _classCallCheck(this, App);
 	
+	    //console.log('in app');
+	    //console.log(props);
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.toggleAddPostSection = function () {
@@ -1423,8 +1575,6 @@
 	      _this.props.toggleActiveMenu();
 	    };
 	
-	    console.log('in app');
-	    console.log(props);
 	    _this.state = { isMounted: false };
 	    return _this;
 	  }
@@ -1753,27 +1903,33 @@
 	  }, void 0, _ref, _ref2, _ref3), _jsx('div', {
 	    className: _Menu2.default.menuContent
 	  }, void 0, _jsx('ul', {}, void 0, _jsx('li', {}, void 0, _jsx('a', {
-	    href: '#About'
+	    href: '/#About'
 	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
 	    id: 'menuAbout'
 	  }, void 0, function (txt) {
 	    return _jsx('div', {}, void 0, txt);
 	  }))), _jsx('li', {}, void 0, _jsx('a', {
-	    href: '#Skills'
+	    href: '/#Skills'
 	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
 	    id: 'menuSkills'
 	  }, void 0, function (txt) {
 	    return _jsx('div', {}, void 0, txt);
 	  }))), _jsx('li', {}, void 0, _jsx('a', {
-	    href: '#Resume'
+	    href: '/#Resume'
 	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
 	    id: 'menuResume'
 	  }, void 0, function (txt) {
 	    return _jsx('div', {}, void 0, txt);
 	  }))), _jsx('li', {}, void 0, _jsx('a', {
-	    href: '#Contact'
+	    href: '/#Contact'
 	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
 	    id: 'menuContact'
+	  }, void 0, function (txt) {
+	    return _jsx('div', {}, void 0, txt);
+	  }))), _jsx('li', {}, void 0, _jsx('a', {
+	    href: '/projects'
+	  }, void 0, _jsx(_reactIntl.FormattedMessage, {
+	    id: 'menuProjects'
 	  }, void 0, function (txt) {
 	    return _jsx('div', {}, void 0, txt);
 	  }))))));
@@ -2373,11 +2529,11 @@
 	
 	function HardSkills(props, context) {
 	  var isVisible = props.isVisible;
-	  var hard_program_arr = [{ name: 'PHP', percentage: 90 }, { name: 'C', percentage: 60 }, { name: 'JS', percentage: 90 }, { name: 'VBA', percentage: 90 }, { name: 'Python', percentage: 60 }];
-	  var hard_langs_arr = [{ name: 'Français', percentage: 90 }, { name: 'English', percentage: 90 }, { name: 'Español', percentage: 90 }, { name: 'Italiano', percentage: 60 }];
-	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 80 }, { name: 'MERN', percentage: 60 }];
+	  var hard_program_arr = [{ name: 'PHP', percentage: 100 }, { name: 'C', percentage: 60 }, { name: 'JS', percentage: 100 }, { name: 'VBA', percentage: 100 }, { name: 'Python', percentage: 60 }];
+	  var hard_langs_arr = [{ name: 'Français', percentage: 100 }, { name: 'English', percentage: 100 }, { name: 'Español', percentage: 100 }, { name: 'Italiano', percentage: 60 }];
+	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 90 }, { name: 'MERN', percentage: 70 }];
 	  var hard_frame_arr = [{ name: 'Node.js', percentage: 80 }, { name: 'React', percentage: 90 }, { name: 'Redux', percentage: 80 }, { name: 'Express.js', percentage: 80 }, { name: 'D3.js', percentage: 80 }, { name: 'Mongoose', percentage: 60 }];
-	  var hard_others_arr = [{ name: 'HTML', percentage: 90 }, { name: 'CSS', percentage: 70 }, { name: 'SQL', percentage: 80 }, { name: 'NoSQL', percentage: 70 }, { name: 'Git', percentage: 80 }, { name: 'NPM', percentage: 70 }];
+	  var hard_others_arr = [{ name: 'HTML', percentage: 100 }, { name: 'CSS', percentage: 80 }, { name: 'SQL', percentage: 100 }, { name: 'NoSQL', percentage: 90 }, { name: 'Git', percentage: 100 }, { name: 'NPM', percentage: 80 }];
 	  var hard_programs = void 0;
 	  var hard_langs = void 0;
 	  var hard_other = void 0;
@@ -3203,7 +3359,7 @@
 	  value: true
 	});
 	
-	var _redux = __webpack_require__(6);
+	var _redux = __webpack_require__(7);
 	
 	var _AppReducer = __webpack_require__(37);
 	
@@ -3253,7 +3409,7 @@
 	
 	var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 	
-	var _config = __webpack_require__(7);
+	var _config = __webpack_require__(8);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -3560,7 +3716,7 @@
 	
 	var _reactRouter = __webpack_require__(3);
 	
-	var _reactHelmet = __webpack_require__(8);
+	var _reactHelmet = __webpack_require__(6);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -3582,7 +3738,7 @@
 	
 	var _dummyData2 = _interopRequireDefault(_dummyData);
 	
-	var _config = __webpack_require__(7);
+	var _config = __webpack_require__(8);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
