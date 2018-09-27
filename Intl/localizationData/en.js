@@ -121,5 +121,61 @@ export default {
     October: 'October',
     December: 'December',
     ToDate: 'To Date',
+
+    //Projects
+    project_valhalla_status: 'Sorry, "Valhalla" is private, but you can click and access to the public page :)',
+    project_valhalla_title: 'Fintech Core Banking System (ERP)',
+    project_valhalla_role: 'Software Engineer',
+    project_valhalla_context: 'Fintech / RPA',
+    project_valhalla_description: 'We wanted to create our own software in order to model every product and financial products as we wanted. So, there you will find a huge related database, clients, products, financial products and all you can imagine to automate and help business ...',
+  
+    project_datavis_status: 'Click on the links :)',
+    project_datavis_title: 'Data Visualization',
+    project_datavis_role: 'Student',
+    project_datavis_context: 'Data Visualization',
+    project_datavis_description: 'Data is one of the most valuable things for business and, one of the most enlightening tools on decision making, so it was a must.',
+
+    project_pm_status: "Sorry, private projects because of sensitive information, but there's a video :)",
+    project_pm_title: 'Project Management Tool Dev.',
+    project_pm_role: 'Project Manager / Software Engineer',
+    project_pm_context: 'Project / Product Management / RPA',
+    project_pm_description: 'In order to avoid errors and excel on projects follow up, I created in ICA FLUOR, Jacobs, Citi Banamex, and Mutuo Financiera files like this one for myself as PM or to the PMOffice.',
+    
+    project_ttt_status: "Click to Play :)",
+    project_ttt_title: 'Tic-Tac-Toe Game',
+    project_ttt_role: 'Student',
+    project_ttt_context: 'Artificial Inteligence Principles',
+    project_ttt_description: 'When studing the AI principles, this was a project to preactice and understand better this example.',
+
+    project_cs50final_status: "Click to See :)",
+    project_cs50final_title: 'CS50 Final - Final Project',
+    project_cs50final_role: 'Student',
+    project_cs50final_context: 'Web development',
+    project_cs50final_description: 'The final project, I chose to do a coffee management software. If you want to understand its functionaliity, watch the video, click in the title.',
+  
+    project_cs50p8_status: "Click to See :)",
+    project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',
+    project_cs50p8_role: 'Student',
+    project_cs50p8_context: 'Web development',
+    project_cs50p8_description: 'A project left for the Pset8 during the CS50 course.',
+
+    project_cs50p7_status: "Click to See :)",
+    project_cs50p7_title: 'CS50 Pset7 - Stock Exchange',
+    project_cs50p7_role: 'Student',
+    project_cs50p7_context: 'Web development',
+    project_cs50p7_description: ' A project left for the Pset7 during the CS50 course.',
+
+    project_fccback_status: "Click on the links :)",
+    project_fccback_title: 'Some Back-End projects',
+    project_fccback_role: 'Student',
+    project_fccback_context: 'Learning NodeJS mainly and some frameworks',
+    project_fccback_description: 'Learning the principles of a server, using Node as javascript in the backend, learning about security and frameworks related.',
+
+    project_fccback_status: "Click To See the whole :)",
+    project_fccback_title: 'Some Front-End projects',
+    project_fccback_role: 'Student',
+    project_fccback_context: 'Learning UI / UX and software engineering',
+    project_fccback_description: 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.',
+
   },
 };

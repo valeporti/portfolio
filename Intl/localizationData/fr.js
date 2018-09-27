@@ -120,5 +120,60 @@ export default {
       October: 'Octobre',
       December: 'Décembre',
       ToDate: 'Á aujourd\'hui',
+
+       //Projects
+    project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
+    project_valhalla_title: 'Fintech Core Banking System (ERP)',
+    project_valhalla_role: 'Software Engineer',
+    project_valhalla_context: 'Fintech / RPA',
+    project_valhalla_description: 'Nous voulions créer notre propre logiciel pour modeler chaque produit et produit financier. Alors, vous y trouveriez une énorme structure de base de données, clients, products, financial products, et tout ce que vous pouvez imaginer pour automatiser et aider le business ...',
+  
+    project_datavis_status: 'Cliquez sur les links :)',
+    project_datavis_title: 'Visualisasion des données',
+    project_datavis_role: 'Étudiant',
+    project_datavis_context: 'Visualisasion des données',
+    project_datavis_description: "Les données sont une des choses les plus précieuses pour le commerce et, une des outils les plus révélateurs pour la prise de décisions, alors, c'était à faire.",
+
+    project_pm_status: "Désolé, projets privés à cause d'information sensible, mais il y a une vidéo :)",
+    project_pm_title: 'Outil de Suivi de Projets',
+    project_pm_role: 'Project Manager / Software Engineer',
+    project_pm_context: 'Gestion du Projet / Produit / RPA',
+    project_pm_description: "Pour éviter des erreurs et briller au suivi de projet, j'ai créé en ICA FLUOR, Jacobs, Citi Banamex, et Mutuo Financiera des fichiers comme celui ci pour moi comme PM ou pour le PMOffice.",
+    
+    project_ttt_status: "Cliquez pour jouer :)",
+    project_ttt_title: 'Jeu Tic-Tac-Toe',
+    project_ttt_role: 'Étudiant',
+    project_ttt_context: "Principes de l'Intéligence Artificielle",
+    project_ttt_description: "En étudiant les principes de l'IA, c'est un projet pour pratiquer et bien comprendre cet exemple.",
+
+    project_cs50final_status: "Cliquez pour voir :)",
+    project_cs50final_title: 'CS50 Final - Projet Final',
+    project_cs50final_role: 'Étudiant',
+    project_cs50final_context: 'Développement Web',
+    project_cs50final_description: "Pour le projet final, j'ai choisi de faire un logiciel pour la gestion d'une cafétéria. Si vous voulez comprendre son fonctionnement, regardez la vidéo ou cliquez sur le titre.",
+  
+    project_cs50p8_status: "Cliquez pour voir :)",
+    project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',
+    project_cs50p8_role: 'Étudiant',
+    project_cs50p8_context: 'Développement Web',
+    project_cs50p8_description: 'Un projet fait pour le TP8 pendant le cours CS50.',
+
+    project_cs50p7_status: "Cliquez pour voir :)",
+    project_cs50p7_title: 'CS50 Pset7 - Stock Exchange',
+    project_cs50p7_role: 'Étudiant',
+    project_cs50p7_context: 'Développement Web',
+    project_cs50p7_description: 'Un projet fait pour le TP7 pendant le cours CS50.',
+
+    project_fccback_status: "Cliquez sur les links :)",
+    project_fccback_title: 'Quelques projets Back-End',
+    project_fccback_role: 'Étudiant',
+    project_fccback_context: 'Apprenant principalement NodeJS et quelques frameworks',
+    project_fccback_description: "J'ai appris les principes d'un serveur avec Node comme javascript en Back End, la sécurité et d'autres 'frameworks' liés.",
+
+    project_fccback_status: "Cliquez pour voir plusieurs examples :)",
+    project_fccback_title: 'Quelques projets Front-End',
+    project_fccback_role: 'Étudiant',
+    project_fccback_context: 'Apprenant UI / UX et software engineering',
+    project_fccback_description: "En faisant ces projets, j'ai dû poursuivre des histoires d'utilisateur, utiliser des algorithmes pour créer ce qu¿on me demandait.",
   },
 };
