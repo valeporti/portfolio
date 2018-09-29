@@ -62,6 +62,7 @@ class Profile extends Component {
       mess: this.props.prof.contactMess,
       indu: this.props.prof.contactIndu,
       purp: this.props.prof.contactPurp,
+      courtesy_mes: this.props.intl.messages.SentMessage,
     };
     const contactMessInput = this.props.contactMessInput;
     const contactEmailInput = this.props.contactEmailInput;
@@ -87,7 +88,7 @@ class Profile extends Component {
           setTimeout(() => { contactMessInput('') }, 10000);
         } else {
           contactMessInput(messageNotSent);
-          setTimeout(() => { contactMessInput('') }, 3000);
+          setTimeout(() => { contactMessInput('') }, 4000);
         }
         console.log(response);
       })

@@ -12,8 +12,9 @@ export function sendMail(req, res) {
   const mail = req.query.mail;
   const indu = req.query.indu;
   const purp = req.query.purp;
+  const courtesy_mes = req.query.courtesy_mes;
 
-  nodemailer.createTestAccount((err, account) => {
+  //nodemailer.createTestAccount((err, account) => {
     // create reusable transporter object using the default SMTP transport
 
     let transporter = nodemailer.createTransport({
@@ -29,10 +30,13 @@ export function sendMail(req, res) {
     // setup email data with unicode symbols
     let mailOptions = {
       from: '"' + process.env.MAIL_NAME + '" <' + process.env.MAIL_USERNAME + '>', // sender address
-      to: process.env.MAIL_MINE, // list of receivers
+      to: [process.env.MAIL_MINE, mail],  // list of receivers
       subject: 'Hello ✔', // Subject line
-      text: 'Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess, // plain text body
-      html: '<b>Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess + '</b>' // html body
+      text: 'Name: ' + name + ' && Purpose: ' + purp + ' && Industry: ' + indu + ' && Message ' + mess, // plain text body
+      html: '<p>' + courtesy_mes + '</p>' 
+        + '<p><b>Name: ' + name + '</b></p> <p><b>Mail: ' + mail 
+        + '</b></p> <p><b>Purpose: ' + purp + '</b></p> <p><b>Industry: ' 
+        + indu + '</b></p> <p><b>Message ' + mess + '</b>' // html body
     };
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
@@ -46,7 +50,7 @@ export function sendMail(req, res) {
 
         return res.status(200).json({success: 'Mail Sent!!'})
     });
-});
+//});
 
   //console.log(req.query);
   //return res.send('lol');
