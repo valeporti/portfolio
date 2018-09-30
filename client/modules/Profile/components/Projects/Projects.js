@@ -286,7 +286,7 @@ function Projects(props, context) {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className={styles.project_status_text}>
-                  <FormattedMessage id="project_cs50p7_status" />
+                  <FormattedMessage id="project_fccback_status" />
                   <hr></hr>
                   <p><a href='https://timestamp-vp.herokuapp.com/' target="_blank">TimeStamp</a></p>
                   <p><a href='https://whoami-vp.herokuapp.com/' target="_blank">Who Am I</a></p>
@@ -298,7 +298,7 @@ function Projects(props, context) {
           </div>
           <div className={styles.project_content}>
             <div className={styles.project_title}>
-              {'{'} <FormattedMessage id="project_cs50p7_title" /> {'}'}
+              {'{'} <FormattedMessage id="project_fccback_title" /> {'}'}
             </div>
             <div className={styles.project_photo}>
               <img className={styles.project_photo} src={who_am_i} />
@@ -307,13 +307,13 @@ function Projects(props, context) {
               <i className="fas fa-flask"></i> NodeJS, ExpressJS
             </div>
             <div className={styles.worked_as}>
-              <i className="far fa-address-card"></i> <FormattedMessage id="project_cs50p7_role" />
+              <i className="far fa-address-card"></i> <FormattedMessage id="project_fccback_role" />
             </div>
             <div className={styles.context}>
-              <i className="fas fa-briefcase"></i> <FormattedMessage id="project_cs50p7_context" />
+              <i className="fas fa-briefcase"></i> <FormattedMessage id="project_fccback_context" />
             </div>
             <div className={styles.description}>
-              <i className="fas fa-comment"></i> <FormattedMessage id="project_cs50p7_description" />
+              <i className="fas fa-comment"></i> <FormattedMessage id="project_fccback_description" />
             </div>
           </div>
         </div>
@@ -327,14 +327,14 @@ function Projects(props, context) {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className={styles.project_status_text}>
-                  <FormattedMessage id="project_fccback_status" />
+                  <FormattedMessage id="project_fccfront_status" />
                 </div>
               </div>
             </div>
           </a>
           <div className={styles.project_content}>
             <div className={styles.project_title}>
-              {'{'} <FormattedMessage id="project_fccback_title" /> {'}'}
+              {'{'} <FormattedMessage id="project_fccfront_title" /> {'}'}
             </div>
             <div className={styles.project_photo}>
               <img className={styles.project_photo} src={front_proj} />
@@ -343,13 +343,13 @@ function Projects(props, context) {
               <i className="fas fa-flask"></i> HTML, CSS, JS, React, Redux
             </div>
             <div className={styles.worked_as}>
-              <i className="far fa-address-card"></i> <FormattedMessage id="project_fccback_role" />
+              <i className="far fa-address-card"></i> <FormattedMessage id="project_fccfront_role" />
             </div>
             <div className={styles.context}>
-              <i className="fas fa-briefcase"></i> <FormattedMessage id="project_fccback_context" />
+              <i className="fas fa-briefcase"></i> <FormattedMessage id="project_fccfront_context" />
             </div>
             <div className={styles.description}>
-              <i className="fas fa-comment"></i> <FormattedMessage id="project_fccback_description" />
+              <i className="fas fa-comment"></i> <FormattedMessage id="project_fccfront_description" />
             </div>
           </div>
         </div>

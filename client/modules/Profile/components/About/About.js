@@ -14,7 +14,7 @@ function About(props, context) {
         </div>
         <div className={styles.presentation}>
           <p className={styles.name}>Valentin Portillo Galvan</p>
-          <p className={styles.intitle}>Software Developer</p>
+          <p className={styles.intitle}>Software Engineer</p>
           <div className={styles.smallDescription}>
             <p><FormattedMessage id="Me1" /></p>
             <p>
@@ -23,11 +23,14 @@ function About(props, context) {
             <p>
               <FormattedMessage id="Me3" />
             </p>
+            <p>
+              <FormattedMessage id="MeConc" />
+            </p>
           </div>
           <p className={styles.intitle}><FormattedMessage id="KeyW" /></p>
           <div className={styles.smallDescription}>
             <p>
-              TDD, SCRUM, RPA
+              <FormattedMessage id='KeyWords' /> 
             </p>
           </div>
         </div>

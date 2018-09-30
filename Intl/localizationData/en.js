@@ -33,10 +33,14 @@ export default {
     menuResume: 'Resume',
     menuContact: 'Contact',
     menuProjects: 'Projects',
-    Me1:'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
-    Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
-    Me3: 'Always interested in Computer Science deepening knowledge and challenges.',
+    Me1:'I started my career as a Civil Engineer but somehow my life toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
+    Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management and using that, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
+    Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. I believe that I would be a very nice fit for the "Junior Atlantique" because of this characteristics and the entrepreneurial profile of mine (here appears behind the web development learning to be able to create my own apps/enterprise ideas).',
+    Me4: 'Before concluding, ',
+    MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to help / achieve the projects or challenges that the "pôle informatique" may face (have a look into my projects and resume). As I have already experience (also in project management: SCRUM, Waterfall, PMI), it could be interesting to mix me with 1st year alumni and the rest of the "pôle informatique" team.'
+      + ' And for me, it would be a very rewarding experience in order to improve my coding, algorithms and management skills and at the same time learn more about the french enterprises world, share knowledge and meet interesting people.',
     KeyW: 'Key Words',
+    KeyWords: 'SCRUM, RPA/BPA (Robotic/Business Process Automation), Full Stack Web Developement, TDD (Test Directed Developement), Data Science',
     //Soft Skills
     SS1: 'Analytic',
     SS2: 'Commitment',
@@ -171,11 +175,11 @@ export default {
     project_fccback_context: 'Learning NodeJS mainly and some frameworks',
     project_fccback_description: 'Learning the principles of a server, using Node as javascript in the backend, learning about security and frameworks related.',
 
-    project_fccback_status: "Click To See the whole :)",
-    project_fccback_title: 'Some Front-End projects',
-    project_fccback_role: 'Student',
-    project_fccback_context: 'Learning UI / UX and software engineering',
-    project_fccback_description: 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.',
+    project_fccfront_status: "Click To See the whole :)",
+    project_fccfront_title: 'Some Front-End projects',
+    project_fccfront_role: 'Student',
+    project_fccfront_context: 'Learning UI / UX and software engineering',
+    project_fccfront_description: 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.',
 
   },
 };
