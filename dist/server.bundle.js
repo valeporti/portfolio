@@ -480,7 +480,8 @@
 	        mail: _this.props.prof.contactMail,
 	        mess: _this.props.prof.contactMess,
 	        indu: _this.props.prof.contactIndu,
-	        purp: _this.props.prof.contactPurp
+	        purp: _this.props.prof.contactPurp,
+	        courtesy_mes: _this.props.intl.messages.SentMessage
 	      };
 	      var contactMessInput = _this.props.contactMessInput;
 	      var contactEmailInput = _this.props.contactEmailInput;
@@ -509,7 +510,7 @@
 	          contactMessInput(messageNotSent);
 	          setTimeout(function () {
 	            contactMessInput('');
-	          }, 3000);
+	          }, 4000);
 	        }
 	        console.log(response);
 	      }).catch(function (error) {
@@ -1137,14 +1138,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _messages;
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
 	exports.default = {
 	    locale: 'en',
-	    messages: (_messages = {
+	    messages: {
 	        siteTitle: 'Valentin Portillo Portfolio',
 	        addPost: 'Add Post',
 	        switchLanguage: 'Switch Language',
@@ -1165,10 +1161,13 @@
 	        menuResume: 'Resume',
 	        menuContact: 'Contact',
 	        menuProjects: 'Projects',
-	        Me1: 'I\'m a Universidad Nacional Autónoma de México (UNAM) Graduate, right now looking for a master.',
-	        Me2: 'I\'ve worked in Project Management, Business Analysis and Software Developement. Being Software Development my favorite and mainly working in back-end Developement.',
-	        Me3: 'Always interested in Computer Science deepening knowledge and challenges.',
+	        Me1: 'I started my career as a Civil Engineer but somehow my life toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
+	        Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management and using that, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
+	        Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. I believe that I would be a very nice fit for the "Junior Atlantique" because of this characteristics and the entrepreneurial profile of mine (here appears behind the web development learning to be able to create my own apps/enterprise ideas).',
+	        Me4: 'Before concluding, ',
+	        MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to help / achieve the projects or challenges that the "pôle informatique" may face (have a look into my projects and resume). As I have already experience (also in project management: SCRUM, Waterfall, PMI), it could be interesting to mix me with 1st year alumni and the rest of the "pôle informatique" team.' + ' And for me, it would be a very rewarding experience in order to improve my coding, algorithms and management skills and at the same time learn more about the french enterprises world, share knowledge and meet interesting people.',
 	        KeyW: 'Key Words',
+	        KeyWords: 'SCRUM, RPA/BPA (Robotic/Business Process Automation), Full Stack Web Developement, TDD (Test Directed Developement), Data Science',
 	        //Soft Skills
 	        SS1: 'Analytic',
 	        SS2: 'Commitment',
@@ -1301,9 +1300,15 @@
 	        project_fccback_title: 'Some Back-End projects',
 	        project_fccback_role: 'Student',
 	        project_fccback_context: 'Learning NodeJS mainly and some frameworks',
-	        project_fccback_description: 'Learning the principles of a server, using Node as javascript in the backend, learning about security and frameworks related.'
+	        project_fccback_description: 'Learning the principles of a server, using Node as javascript in the backend, learning about security and frameworks related.',
 	
-	    }, _defineProperty(_messages, 'project_fccback_status', "Click To See the whole :)"), _defineProperty(_messages, 'project_fccback_title', 'Some Front-End projects'), _defineProperty(_messages, 'project_fccback_role', 'Student'), _defineProperty(_messages, 'project_fccback_context', 'Learning UI / UX and software engineering'), _defineProperty(_messages, 'project_fccback_description', 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.'), _messages)
+	        project_fccfront_status: "Click To See the whole :)",
+	        project_fccfront_title: 'Some Front-End projects',
+	        project_fccfront_role: 'Student',
+	        project_fccfront_context: 'Learning UI / UX and software engineering',
+	        project_fccfront_description: 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.'
+	
+	    }
 	};
 
 /***/ },
@@ -1316,14 +1321,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _messages;
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
 	exports.default = {
 	    locale: 'fr',
-	    messages: (_messages = {
+	    messages: {
 	        siteTitle: 'MERN blog de démarrage',
 	        addPost: 'Ajouter Poster',
 	        switchLanguage: 'Changer de langue',
@@ -1341,13 +1341,15 @@
 	        profileTitle: 'Profil',
 	        menuAbout: 'Main',
 	        menuSkills: 'Compétences',
-	        menuResume: 'Resumé',
+	        menuResume: 'Résumé',
 	        menuContact: 'Contacter',
 	        menuProjects: 'Projets',
-	        Me1: 'Je suis gradué de l\'Universidad Nacional Autónoma de México (UNAM), et en ce moment, je cherche de faire un master.',
-	        Me2: 'J\'ai de l\'éxpérience en gestion de projets, analyse du commerce et développement de logiciel. Étant le développement de logiciel mon préféré et travaillant principalement en développement back-end',
-	        Me3: 'Toujours intéressé en approfondir mes connaissances sur informatique et défis.',
+	        Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime les algorithmes dès toujours. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cette passion et des sujets que j\'ai toujours aimé : MSc en Science des données.',
+	        Me2: 'Avant mon premier travail lié à l\'informatique, j\'automatisais mes activités du travail et avec ça plus des études autodidactes, finalement j\'ai eu mon premier rôle lié aux algorithmes et au back-end/full-stack, appliqués principalement aux finances et à la banque.',
+	        Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. Je pense que je serais in très bon élément pour la "Junior Atlantique" grâce à ces caractéristiques et mon profil entrepreneur (apparait sous le fait d\'apprendre développement web pour créer mes propres apps/idées d\'entreprise).',
+	        MeConc: 'Pour conclure, à part de mes compétences personnelles listées ici, Je possède les compétences et expérience afin d\'aider / atteindre les projets ou défis que puissent se présenter chez le pôle informatique (vous pouvez voir mon parcours au résumé et aux projets). Comme j\'ai de l\'expérience (aussi en gestion de projets : SCRUM, Waterfall, PMI), ça pourrait être intéressant de me mélanger avec des 1A et le reste des intégrants su pôle informatique.' + ' Et pour moi, ce serait une expérience très intéressante du fait qu\'elle me permettrait d\'améliorer mes compétences de codage, algorithmes et gestion tout en apprenant au même temps sur le monde des entreprises françaises, partager les connaissances et connaître des personnes intéressantes.',
 	        KeyW: 'Mots Clés',
+	        KeyWords: 'SCRUM, RPA/BPA (Automatisation des Processus Robotiques/du Commerce), Développement Web Full Stack, TDD (Développement Test Dirigé), Science des Données',
 	        //Soft Skills
 	        SS1: 'Analytique',
 	        SS2: 'Engagé',
@@ -1479,9 +1481,14 @@
 	        project_fccback_title: 'Quelques projets Back-End',
 	        project_fccback_role: 'Étudiant',
 	        project_fccback_context: 'Apprenant principalement NodeJS et quelques frameworks',
-	        project_fccback_description: "J'ai appris les principes d'un serveur avec Node comme javascript en Back End, la sécurité et d'autres 'frameworks' liés."
+	        project_fccback_description: "J'ai appris les principes d'un serveur avec Node comme javascript en Back End, la sécurité et d'autres 'frameworks' liés.",
 	
-	    }, _defineProperty(_messages, 'project_fccback_status', "Cliquez pour voir plusieurs examples :)"), _defineProperty(_messages, 'project_fccback_title', 'Quelques projets Front-End'), _defineProperty(_messages, 'project_fccback_role', 'Étudiant'), _defineProperty(_messages, 'project_fccback_context', 'Apprenant UI / UX et software engineering'), _defineProperty(_messages, 'project_fccback_description', "En faisant ces projets, j'ai dû poursuivre des histoires d'utilisateur, utiliser des algorithmes pour créer ce qu¿on me demandait."), _messages)
+	        project_fccfront_status: "Cliquez pour voir plusieurs examples :)",
+	        project_fccfront_title: 'Quelques projets Front-End',
+	        project_fccfront_role: 'Étudiant',
+	        project_fccfront_context: 'Apprenant UI / UX et software engineering',
+	        project_fccfront_description: "En faisant ces projets, j'ai dû poursuivre des histoires d'utilisateur, utiliser des algorithmes pour créer ce qu¿on me demandait."
+	    }
 	};
 
 /***/ },
@@ -2243,11 +2250,17 @@
 	  id: 'Me3'
 	}));
 	
-	var _ref6 = _jsx(_reactIntl.FormattedMessage, {
+	var _ref6 = _jsx('p', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'MeConc'
+	}));
+	
+	var _ref7 = _jsx(_reactIntl.FormattedMessage, {
 	  id: 'KeyW'
 	});
 	
-	var _ref7 = _jsx('p', {}, void 0, 'TDD, SCRUM, RPA');
+	var _ref8 = _jsx('p', {}, void 0, _jsx(_reactIntl.FormattedMessage, {
+	  id: 'KeyWords'
+	}));
 	
 	function About(props, context) {
 	  return _jsx('div', {
@@ -2264,13 +2277,13 @@
 	    className: _About2.default.name
 	  }, void 0, 'Valentin Portillo Galvan'), _jsx('p', {
 	    className: _About2.default.intitle
-	  }, void 0, 'Software Developer'), _jsx('div', {
+	  }, void 0, 'Software Engineer'), _jsx('div', {
 	    className: _About2.default.smallDescription
-	  }, void 0, _ref3, _ref4, _ref5), _jsx('p', {
+	  }, void 0, _ref3, _ref4, _ref5, _ref6), _jsx('p', {
 	    className: _About2.default.intitle
-	  }, void 0, _ref6), _jsx('div', {
+	  }, void 0, _ref7), _jsx('div', {
 	    className: _About2.default.smallDescription
-	  }, void 0, _ref7))));
+	  }, void 0, _ref8))));
 	}
 	
 	exports.default = About;
@@ -3479,41 +3492,42 @@
 	    var mail = req.query.mail;
 	    var indu = req.query.indu;
 	    var purp = req.query.purp;
+	    var courtesy_mes = req.query.courtesy_mes;
 	
-	    _nodemailer2.default.createTestAccount(function (err, account) {
-	        // create reusable transporter object using the default SMTP transport
+	    //nodemailer.createTestAccount((err, account) => {
+	    // create reusable transporter object using the default SMTP transport
 	
-	        var transporter = _nodemailer2.default.createTransport({
-	            host: process.env.MAIL_HOST,
-	            port: process.env.MAIL_PORT,
-	            secure: process.env.MAIL_SEC, // true for 465, false for other ports
-	            auth: {
-	                user: process.env.MAIL_USERNAME, // generated ethereal user
-	                pass: process.env.MAIL_PASSWORD // generated ethereal password
-	            }
-	        });
-	
-	        // setup email data with unicode symbols
-	        var mailOptions = {
-	            from: '"' + process.env.MAIL_NAME + '" <' + process.env.MAIL_USERNAME + '>', // sender address
-	            to: process.env.MAIL_MINE, // list of receivers
-	            subject: 'Hello ✔', // Subject line
-	            text: 'Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess, // plain text body
-	            html: '<b>Name: ' + name + 'Purpose: ' + purp + 'Industry: ' + indu + ' && Message ' + mess + '</b>' // html body
-	        };
-	        // send mail with defined transport object
-	        transporter.sendMail(mailOptions, function (error, info) {
-	            if (error) {
-	                console.log(error);
-	                return res.status(500).json({ error: 'Mail not sent!!' });
-	            }
-	            console.log('Message sent: %s', info.messageId);
-	            // Preview only available when sending through an Ethereal account
-	            console.log('Preview URL: %s', _nodemailer2.default.getTestMessageUrl(info));
-	
-	            return res.status(200).json({ success: 'Mail Sent!!' });
-	        });
+	    var transporter = _nodemailer2.default.createTransport({
+	        host: process.env.MAIL_HOST,
+	        port: process.env.MAIL_PORT,
+	        secure: process.env.MAIL_SEC, // true for 465, false for other ports
+	        auth: {
+	            user: process.env.MAIL_USERNAME, // generated ethereal user
+	            pass: process.env.MAIL_PASSWORD // generated ethereal password
+	        }
 	    });
+	
+	    // setup email data with unicode symbols
+	    var mailOptions = {
+	        from: '"' + process.env.MAIL_NAME + '" <' + process.env.MAIL_USERNAME + '>', // sender address
+	        to: [process.env.MAIL_MINE, mail], // list of receivers
+	        subject: 'Hello ✔', // Subject line
+	        text: 'Name: ' + name + ' && Purpose: ' + purp + ' && Industry: ' + indu + ' && Message ' + mess, // plain text body
+	        html: '<p>' + courtesy_mes + '</p>' + '<p><b>Name: ' + name + '</b></p> <p><b>Mail: ' + mail + '</b></p> <p><b>Purpose: ' + purp + '</b></p> <p><b>Industry: ' + indu + '</b></p> <p><b>Message ' + mess + '</b>' // html body
+	    };
+	    // send mail with defined transport object
+	    transporter.sendMail(mailOptions, function (error, info) {
+	        if (error) {
+	            console.log(error);
+	            return res.status(500).json({ error: 'Mail not sent!!' });
+	        }
+	        console.log('Message sent: %s', info.messageId);
+	        // Preview only available when sending through an Ethereal account
+	        console.log('Preview URL: %s', _nodemailer2.default.getTestMessageUrl(info));
+	
+	        return res.status(200).json({ success: 'Mail Sent!!' });
+	    });
+	    //});
 	
 	    //console.log(req.query);
 	    //return res.send('lol');

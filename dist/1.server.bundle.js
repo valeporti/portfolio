@@ -431,7 +431,7 @@ exports.modules = {
 	});
 	
 	var _ref76 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_cs50p7_status'
+	  id: 'project_fccback_status'
 	});
 	
 	var _ref77 = _jsx('hr', {});
@@ -457,7 +457,7 @@ exports.modules = {
 	}, void 0, 'Image Search'));
 	
 	var _ref82 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_cs50p7_title'
+	  id: 'project_fccback_title'
 	});
 	
 	var _ref83 = _jsx('i', {
@@ -469,7 +469,7 @@ exports.modules = {
 	});
 	
 	var _ref85 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_cs50p7_role'
+	  id: 'project_fccback_role'
 	});
 	
 	var _ref86 = _jsx('i', {
@@ -477,7 +477,7 @@ exports.modules = {
 	});
 	
 	var _ref87 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_cs50p7_context'
+	  id: 'project_fccback_context'
 	});
 	
 	var _ref88 = _jsx('i', {
@@ -485,7 +485,7 @@ exports.modules = {
 	});
 	
 	var _ref89 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_cs50p7_description'
+	  id: 'project_fccback_description'
 	});
 	
 	var _ref90 = _jsx('i', {
@@ -493,11 +493,11 @@ exports.modules = {
 	});
 	
 	var _ref91 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_fccback_status'
+	  id: 'project_fccfront_status'
 	});
 	
 	var _ref92 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_fccback_title'
+	  id: 'project_fccfront_title'
 	});
 	
 	var _ref93 = _jsx('i', {
@@ -509,7 +509,7 @@ exports.modules = {
 	});
 	
 	var _ref95 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_fccback_role'
+	  id: 'project_fccfront_role'
 	});
 	
 	var _ref96 = _jsx('i', {
@@ -517,7 +517,7 @@ exports.modules = {
 	});
 	
 	var _ref97 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_fccback_context'
+	  id: 'project_fccfront_context'
 	});
 	
 	var _ref98 = _jsx('i', {
@@ -525,7 +525,7 @@ exports.modules = {
 	});
 	
 	var _ref99 = _jsx(_reactIntl.FormattedMessage, {
-	  id: 'project_fccback_description'
+	  id: 'project_fccfront_description'
 	});
 	
 	function Projects(props, context) {
