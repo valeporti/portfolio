@@ -97,7 +97,7 @@ export default {
       ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
       ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
       ResMutuo: 'Mutuo Financiera',
-      ResMutuoRole: 'Software Developer',
+      ResMutuoRole: 'Software Engineer',
       ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
       ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
       ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
