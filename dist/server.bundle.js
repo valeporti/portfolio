@@ -2287,9 +2287,9 @@
 	    className: _About2.default.presentation
 	  }, void 0, _jsx('p', {
 	    className: _About2.default.name
-	  }, void 0, 'Valentin Portillo Galvan'), _jsx('p', {
+	  }, void 0, 'Valentin Portillo'), _jsx('p', {
 	    className: _About2.default.intitle
-	  }, void 0, 'Software Engineer'), _jsx('div', {
+	  }, void 0, 'Data Scientist / Software Engineer'), _jsx('div', {
 	    className: _About2.default.smallDescription
 	  }, void 0, _ref3, _ref4, _ref5, _ref6), _jsx('p', {
 	    className: _About2.default.intitle
@@ -2556,8 +2556,8 @@
 	  var isVisible = props.isVisible;
 	  var hard_program_arr = [{ name: 'PHP', percentage: 100 }, { name: 'C', percentage: 60 }, { name: 'JS', percentage: 100 }, { name: 'VBA', percentage: 100 }, { name: 'Python', percentage: 100 }, { name: 'Matlab', percentage: 60 }, { name: 'Java', percentage: 80 }];
 	  var hard_langs_arr = [{ name: 'Français', percentage: 100 }, { name: 'English', percentage: 100 }, { name: 'Español', percentage: 100 }, { name: 'Italiano', percentage: 60 }];
-	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 100 }, { name: 'MERN', percentage: 100 }, { name: 'Hadoop Environment', percentage: 60 }, { name: 'Python DS', percentage: 80 }];
-	  var hard_frame_arr = [{ name: 'Node.js/Express.js', percentage: 100 }, { name: 'React/Redux', percentage: 100 }, { name: 'D3.js', percentage: 80 }, { name: 'Mongoose', percentage: 100 }];
+	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 100 }, { name: 'MERN', percentage: 100 }, { name: 'Hadoop', percentage: 60 }, { name: 'Python DS', percentage: 80 }];
+	  var hard_frame_arr = [{ name: 'Node/Express', percentage: 100 }, { name: 'React/Redux', percentage: 100 }, { name: 'D3.js', percentage: 80 }, { name: 'Mongoose', percentage: 100 }];
 	  var hard_others_arr = [{ name: 'HTML', percentage: 100 }, { name: 'CSS', percentage: 80 }, { name: 'SQL', percentage: 100 }, { name: 'NoSQL', percentage: 90 }, { name: 'Git', percentage: 100 }, { name: 'NPM', percentage: 80 }];
 	  var hard_programs = void 0;
 	  var hard_langs = void 0;

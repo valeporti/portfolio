@@ -13,8 +13,8 @@ function About(props, context) {
           <i className="fas fa-terminal"></i>
         </div>
         <div className={styles.presentation}>
-          <p className={styles.name}>Valentin Portillo Galvan</p>
-          <p className={styles.intitle}>Software Engineer</p>
+          <p className={styles.name}>Valentin Portillo</p>
+          <p className={styles.intitle}>Data Scientist / Software Engineer</p>
           <div className={styles.smallDescription}>
             <p><FormattedMessage id="Me1" /></p>
             <p>
