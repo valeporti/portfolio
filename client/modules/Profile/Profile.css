@@ -6,6 +6,11 @@
     width: 100%;
     background-color: white;
 }
+
+.githubchart {
+    margin: 1em auto;
+    text-align: center;
+}
 /* 
 
 .fastAbout {

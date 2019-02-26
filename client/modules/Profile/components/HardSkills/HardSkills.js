@@ -17,7 +17,9 @@ function HardSkills(props, context) {
     {name: 'C', percentage: 60},
     {name: 'JS', percentage: 100},
     {name: 'VBA', percentage: 100},
-    {name: 'Python', percentage: 60},
+    {name: 'Python', percentage: 100},
+    {name: 'Matlab', percentage: 60},
+    {name: 'Java', percentage: 80},
   ];
   const hard_langs_arr = [
     {name: 'Français', percentage: 100},
@@ -26,16 +28,16 @@ function HardSkills(props, context) {
     {name: 'Italiano', percentage: 60},
   ];
   const hard_stacks_arr = [
-    {name: 'LARAVEL', percentage: 90},
-    {name: 'MERN', percentage: 70},
+    {name: 'LARAVEL', percentage: 100},
+    {name: 'MERN', percentage: 100},
+    {name: 'Hadoop Environment', percentage: 60},
+    {name: 'Python DS', percentage: 80},
   ];
   const hard_frame_arr = [
-    {name: 'Node.js', percentage: 80},
-    {name: 'React', percentage: 90},
-    {name: 'Redux', percentage: 80},
-    {name: 'Express.js', percentage: 80},
+    {name: 'Node.js/Express.js', percentage: 100},
+    {name: 'React/Redux', percentage: 100},
     {name: 'D3.js', percentage: 80},
-    {name: 'Mongoose', percentage: 60},
+    {name: 'Mongoose', percentage: 100},
   ];
   const hard_others_arr = [
     {name: 'HTML', percentage: 100},

@@ -387,7 +387,8 @@
 	var _About2 = _interopRequireDefault(_About);
 	
 	var _Profile = {
-	  "Profile": "g8aguRPlFsvVKJMLkJYe1"
+	  "Profile": "g8aguRPlFsvVKJMLkJYe1",
+	  "githubchart": "pNighX9WfiP7LJAFEoOTW"
 	};
 	
 	var _Profile2 = _interopRequireDefault(_Profile);
@@ -427,11 +428,16 @@
 	//Import Actions 
 	
 	
-	var _ref = _jsx(_About2.default, {});
+	var _ref = _jsx('img', {
+	  src: 'http://ghchart.rshah.org/valeporti',
+	  alt: 'Valentin Portillo Github chart'
+	});
 	
-	var _ref2 = _jsx(_SoftSkills2.default, {});
+	var _ref2 = _jsx(_About2.default, {});
 	
-	var _ref3 = _jsx(_Resume2.default, {});
+	var _ref3 = _jsx(_SoftSkills2.default, {});
+	
+	var _ref4 = _jsx(_Resume2.default, {});
 	
 	var Profile = function (_Component) {
 	  _inherits(Profile, _Component);
@@ -547,17 +553,23 @@
 	  _createClass(Profile, [{
 	    key: 'render',
 	    value: function render() {
+	      var githubCalendar = _ref;
 	      return _jsx('div', {
 	        className: _Profile2.default.Profile
 	      }, void 0, _jsx('a', {
 	        name: 'About'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.fastAbout
-	      }, void 0, _ref)), _jsx('a', {
+	      }, void 0, _ref2), _jsx('div', {
+	        className: _Profile2.default.githubchart
+	      }, void 0, _jsx('a', {
+	        href: 'https://github.com/valeporti/',
+	        target: '_blank'
+	      }, void 0, githubCalendar))), _jsx('a', {
 	        name: 'Skills'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.skillsSec
-	      }, void 0, _ref2, _jsx(_reactVisibilitySensor2.default, {
+	      }, void 0, _ref3, _jsx(_reactVisibilitySensor2.default, {
 	        onChange: this.toggleActiveHS,
 	        partialVisibility: true,
 	        minTopValue: 100
@@ -568,7 +580,7 @@
 	        name: 'Resume'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.ResumeSec
-	      }, void 0, _ref3)), _jsx('a', {
+	      }, void 0, _ref4)), _jsx('a', {
 	        name: 'Contact'
 	      }, void 0, _jsx('div', {
 	        className: _Profile2.default.ContactSec
@@ -1161,13 +1173,13 @@
 	        menuResume: 'Resume',
 	        menuContact: 'Contact',
 	        menuProjects: 'Projects',
-	        Me1: 'I started my career as a Civil Engineer but somehow my life toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
-	        Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management and using that, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
-	        Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. I believe that I would be a very nice fit for the "Junior Atlantique" because of this characteristics and the entrepreneurial profile of mine (here appears behind the web development learning to be able to create my own apps/enterprise ideas).',
+	        Me1: 'I started my professional career as a Civil Engineer and then I made my life to toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
+	        Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
+	        Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. Values that I believe are really appreciated, thing that I would rather search if I was going to hire someone.',
 	        Me4: 'Before concluding, ',
-	        MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to help / achieve the projects or challenges that the "pôle informatique" may face (have a look into my projects and resume). As I have already experience (also in project management: SCRUM, Waterfall, PMI), it could be interesting to mix me with 1st year alumni and the rest of the "pôle informatique" team.' + ' And for me, it would be a very rewarding experience in order to improve my coding, algorithms and management skills and at the same time learn more about the french enterprises world, share knowledge and meet interesting people.',
+	        MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to aboard projects or challenges of the type Data Science ans Software Engineering. As I have already experience (also in project management: SCRUM, Waterfall, PMI), this could be a plus for any type of project.' + '',
 	        KeyW: 'Key Words',
-	        KeyWords: 'SCRUM, RPA/BPA (Robotic/Business Process Automation), Full Stack Web Developement, TDD (Test Directed Developement), Data Science',
+	        KeyWords: 'Data Science (Data Engineering, Analysis, Visualization), Software Engineering, Full Stack, RPA/BPA (Robotic/Business Process Automation), SCRUM',
 	        //Soft Skills
 	        SS1: 'Analytic',
 	        SS2: 'Commitment',
@@ -1193,7 +1205,7 @@
 	        ttLang: 'Languages',
 	        ttProgLang: 'Programming Languages',
 	        ttStacks: 'Stacks',
-	        ttFrameworks: 'Frameworks',
+	        ttFrameworks: 'Frameworks/Libraries',
 	        ttOther: 'Other',
 	        //Resume
 	        ResHighShool: ' Lycée Franco Mexicain (High School)',
@@ -1225,7 +1237,7 @@
 	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
 	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
 	        ResMutuo: 'Mutuo Financiera',
-	        ResMutuoRole: 'Software Developer',
+	        ResMutuoRole: 'Software Engineer',
 	        ResMutuoDesc: 'Internal software development (MVC) and API, RPA for different projects (get/analyze and deduce from data) using Laravel framework mainly and VBA.',
 	        ResMutuoAchi: 'Projects Follow Up Automation, Scalability, Financial Projects',
 	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
@@ -1344,12 +1356,12 @@
 	        menuResume: 'Résumé',
 	        menuContact: 'Contacter',
 	        menuProjects: 'Projets',
-	        Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime les algorithmes dès toujours. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cette passion et des sujets que j\'ai toujours aimé : MSc en Science des données.',
-	        Me2: 'Avant mon premier travail lié à l\'informatique, j\'automatisais mes activités du travail et avec ça plus des études autodidactes, finalement j\'ai eu mon premier rôle lié aux algorithmes et au back-end/full-stack, appliqués principalement aux finances et à la banque.',
-	        Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. Je pense que je serais in très bon élément pour la "Junior Atlantique" grâce à ces caractéristiques et mon profil entrepreneur (apparait sous le fait d\'apprendre développement web pour créer mes propres apps/idées d\'entreprise).',
-	        MeConc: 'Pour conclure, à part de mes compétences personnelles listées ici, Je possède les compétences et expérience afin d\'aider / atteindre les projets ou défis que puissent se présenter chez le pôle informatique (vous pouvez voir mon parcours au résumé et aux projets). Comme j\'ai de l\'expérience (aussi en gestion de projets : SCRUM, Waterfall, PMI), ça pourrait être intéressant de me mélanger avec des 1A et le reste des intégrants su pôle informatique.' + ' Et pour moi, ce serait une expérience très intéressante du fait qu\'elle me permettrait d\'améliorer mes compétences de codage, algorithmes et gestion tout en apprenant au même temps sur le monde des entreprises françaises, partager les connaissances et connaître des personnes intéressantes.',
+	        Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime les algorithmes dès toujours. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cet interêt et des sujets que j\'ai toujours aimé : MSc en Science des données.',
+	        Me2: 'Avant mon premier travail lié à l\'informatique, j\'automatisais mes activités du travail, et, en ajoutant des études autodidactes, finalement j\'ai eu mon premier rôle lié aux algorithmes et au back-end/full-stack, appliqués principalement aux finances et à la banque.',
+	        Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. En étant ces valeures très importantes je les chercherais, entre d\'autres choses, dans des candidats que je prendrais.',
+	        MeConc: 'Pour conclure, à part de mes compétences personnelles listées ici, Je possède les compétences et expérience afin atteindre les projets ou défis que puissent se présenter de type Data Science ou Génie Logiciel. Comme j\'ai déjà de l\'expérience (aussi en Gestion de Projets: SCRUM, Waterfall, PMI), ce serait un plus pour n\'importe quel type de projet.' + ' Et pour moi, ce serait une expérience très intéressante du fait qu\'elle me permettrait d\'améliorer mes compétences de codage, algorithmes et gestion tout en apprenant au même temps sur le monde des entreprises françaises, partager les connaissances et connaître des personnes intéressantes.',
 	        KeyW: 'Mots Clés',
-	        KeyWords: 'SCRUM, RPA/BPA (Automatisation des Processus Robotiques/du Commerce), Développement Web Full Stack, TDD (Développement Test Dirigé), Science des Données',
+	        KeyWords: 'Science des Données (Data Engineering, Analysis, Visualisation), Génie Logiciel, Développement Full Stack, RPA/BPA (Automatisation des Processus Robotiques/du Commerce), SCRUM',
 	        //Soft Skills
 	        SS1: 'Analytique',
 	        SS2: 'Engagé',
@@ -1375,7 +1387,7 @@
 	        ttLang: 'Langues',
 	        ttProgLang: 'Langues de programmation',
 	        ttStacks: 'Stacks',
-	        ttFrameworks: 'Frameworks',
+	        ttFrameworks: 'Frameworks/Librairies',
 	        ttOther: 'Autres',
 	        //Resume
 	        ResHighShool: ' Lycée Franco Mexicain',
@@ -1407,7 +1419,7 @@
 	        ResDiploFCCFront: 'FreeCodeCamp - Front End Certification',
 	        ResDiploSAOpSys: 'Saylor Academy - CS401: Operating Systems',
 	        ResMutuo: 'Mutuo Financiera',
-	        ResMutuoRole: 'Software Developer',
+	        ResMutuoRole: 'Software Engineer',
 	        ResMutuoDesc: 'Développement du software interne, BPA & RPA pour des différents projets (obtenir/analyser et déduire des données). Méthode : Agile.',
 	        ResMutuoAchi: 'Automatisation du suivi des projets, évolutivité, projets financiers',
 	        ResDiploSAIntroDB: 'Saylor Academy - CS403: Introduction to Modern Databases',
@@ -2542,10 +2554,10 @@
 	
 	function HardSkills(props, context) {
 	  var isVisible = props.isVisible;
-	  var hard_program_arr = [{ name: 'PHP', percentage: 100 }, { name: 'C', percentage: 60 }, { name: 'JS', percentage: 100 }, { name: 'VBA', percentage: 100 }, { name: 'Python', percentage: 60 }];
+	  var hard_program_arr = [{ name: 'PHP', percentage: 100 }, { name: 'C', percentage: 60 }, { name: 'JS', percentage: 100 }, { name: 'VBA', percentage: 100 }, { name: 'Python', percentage: 100 }, { name: 'Matlab', percentage: 60 }, { name: 'Java', percentage: 80 }];
 	  var hard_langs_arr = [{ name: 'Français', percentage: 100 }, { name: 'English', percentage: 100 }, { name: 'Español', percentage: 100 }, { name: 'Italiano', percentage: 60 }];
-	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 90 }, { name: 'MERN', percentage: 70 }];
-	  var hard_frame_arr = [{ name: 'Node.js', percentage: 80 }, { name: 'React', percentage: 90 }, { name: 'Redux', percentage: 80 }, { name: 'Express.js', percentage: 80 }, { name: 'D3.js', percentage: 80 }, { name: 'Mongoose', percentage: 60 }];
+	  var hard_stacks_arr = [{ name: 'LARAVEL', percentage: 100 }, { name: 'MERN', percentage: 100 }, { name: 'Hadoop Environment', percentage: 60 }, { name: 'Python DS', percentage: 80 }];
+	  var hard_frame_arr = [{ name: 'Node.js/Express.js', percentage: 100 }, { name: 'React/Redux', percentage: 100 }, { name: 'D3.js', percentage: 80 }, { name: 'Mongoose', percentage: 100 }];
 	  var hard_others_arr = [{ name: 'HTML', percentage: 100 }, { name: 'CSS', percentage: 80 }, { name: 'SQL', percentage: 100 }, { name: 'NoSQL', percentage: 90 }, { name: 'Git', percentage: 100 }, { name: 'NPM', percentage: 80 }];
 	  var hard_programs = void 0;
 	  var hard_langs = void 0;

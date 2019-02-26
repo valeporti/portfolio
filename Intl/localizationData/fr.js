@@ -33,13 +33,13 @@ export default {
       menuResume: 'Résumé',
       menuContact: 'Contacter',
       menuProjects: 'Projets',
-      Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime les algorithmes dès toujours. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cette passion et des sujets que j\'ai toujours aimé : MSc en Science des données.',
-      Me2: 'Avant mon premier travail lié à l\'informatique, j\'automatisais mes activités du travail et avec ça plus des études autodidactes, finalement j\'ai eu mon premier rôle lié aux algorithmes et au back-end/full-stack, appliqués principalement aux finances et à la banque.',
-      Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. Je pense que je serais in très bon élément pour la "Junior Atlantique" grâce à ces caractéristiques et mon profil entrepreneur (apparait sous le fait d\'apprendre développement web pour créer mes propres apps/idées d\'entreprise).',
-      MeConc: 'Pour conclure, à part de mes compétences personnelles listées ici, Je possède les compétences et expérience afin d\'aider / atteindre les projets ou défis que puissent se présenter chez le pôle informatique (vous pouvez voir mon parcours au résumé et aux projets). Comme j\'ai de l\'expérience (aussi en gestion de projets : SCRUM, Waterfall, PMI), ça pourrait être intéressant de me mélanger avec des 1A et le reste des intégrants su pôle informatique.'
+      Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime les algorithmes dès toujours. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cet interêt et des sujets que j\'ai toujours aimé : MSc en Science des données.',
+      Me2: 'Avant mon premier travail lié à l\'informatique, j\'automatisais mes activités du travail, et, en ajoutant des études autodidactes, finalement j\'ai eu mon premier rôle lié aux algorithmes et au back-end/full-stack, appliqués principalement aux finances et à la banque.',
+      Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. En étant ces valeures très importantes je les chercherais, entre d\'autres choses, dans des candidats que je prendrais.',
+      MeConc: 'Pour conclure, à part de mes compétences personnelles listées ici, Je possède les compétences et expérience afin atteindre les projets ou défis que puissent se présenter de type Data Science ou Génie Logiciel. Comme j\'ai déjà de l\'expérience (aussi en Gestion de Projets: SCRUM, Waterfall, PMI), ce serait un plus pour n\'importe quel type de projet.'
         + ' Et pour moi, ce serait une expérience très intéressante du fait qu\'elle me permettrait d\'améliorer mes compétences de codage, algorithmes et gestion tout en apprenant au même temps sur le monde des entreprises françaises, partager les connaissances et connaître des personnes intéressantes.',
       KeyW: 'Mots Clés',
-      KeyWords: 'SCRUM, RPA/BPA (Automatisation des Processus Robotiques/du Commerce), Développement Web Full Stack, TDD (Développement Test Dirigé), Science des Données',
+      KeyWords: 'Science des Données (Data Engineering, Analysis, Visualisation), Génie Logiciel, Développement Full Stack, RPA/BPA (Automatisation des Processus Robotiques/du Commerce), SCRUM',
       //Soft Skills
       SS1: 'Analytique',
       SS2: 'Engagé',
@@ -65,7 +65,7 @@ export default {
       ttLang: 'Langues',
       ttProgLang: 'Langues de programmation',
       ttStacks: 'Stacks',
-      ttFrameworks: 'Frameworks',
+      ttFrameworks: 'Frameworks/Librairies',
       ttOther: 'Autres',
       //Resume
       ResHighShool: ' Lycée Franco Mexicain',

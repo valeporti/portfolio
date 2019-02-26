@@ -120,12 +120,16 @@ class Profile extends Component {
   }
 
   render() {
+    const githubCalendar = <img src="http://ghchart.rshah.org/valeporti" alt="Valentin Portillo Github chart" />;
     return (
       <div className={styles.Profile}>
         <a name="About">
           <div className={styles.fastAbout}>
             <About />
           </div>  
+          <div className={styles.githubchart}>
+            <a href="https://github.com/valeporti/" target="_blank">{ githubCalendar }</a>
+          </div>
         </a>  
         <a name="Skills">
           <div className={styles.skillsSec}>

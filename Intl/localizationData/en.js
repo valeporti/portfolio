@@ -33,14 +33,14 @@ export default {
     menuResume: 'Resume',
     menuContact: 'Contact',
     menuProjects: 'Projects',
-    Me1:'I started my career as a Civil Engineer but somehow my life toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
-    Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management and using that, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
-    Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. I believe that I would be a very nice fit for the "Junior Atlantique" because of this characteristics and the entrepreneurial profile of mine (here appears behind the web development learning to be able to create my own apps/enterprise ideas).',
+    Me1:'I started my professional career as a Civil Engineer and then I made my life to toggled over Computer Science, totally related with the fact that I always loved algorithms. Nowadays, I\'m doing a Computer Science related Master in order to mix this passion of mine and the subjects that I\'ve always studied: MSc in Data Science.',
+    Me2: 'Before my first Computer Science role, I used to automate all my activities related to Project Management, followed by Smart Studying, I got to finally work on algorithms and back-end/full-stack, applied mainly to finances and banking.',
+    Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. Values that I believe are really appreciated, thing that I would rather search if I was going to hire someone.',
     Me4: 'Before concluding, ',
-    MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to help / achieve the projects or challenges that the "pôle informatique" may face (have a look into my projects and resume). As I have already experience (also in project management: SCRUM, Waterfall, PMI), it could be interesting to mix me with 1st year alumni and the rest of the "pôle informatique" team.'
-      + ' And for me, it would be a very rewarding experience in order to improve my coding, algorithms and management skills and at the same time learn more about the french enterprises world, share knowledge and meet interesting people.',
+    MeConc: 'To conclude, besides the soft skills here listed, I do have the skills and experience in order to be able to aboard projects or challenges of the type Data Science ans Software Engineering. As I have already experience (also in project management: SCRUM, Waterfall, PMI), this could be a plus for any type of project.'
+      + '',
     KeyW: 'Key Words',
-    KeyWords: 'SCRUM, RPA/BPA (Robotic/Business Process Automation), Full Stack Web Developement, TDD (Test Directed Developement), Data Science',
+    KeyWords: 'Data Science (Data Engineering, Analysis, Visualization), Software Engineering, Full Stack, RPA/BPA (Robotic/Business Process Automation), SCRUM',
     //Soft Skills
     SS1: 'Analytic',
     SS2: 'Commitment',
@@ -66,7 +66,7 @@ export default {
     ttLang: 'Languages',
     ttProgLang: 'Programming Languages',
     ttStacks: 'Stacks',
-    ttFrameworks: 'Frameworks',
+    ttFrameworks: 'Frameworks/Libraries',
     ttOther: 'Other',
     //Resume
     ResHighShool: ' Lycée Franco Mexicain (High School)',
