@@ -14,12 +14,14 @@ function HardSkills(props, context) {
   let isVisible = props.isVisible;
   const hard_program_arr = [
     {name: 'PHP', percentage: 100},
-    {name: 'C', percentage: 60},
+    {name: 'C', percentage: 80},
     {name: 'JS', percentage: 100},
     {name: 'VBA', percentage: 100},
     {name: 'Python', percentage: 100},
     {name: 'Matlab', percentage: 60},
     {name: 'Java', percentage: 80},
+    {name: 'OCAML', percentage: 80},
+    {name: 'Scala', percentage: 80},
   ];
   const hard_langs_arr = [
     {name: 'Français', percentage: 100},
@@ -31,21 +33,23 @@ function HardSkills(props, context) {
     {name: 'LARAVEL', percentage: 100},
     {name: 'MERN', percentage: 100},
     {name: 'Hadoop', percentage: 60},
-    {name: 'Python DS', percentage: 80},
   ];
   const hard_frame_arr = [
-    {name: 'Node/Express', percentage: 100},
+    {name: 'ExpressJS', percentage: 100},
     {name: 'React/Redux', percentage: 100},
     {name: 'D3.js', percentage: 80},
     {name: 'Mongoose', percentage: 100},
+    {name: 'Spark', percentage: 80},
+    {name: 'Scikit-L', percentage: 80},
+    {name: 'Keras', percentage: 80},
   ];
   const hard_others_arr = [
     {name: 'HTML', percentage: 100},
     {name: 'CSS', percentage: 80},
     {name: 'SQL', percentage: 100},
-    {name: 'NoSQL', percentage: 90},
     {name: 'Git', percentage: 100},
     {name: 'NPM', percentage: 80},
+    {name: 'Mongo', percentage: 100},
   ];
   let hard_programs;
   let hard_langs;

@@ -18,6 +18,7 @@ import logo_lfm from '../../../../images/logo_lfm.jpg';
 import logo_solar from '../../../../images/logo_solar.png';
 import logo_unam from '../../../../images/logo_unam.png';
 import logo_imt from '../../../../images/logo_imt.png';
+import logo_irent from '../../../../images/icond.png';
 
 
 function Resume(props, context) {
@@ -197,7 +198,43 @@ function Resume(props, context) {
                 <h4><FormattedMessage id="September" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
                 <ul>
                   <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>
-                  <li> <FormattedMessage id="ResIMTSpe" /></li>
+                  <li><strong><FormattedMessage id="ResIMTSpe" /></strong></li>
+                  <li><FormattedMessage id="ResIMTCours" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="ResIMTP" /></h4>
+                <ul>
+                  <li><FormattedMessage id="ResIMTP1" /></li>
+                </ul>
+              </section>
+            </section>
+            <section className={styles.year}>
+              <h3>2019</h3>
+              <section>
+                <h4><FormattedMessage id="ResIMTP" /></h4>
+                <ul>
+                  <li><FormattedMessage id="ResIMTP2" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="ResIMTP" /></h4>
+                <ul>
+                  <li><FormattedMessage id="ResIMTP3" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="ResIMTP" /></h4>
+                <ul>
+                  <li><FormattedMessage id="ResIMTP4" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="September" /></h4>
+                <ul>
+                  <li><a href="https://www.irent.haus" target="_blank"><img className={styles.logo} src={logo_irent} /></a>IRent Haus: <FormattedMessage id="ResIRH" /></li>
+                  <li><strong><FormattedMessage id="ResIRHRole" /></strong></li>
+                  <li><FormattedMessage id="ResIRHDesc" /></li>
                 </ul>
               </section>
             </section>

@@ -87,6 +87,19 @@ function SoftSkills(props, context) {
           <li><FormattedMessage id="ss62" /></li>
         </ul>
       </div>
+      {/* Copy Paste for SoftSkill */}
+      <div className={styles.softSkill}>
+        <div className={styles.octagon}>
+          <div className={styles.octagonContent}>
+            <i className="fas fa-shapes"></i>
+          </div>
+        </div>
+        <div className={styles.softTtl}><FormattedMessage id="SS7" /></div>
+        <ul className={styles.ulSoft}>
+          <li><FormattedMessage id="ss71" /></li>
+          <li><FormattedMessage id="ss72" /></li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -24,6 +24,9 @@ function About(props, context) {
               <FormattedMessage id="Me3" />
             </p>
             <p>
+              <FormattedMessage id="Me4" />
+            </p>
+            <p>
               <FormattedMessage id="MeConc" />
             </p>
           </div>

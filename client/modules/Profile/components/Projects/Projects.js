@@ -14,15 +14,51 @@ import who_am_i from '../../../../images/Projects/who_am_i.png';
 import front_proj from '../../../../images/Projects/front_proj.png';
 import data_plot from '../../../../images/Projects/data_plot.png';
 import mutuo_valhalla from '../../../../images/Projects/mutuo_valhalla.png';
-
+import logo_irent from '../../../../images/icond.png';
 
 function Projects(props, context) {
   return (
     <div>
       <div className={styles.Projects}>
 
-         {/* Fintech Stuff */}
-         <div className={styles.project_display}>
+        {/* IRent Haus */}
+        <div className={styles.project_display}>
+          <a href="https://www.irent.haus" target="_blank">
+            <div className={styles.project_alert}>
+              <div className={styles.project_status}>
+                <div className={styles.project_status_icon_pos}>
+                  <i className="fas fa-check-circle"></i>
+                </div>
+                <div className={styles.project_status_text}>
+                  <FormattedMessage id="project_cs50p8_status" />
+                </div>
+              </div>
+            </div>
+          </a>
+          <div className={styles.project_content}>
+            <div className={styles.project_title}>
+              {'{'} <FormattedMessage id="ResIRH" /> {'}'}
+            </div>
+            <div className={styles.project_photo} >
+              <img className={styles.project_photo} style={{ width: '11em' }} src={logo_irent} />
+            </div>
+            <div className={styles.technologies}>
+              <i className="fas fa-flask"></i> Mongo, React/Redux, ExpressJS
+            </div>
+            <div className={styles.worked_as}>
+              <i className="far fa-address-card"></i> <FormattedMessage id="ResIRHRole" />
+            </div>
+            <div className={styles.context}>
+              <i className="fas fa-briefcase"></i> PropTech
+            </div>
+            <div className={styles.description}>
+              <i className="fas fa-comment"></i> <FormattedMessage id="project_irent_description" />
+            </div>
+          </div>
+        </div>
+
+        {/* Fintech Stuff */}
+        <div className={styles.project_display}>
           <a href="https://mutuofinanciera.com/" target="_blank">
             <div className={styles.project_alert}>
               <div className={styles.project_status}>

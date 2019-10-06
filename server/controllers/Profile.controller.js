@@ -41,7 +41,7 @@ export function sendMail(req, res) {
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+            console.error(error);
             return res.status(500).json({error: 'Mail not sent!!'});
         }
         console.log('Message sent: %s', info.messageId);
