@@ -116,6 +116,8 @@ export default {
     ResIRH: 'Rent Platform',
     ResIRHRole: 'Side Project',
     ResIRHDesc: 'Develop a Web Application to handle Rents',
+    ResIMTRole: 'Data Science Internship',
+    ResIMTDesc: 'Clustering over features from ECG signals to find the partitions candidates to be hearbeats',
     //Form
     Name: 'Name',
     Send: 'Send',

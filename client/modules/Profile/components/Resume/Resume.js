@@ -230,11 +230,19 @@ function Resume(props, context) {
                 </ul>
               </section>
               <section>
-                <h4><FormattedMessage id="September" /></h4>
+                <h4><FormattedMessage id="January" /> - <FormattedMessage id="September" /> (MVP)</h4>
                 <ul>
                   <li><a href="https://www.irent.haus" target="_blank"><img className={styles.logo} src={logo_irent} /></a>IRent Haus: <FormattedMessage id="ResIRH" /></li>
                   <li><strong><FormattedMessage id="ResIRHRole" /></strong></li>
                   <li><FormattedMessage id="ResIRHDesc" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="June" /> - <FormattedMessage id="September" /></h4>
+                <ul>
+                  <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>
+                  <li><strong><FormattedMessage id="ResIMTRole" /></strong></li>
+                  <li><FormattedMessage id="ResIMTDesc" /></li>
                 </ul>
               </section>
             </section>

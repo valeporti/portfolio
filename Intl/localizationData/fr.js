@@ -116,6 +116,8 @@ export default {
       ResIRH: 'Plataforme de Location Habitation',
       ResIRHRole: 'Projet Personel',
       ResIRHDesc: 'Déveloper une Application Web pour gèrer la location habitation',
+      ResIMTRole: 'Stagiaire Data Science',
+      ResIMTDesc: 'Classification non supervisée de caractéristiques obtenues de signaux ECG pour trouver des groupes indiquant battements de cœur',
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',
