@@ -15,6 +15,7 @@ import front_proj from '../../../../images/Projects/front_proj.png';
 import data_plot from '../../../../images/Projects/data_plot.png';
 import mutuo_valhalla from '../../../../images/Projects/mutuo_valhalla.png';
 import logo_irent from '../../../../images/icond.png';
+import exprpfx from '../../../../images/exprpfx.png';
 
 function Projects(props, context) {
   return (
@@ -53,6 +54,42 @@ function Projects(props, context) {
             </div>
             <div className={styles.description}>
               <i className="fas fa-comment"></i> <FormattedMessage id="project_irent_description" />
+            </div>
+          </div>
+        </div>
+
+         {/* Compilateur */}
+         <div className={styles.project_display}>
+          <a href="https://github.com/valeporti/imt/tree/home/imt_ll/proj/final" target="_blank">
+            <div className={styles.project_alert}>
+              <div className={styles.project_status}>
+                <div className={styles.project_status_icon_pos}>
+                  <i className="fas fa-check-circle"></i>
+                </div>
+                <div className={styles.project_status_text}>
+                  <FormattedMessage id="project_comp_status" />
+                </div>
+              </div>
+            </div>
+          </a>
+          <div className={styles.project_content}>
+            <div className={styles.project_title}>
+              {'{'} <FormattedMessage id="project_comp_title" /> {'}'}
+            </div>
+            <div className={styles.project_photo} >
+              <img className={styles.project_photo} style={{ width: '15em' }} src={exprpfx} />
+            </div>
+            <div className={styles.technologies}>
+              <i className="fas fa-flask"></i> OCAML
+            </div>
+            <div className={styles.worked_as}>
+              <i className="far fa-address-card"></i> <FormattedMessage id="project_datavis_role" />
+            </div>
+            <div className={styles.context}>
+              <i className="fas fa-briefcase"></i> <FormattedMessage id="project_comp_context" />, 
+            </div>
+            <div className={styles.description}>
+              <i className="fas fa-comment"></i> <FormattedMessage id="project_comp_description" />
             </div>
           </div>
         </div>

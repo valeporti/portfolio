@@ -118,6 +118,9 @@ export default {
     ResIRHDesc: 'Develop a Web Application to handle Rents',
     ResIMTRole: 'Data Science Internship',
     ResIMTDesc: 'Clustering over features from ECG signals to find the partitions candidates to be hearbeats',
+    ResIMTCHLG: 'Challenge IMT Disrupt’ Campus 2019',
+    ResIMTCHLGRole: 'Competitor',
+    ResIMTCHLGDesc: 'Artificial Intelligence 4 day event with conferences, activities, meet ups with enterprises and case study. For me, the study case was for BNP for their new "Innovation Center" BivWak. It was about an Identification Process using AI',
     //Form
     Name: 'Name',
     Send: 'Send',
@@ -140,6 +143,11 @@ export default {
     ToDate: 'To Date',
 
     //Projects
+    project_comp_title: 'Compiler PFX - EXPR',
+    project_comp_description: 'Create a compiler using the pfx-expr framework. By using a lexer and a parser, the "new programming language" is identified and all of its operations ordered in a pipe (expr) wich will be afterwards calculated recursively (pfx). The "new language" handles variables and lambda calculations as functions.',
+    project_comp_context: 'Functional Programming, NLP, Languages and Logic',
+    project_comp_status: 'Click to see the code',
+
     project_irent_description: 'Develop a Rent Plataform so that traditional businesses (thinking more in real state managers) can control the properties they manage. From comunication, reports, contracts to payments and data visualization/analysis',
 
     project_valhalla_status: 'Sorry, "Valhalla" is private, but you can click and access to the public page :)',

@@ -238,6 +238,14 @@ function Resume(props, context) {
                 </ul>
               </section>
               <section>
+                <h4><FormattedMessage id="June" /></h4>
+                <ul>
+                  <li><a href="https://www.imt.fr/en/education/imt-disruptcampus/challenge-imt/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMTCHLG" /></li>
+                  <li><strong><FormattedMessage id="ResIMTCHLGRole" /></strong></li>
+                  <li><FormattedMessage id="ResIMTCHLGDesc" /></li>
+                </ul>
+              </section>
+              <section>
                 <h4><FormattedMessage id="June" /> - <FormattedMessage id="September" /></h4>
                 <ul>
                   <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>

@@ -118,6 +118,9 @@ export default {
       ResIRHDesc: 'Déveloper une Application Web pour gèrer la location habitation',
       ResIMTRole: 'Stagiaire Data Science',
       ResIMTDesc: 'Classification non supervisée de caractéristiques obtenues de signaux ECG pour trouver des groupes indiquant battements de cœur',
+      ResIMTCHLG: 'Challenge IMT Disrupt’ Campus 2019',
+      ResIMTCHLGRole: 'Participant',
+      ResIMTCHLGDesc: 'Évenement de 4 jours dédiés à l\'Intelligence Artificielle avec des conférences, activités, rencontres avec des entreprises et un étude de cas. Pour moi, l\'étude de cas était pour BNP, pour leur nouvel "centre d\'innovation" BivWak. C\'était une manière de identification en utilisant l\'IA.',
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',
@@ -139,6 +142,12 @@ export default {
       ToDate: 'Á aujourd\'hui',
 
        //Projects
+
+    project_comp_title: 'Compilateur PFX - EXPR',
+    project_comp_description: 'Créer un compilateur en utilisant le cadre pfx-expr. En utilisant un lexer et un parser, le nouvel "langage de programmation" est identifié et toutes ses opérations ordonnées dans une pipe (expr) laquelle sera calculée après récursivement (pfx). Le nouveau langage utilise variables et lambda calcul.',
+    project_comp_context: 'Programmation Fonctionelle, NLP, Langages et Logique',
+    project_comp_status: 'Click pour voir le code',
+
     project_irent_description: 'Développer une plateforme web pour la gestion de la location habitation pour les entreprises traditionneles (en pensant plutôt en un administrateur immobilier pour qu\'elles puissent controler les proprietés qu\'elles gèrent. Dés la communication, raports, contrats, jusqu\'à paiements et visualisation et analyse des données.',
     
     project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
