@@ -6,10 +6,11 @@ var cssnext = require('postcss-cssnext');
 var postcssFocus = require('postcss-focus');
 var postcssReporter = require('postcss-reporter');
 var cssnano = require('cssnano');
+var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   devtool: 'hidden-source-map',
-  
+
   entry: {
     app: [
       './client/index.js',
@@ -20,6 +21,10 @@ module.exports = {
     ]
   },
 
+  node: {
+    fs: 'empty'
+  },
+
   output: {
     path: __dirname + '/dist/client/',
     filename: '[name].[chunkhash].js',
@@ -27,7 +32,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     modules: [
       'client',
       'node_modules',
@@ -35,33 +40,86 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.s?css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                localIdentName: '[hash:base64]',
+                modules: true,
+                importLoaders: 1,
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [
+                  postcssFocus(),
+                  cssnext({
+                    browsers: ['last 2 versions', 'IE > 10'],
+                  }),
+                  cssnano({
+                    autoprefixer: false,
+                  }),
+                  postcssReporter({
+                    clearMessages: true,
+                  }),
+                ],
+              },
+            },
+          ],
+        }),
+      },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?localIdentName=[hash:base64]&modules&importLoaders=1!postcss-loader'),
-      }, {
-        test: /\.css$/,
         include: /node_modules/,
-        loaders: ['style-loader', 'css-loader'],
-      }, {
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.jsx*$/,
         exclude: /node_modules/,
-        loader: 'babel',
-      }, {
-        test: /\.(jpe?g|gif|png|svg)$/i,
-        loader: 'url-loader?limit=10000',
-      }, {
-        test: /\.json$/,
-        loader: 'json-loader',
+        use: 'babel-loader',
       },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
+      /* {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }, */
+      /* {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            "presets": [
+              ["es2015", {"modules": false}]
+            ]
+          }
+        }
+      }, */
     ],
   },
 
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
+        'NODE_ENV': JSON.stringify('production')
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -69,7 +127,10 @@ module.exports = {
       minChunks: Infinity,
       filename: 'vendor.js',
     }),
-    new ExtractTextPlugin('app.[chunkhash].css', { allChunks: true }),
+    new ExtractTextPlugin({
+      filename: 'app.[contenthash].css',
+      allChunks: true,
+    }),
     new ManifestPlugin({
       basePath: '/',
     }),
@@ -77,23 +138,14 @@ module.exports = {
       filename: "chunk-manifest.json",
       manifestVariable: "webpackManifest",
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
+    //new webpack.optimize.UglifyJsPlugin(),
+    new UglifyJSPlugin({
+      sourceMap: true,
+      uglifyOptions: {
+        compress: {
+          warnings: false
+        }
       }
-    }),
-  ],
-
-  postcss: () => [
-    postcssFocus(),
-    cssnext({
-      browsers: ['last 2 versions', 'IE > 10'],
-    }),
-    cssnano({
-      autoprefixer: false
-    }),
-    postcssReporter({
-      clearMessages: true,
-    }),
+    })
   ],
 };

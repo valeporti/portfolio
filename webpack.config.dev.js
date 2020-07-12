@@ -20,14 +20,19 @@ module.exports = {
     ],
   },
 
+  node: {
+    fs: 'empty'
+  },
+
   output: {
     path: __dirname,
     filename: 'app.js',
+    //publicPath: 'http://0.0.0.0:8000/',
     publicPath: '/',
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     modules: [
       'client',
       'node_modules',
@@ -35,25 +40,59 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.s?css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+              modules: true,
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                postcssFocus(),
+                cssnext({
+                  browsers: ['last 2 versions', 'IE > 10'],
+                }),
+                postcssReporter({
+                  clearMessages: true,
+                }),
+              ],
+            },
+          },
+        ],
+      },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'style-loader!css-loader?localIdentName=[name]__[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
-      }, {
-        test: /\.css$/,
         include: /node_modules/,
-        loaders: ['style-loader', 'css-loader'],
-      }, {
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.jsx*$/,
         exclude: [/node_modules/, /.+\.config.js/],
-        loader: 'babel',
-      }, {
+        use: 'babel-loader',
+      },
+      {
         test: /\.(jpe?g|gif|png|svg)$/i,
-        loader: 'url-loader?limit=10000',
-      }, {
-        test: /\.json$/,
-        loader: 'json-loader',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
     ],
   },
@@ -70,16 +109,6 @@ module.exports = {
         CLIENT: JSON.stringify(true),
         'NODE_ENV': JSON.stringify('development'),
       }
-    }),
-  ],
-
-  postcss: () => [
-    postcssFocus(),
-    cssnext({
-      browsers: ['last 2 versions', 'IE > 10'],
-    }),
-    postcssReporter({
-      clearMessages: true,
     }),
   ],
 };
