@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var cssnext = require('postcss-cssnext');
 var postcssFocus = require('postcss-focus');
 var postcssReporter = require('postcss-reporter');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+//var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
