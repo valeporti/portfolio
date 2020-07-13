@@ -33,6 +33,7 @@ export default {
       menuResume: 'Résumé',
       menuContact: 'Contacter',
       menuProjects: 'Projets',
+      clickable_logos: 'Les logos sont cliquables',
       Me1: 'Hello! :)',
       Me2: 'Développé du logiciel pour le besoin métier à partir de mon premier emploi. Curieux et motivé par le réalisable avec fullstack developement. De plus, l\'impact que l\'on pouvait avoir en comprenant les données et les montrant comme un outil de décision m\'a impressionné. En liant ces deux faits, j\'ai décidé d\'ajouter à mes connaissances la Data Science qui est intéressante et surprenante.',
       Me3: 'Actuellement, je veux me focaliser sur le software engineerig ou fullstack developement puisque trouver des solutions algorithmiques, améliorer le code, créer des produits qui ajoutent de la valeur sont les sujets qui me stimulent le plus toujours.',

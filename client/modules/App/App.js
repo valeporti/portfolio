@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Menu from './components/Menu/Menu';
+//import Menu from './components/Menu/Menu';
 
 // Import Actions
 import { toggleAddPost, toggleActiveMenu } from './AppActions';
@@ -61,10 +61,10 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
-          <Menu 
+          {/* <Menu 
             toggleActiveMenu={this.toggleActiveMenu}
             activeMenu={this.props.app.activeMenu}
-          />
+          /> */}
           <div className={styles.container}>
             {this.props.children}
           </div>

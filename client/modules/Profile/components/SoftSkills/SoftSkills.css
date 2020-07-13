@@ -76,7 +76,8 @@
 	border-left: 29px solid white;
 	border-right: 29px solid white;
 	width: 42px;
-	height: 0;
+    height: 0;
+    box-sizing: unset;
 }
 
 .octagon:after {
@@ -88,5 +89,6 @@
 	border-left: 29px solid white;
 	border-right: 29px solid white;
 	width: 42px;
-	height: 0;
+    height: 0;
+    box-sizing: unset;
 }

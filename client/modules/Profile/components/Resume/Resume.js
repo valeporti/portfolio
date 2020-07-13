@@ -29,7 +29,7 @@ function Resume(props, context) {
   return (
     <div className={styles.Resume}>
       <div className={styles.title}>{'{'} <FormattedMessage id="menuResume" /> {'}'}</div>
-      <div style={{fontStyle:'italic', textAlign:'center', margin: '0.1em 0 0.2em 0'}}>Logos are clickable</div>
+      <div style={{fontStyle:'italic', textAlign:'center', margin: '0.1em 0 0.2em 0'}}><FormattedMessage id="clickable_logos" /></div>
       <div className={styles.header}></div>
       <div className={styles.item}>
         <div className={styles.timeline}>
