@@ -15,7 +15,7 @@ function About(props, context) {
         </div>
         <div className={styles.presentation}>
           <p className={styles.name}>Valentin Portillo</p>
-          <p className={styles.intitle}>Data Scientist / Software Engineer</p>
+          <p className={styles.intitle}>Software Engineer / Data Scientist</p>
           <div className={styles.smallDescription}>
             <p><FormattedMessage id="Me1" /></p>
             <p>

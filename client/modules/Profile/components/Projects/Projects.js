@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './Projects.css';
+import Project from './Project'
 
 // Import Images
 import pm_report from '../../../../images/Projects/pm_report.png';
@@ -17,11 +18,25 @@ import data_plot from '../../../../images/Projects/data_plot.png';
 import mutuo_valhalla from '../../../../images/Projects/mutuo_valhalla.png';
 import logo_irent from '../../../../images/icond.png';
 import exprpfx from '../../../../images/exprpfx.png';
+import ship_detec from '../../../../images/ship_detect.jpg';
 
 function Projects(props, context) {
   return (
     <div>
       <div className={styles.Projects}>
+
+        {/* DS Projects */}
+        <Project is_available all_is_link={false} status='project_datavis_status' 
+          id_title='project_ds_multiple_title' id_role='project_ds_multiple_role' 
+          id_description='project_ds_multiple_description' id_context='project_ds_multiple_context' 
+          links={[
+            <p><a href={'https://drive.google.com/file/d/1Gr0sIoUy7WHez5vw1O7YhusLXqNSoajt/view?usp=sharing'}>Profile-Job matcher</a></p>,
+            <p>Ship Detection <a href={'https://drive.google.com/file/d/1kpq-1Cow1GGDxBXbHUxgPtMH9D6eoShn/view?usp=sharing'}>Read</a>+<a href={'https://github.com/valeporti/detection_navire'}>Code</a></p>,
+            <p><a href={'https://drive.google.com/file/d/1zii3cds5TGAtWBTh9OWT_U1CMQL7uqsE/view?usp=sharing'}>Pandemic Simulator</a></p>,
+            <p>Optimization with Genetic Algorithm <a href={'https://drive.google.com/file/d/1wZVd4X-8VA-nZrYYQ8gx5JfuX5ErhRpV/view?usp=sharing'}>Read</a>+<a href='https://github.com/valeporti/imt/tree/master/imt_or/proj/py'>Code</a></p>,
+          ]}
+          img_photo={<img className={styles.project_photo} style={{ width: '11em' }} src={ship_detec} />}
+        />
 
         {/* IRent Haus */}
         <div className={styles.project_display}>
@@ -61,18 +76,21 @@ function Projects(props, context) {
 
          {/* Compilateur */}
          <div className={styles.project_display}>
-          <a href="https://github.com/valeporti/imt/tree/home/imt_ll/proj/final" target="_blank">
+          <div>
             <div className={styles.project_alert}>
               <div className={styles.project_status}>
                 <div className={styles.project_status_icon_pos}>
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className={styles.project_status_text}>
-                  <FormattedMessage id="project_comp_status" />
+                  <FormattedMessage id="project_datavis_status" />
+                  <hr></hr>
+                  <p><a href='https://github.com/valeporti/imt/tree/home/imt_ll/proj/final' target="_blank"><FormattedMessage id="project_comp_status" /></a></p>
+                  <p><a href='https://drive.google.com/file/d/1xB3BDNgIf_vEIXdAhi6_UPcfwnvweu4H/view?usp=sharing' target="_blank"><FormattedMessage id="click_for_more" /></a></p>
                 </div>
               </div>
             </div>
-          </a>
+          </div>
           <div className={styles.project_content}>
             <div className={styles.project_title}>
               {'{'} <FormattedMessage id="project_comp_title" /> {'}'}

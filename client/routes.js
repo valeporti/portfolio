@@ -19,6 +19,8 @@ if (process.env.NODE_ENV !== 'production') {
   //require('./modules/Post/pages/PostListPage/PostListPage');
   //require('./modules/Post/pages/PostDetailPage/PostDetailPage');
   require('./modules/Profile/Profile');
+  require('./modules/Profile/pages/Projects/ProfileProjects');
+  require('./modules/Profile/pages/Projects/pdfs');
 }
 
 // react-router setup with code-splitting
@@ -41,6 +43,14 @@ export default (
           });
         }}
       />
+      {/* <Route 
+        path="/projects/:pdf"
+        getComponent={(nextState, cb) => {
+          require.ensure([], require => {
+            cb(null, require('./modules/Profile/pages/Projects/pdfs').default);
+          });
+        }}
+      /> */}
     </Route>
     
     

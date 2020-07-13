@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var cssnext = require('postcss-cssnext');
 var postcssFocus = require('postcss-focus');
 var postcssReporter = require('postcss-reporter');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -94,6 +95,21 @@ module.exports = {
           },
         ],
       },
+      /* {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader', options: { inline: true } }
+      } */
+      /* {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      } */
     ],
   },
 
@@ -110,5 +126,17 @@ module.exports = {
         'NODE_ENV': JSON.stringify('development'),
       }
     }),
+    /* new CopyWebpackPlugin([
+      //{ 'from': './index.html' },
+      //{ from: './client/images/pdfs/ship_detection.pdf' },
+      {
+        'patterns': [
+          {
+            'from': 'node_modules/pdfjs-dist/cmaps/',
+            'to': 'cmaps/'
+          }
+        ]
+      },
+    ]) */
   ],
 };

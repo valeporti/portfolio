@@ -33,7 +33,10 @@ function HardSkills(props, context) {
   const hard_stacks_arr = [
     {name: 'LARAVEL', percentage: 100},
     {name: 'MERN', percentage: 100},
-    {name: 'Hadoop', percentage: 60},
+    {name: 'Hadoop', percentage: 100},
+    {name: 'PyNLP', percentage: 80},
+    {name: 'PyML', percentage: 100},
+    {name: 'PyData', percentage: 100},
   ];
   const hard_frame_arr = [
     {name: 'ExpressJS', percentage: 100},

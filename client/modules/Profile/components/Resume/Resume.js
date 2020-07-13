@@ -20,6 +20,7 @@ import logo_solar from '../../../../images/logo_solar.png';
 import logo_unam from '../../../../images/logo_unam.png';
 import logo_imt from '../../../../images/logo_imt.png';
 import logo_irent from '../../../../images/icond.png';
+import logo_ama from '../../../../images/ama_logo.png'
 
 
 function Resume(props, context) {
@@ -231,7 +232,7 @@ function Resume(props, context) {
                 </ul>
               </section>
               <section>
-                <h4><FormattedMessage id="January" /> - <FormattedMessage id="September" /> (MVP)</h4>
+                <h4><FormattedMessage id="January" /> - <FormattedMessage id="ToDate" /> (FullStack)</h4>
                 <ul>
                   <li><a href="https://www.irent.haus" target="_blank"><img className={styles.logo} src={logo_irent} /></a>IRent Haus: <FormattedMessage id="ResIRH" /></li>
                   <li><strong><FormattedMessage id="ResIRHRole" /></strong></li>
@@ -252,6 +253,23 @@ function Resume(props, context) {
                   <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>
                   <li><strong><FormattedMessage id="ResIMTRole" /></strong></li>
                   <li><FormattedMessage id="ResIMTDesc" /></li>
+                </ul>
+              </section>
+            </section>
+            <section className={styles.year}>
+              <h3>2020</h3>
+              <section>
+                <h4><FormattedMessage id="ResIMTP" /></h4>
+                <ul>
+                  <li><FormattedMessage id="ResIMTP5" /></li>
+                </ul>
+              </section>
+              <section>
+                <h4><FormattedMessage id="September" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <ul>
+                  <li><a href="https://amadeus.com/" target="_blank"><img style={{verticalAlign: 'middle', width: '60px'}} src={logo_ama} /></a> <FormattedMessage id="ResAMA" /></li>
+                  <li><strong><FormattedMessage id="ResAMARole" /></strong></li>
+                  <li><FormattedMessage id="ResAMADesc" /></li>
                 </ul>
               </section>
             </section>

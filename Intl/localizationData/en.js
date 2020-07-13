@@ -28,18 +28,19 @@ export default {
     	  other {has # comments}
       } as of {date}`,
     profileTitle: 'Profile',
-    menuAbout: 'Main',
+    menuAbout: 'About',
     menuSkills: 'Skills',
     menuResume: 'Resume',
     menuContact: 'Contact',
     menuProjects: 'Projects',
-    Me1:'I started my professional career as a Civil Engineer and then I made my life to toggle over Computer Science, totally related with the fact that I always loved logic and technology. While a Civil Engineer I mainly worked doing management since I find organizing, and decision making challenging and very attractive, curious note: I used to automate my work. Nowadays, I\'m doing a Computer Science related Master in order to mix these passions of mine: MSc in Data Science where data should be understood, tendencies bring us to decisions and yet, visualization is crucial for communication, all with the help of algorithms and logic.',
-    Me2: 'Before my first Computer Science role, as mentioned before, I used to automate all my activities related to Management, followed by a 2 years plan to get the knowledge of a computer science student, I got to finally work as one, starting with Automation and then, as a Software Engineer in the fields of finances and banking.',
-    Me3: 'So, to remark, this path shows, among others, perseverance, autonomy and motivation. Values that I believe are really appreciated, thing that I would rather search if I was going to hire someone.',
-    Me4: 'Before concluding, humility a part, I have the skills to do a Software Engineering project start-to-end, the skills for management including the soft skills as leadership and structuring (also in working structures: SCRUM, Waterfall, PMI), the skills for Data Science like communicating, analytics and logic, and the hunger to apply the new hard skills acquired in the MSc.',
-    MeConc: 'Finally, I invite you to take a look in my projects, to my "rolling résumé" and if you still don\'t want to contact me (by the end there\'s mail, linkedin ...), maybe you can give me any feedback to improve myself. Anyway, thank you and good recruitment! :)',
+    Me1: 'Hello! :)',
+    Me2: 'Developped software for business needs since my first job. Got curious and motivated by the achievable with fullstack developement. Besides, I also got impressed by the impact that one could have by understanding data and showing it as the decision tool. By matching these two facts, I decided then to add to my knowledge Data Science which is interesting and mindblowing.',
+    Me3: 'Currently, I want to focus on the path of software engineering or fullstack developement since finding algorithmic solutions, improving code, creating products and adding up to the client\'s value still are the subjects that stimulate me the most.',
+    Me4: `As you can see downwards, I\'ve used several languages professionnaly, VBA for two years, PHP (Laravel) for more than one year, Javascript and python for two years. In my personal projects, the one that dominate is Javascript stack. And on research or academic projects, the language I\'ve most used is python.  
+        For databases, I've used indefferently MongoDB and MySQL depending on the project. As an add up, the buinesses where I've developed software are management, finance, research and real estate I would say.`,
+    MeConc: 'Finally, if you\'ve arrived to this part of my small introduction, feel free to contact me and ask me for my projects and path. There\'s a link at the end. I invite you to take a look in my projects, to my "rolling résumé" and if you still don\'t want to contact me (by the end there\'s mail, linkedin ...), maybe you can give me any feedback, why not. Anyway, thank you and good recruitment! :)',
     KeyW: 'Key Words',
-    KeyWords: 'Data Science, Computer Science, Artificial Intelligence, Business Analysis, Automation, Project Management, Optimization, Entrepreneurship',
+    KeyWords: 'Software Engineering, FullStack Development, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
     //Soft Skills
     SS1: 'Analytic',
     SS2: 'Commitment',
@@ -113,6 +114,7 @@ export default {
     ResIMTP2: 'Project: Ship Detection using Satellite Images (IA, Statistiques)',
     ResIMTP3: 'Project: Compiler Expr - Pfx type (Lexer, Parser, NLP, Functional Programming)',
     ResIMTP4: 'Project: Infection Simulation and Social Netwoks treatment (Graphes)',
+    ResIMTP5: 'Project: Candidate\'s profile recommandation (RH)',
     ResIRH: 'Rent Platform',
     ResIRHRole: 'Side Project',
     ResIRHDesc: 'Develop a Web Application to handle Rents',
@@ -121,6 +123,9 @@ export default {
     ResIMTCHLG: 'Challenge IMT Disrupt’ Campus 2019',
     ResIMTCHLGRole: 'Competitor',
     ResIMTCHLGDesc: 'Artificial Intelligence 4 day event with conferences, activities, meet ups with enterprises and case study. For me, the study case was for BNP for their new "Innovation Center" BivWak. It was about an Identification Process using AI',
+    ResAMA: 'Amadeus',
+    ResAMARole: 'Data Science Intern',
+    ResAMADesc: 'Détection de Fraude. Recherche, application et différentiation des méthodes. Proposer et implémenter le détecteur (règles et ML).',
     //Form
     Name: 'Name',
     Send: 'Send',
@@ -143,6 +148,7 @@ export default {
     ToDate: 'To Date',
 
     //Projects
+    click_for_more: 'Click to know more',
     project_comp_title: 'Compiler PFX - EXPR',
     project_comp_description: 'Create a compiler using the pfx-expr framework. By using a lexer and a parser, the "new programming language" is identified and all of its operations ordered in a pipe (expr) wich will be afterwards calculated recursively (pfx). The "new language" handles variables and lambda calculations as functions.',
     project_comp_context: 'Functional Programming, NLP, Languages and Logic',
@@ -203,6 +209,11 @@ export default {
     project_fccfront_role: 'Student',
     project_fccfront_context: 'Learning UI / UX and software engineering',
     project_fccfront_description: 'By doing this projects, I followed user stories, had to use algorithms in order to create what I was asked to.',
+
+    project_ds_multiple_title: 'Some interesting DS projects',
+    project_ds_multiple_role: 'Student',
+    project_ds_multiple_context: 'MSc Data Science',
+    project_ds_multiple_description: 'Approached several subjects with different tools and methodology: NLP, AI, ML, Graphs, Operational Research among the most interesting subjects I believe.',
 
   },
 };

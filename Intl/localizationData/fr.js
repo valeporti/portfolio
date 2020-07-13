@@ -28,18 +28,19 @@ export default {
   		  other {has # comments}
       } as of {date} (in real app this would be translated to French)`,
       profileTitle: 'Profil',
-      menuAbout: 'Main',
+      menuAbout: 'À propos',
       menuSkills: 'Compétences',
       menuResume: 'Résumé',
       menuContact: 'Contacter',
       menuProjects: 'Projets',
-      Me1: 'J\'ai commencé ma carrière professionnelle comme Ingénieur Civil mais j\'ai basculé vers informatique plutôt parce que j\'aime la logique et la technologie dès toujours. En tant qu\'ingénieur civil, j\'ai travaillé dans la plupart en faisant de la gestion puisque je trouve organiser et la prise de décisions très intéressantes, point curieux : j\'automatisais mon travail. Ces jours-ci, je fais un master lié à l\'informatique pour pouvoir mélanger cet intérêt  et des sujets que j\'ai toujours aimé : MSc en Science des données où les données doivent être comprises, tendances nous amènent aux décisions et encore, la visualisation est cruciale pour la communication, tout cela avec l\'aide des algorithmes et la logique.',
-      Me2: 'Avant mon premier travail lié à l\'informatique, comme déjà mentionné, j\'automatisais mes activités du travail, et, en ajoutant un plan de 2 ans pour acquérir le savoir d\'un étudiant en informatique, j\'ai réussi à travailler comme un en commençant avec Automatisation et puis, comme un ingénieur logiciel principalement dans le domaine des finances et de la banque.',
-      Me3: 'Alors, pour mettre en évidence, ce chemin montre, entre d\'autres choses, persévérance, autonomie et motivation. En étant ces valeurs très importantes et celles que je chercherais, entre d\'autres choses, dans des candidats que je prendrais.',
-      Me4: 'Avant conclure, humilité à part, j\'ai les compétences pour faire un projet de génie logiciel début-fin, les compétences pour faire de la gestion en incluant leadership et structuration (j\'ai travaillé aussi en SCRUM, Waterfall, PMI), les compétences Data Science comme communication, analyse et logique, et la faim d\'appliquer les nouvelles connaissances acquises au MSc.',
-      MeConc: 'Finalement, je vous invite à regarder mes projets, mon "résumé roulant" et si vous n\'êtes pas encore motivé à me contacter (à la fin, le mail et mon linkedin se trouvent), peut-être vous pouvez me donner une retroalimentation pour améliorer. De toute façon, merci et bon recrutement ! :)',
+      Me1: 'Hello! :)',
+      Me2: 'Développé du logiciel pour le besoin métier à partir de mon premier emploi. Curieux et motivé par le réalisable avec fullstack developement. De plus, l\'impact que l\'on pouvait avoir en comprenant les données et les montrant comme un outil de décision m\'a impressionné. En liant ces deux faits, j\'ai décidé d\'ajouter à mes connaissances la Data Science qui est intéressante et surprenante.',
+      Me3: 'Actuellement, je veux me focaliser sur le software engineerig ou fullstack developement puisque trouver des solutions algorithmiques, améliorer le code, créer des produits qui ajoutent de la valeur sont les sujets qui me stimulent le plus toujours.',
+      Me4: `Comme vous pouvez noter plus en bas, je connais plusieurs langages professionnellement, VBA pour deux ans, PHP (Laravel) pour plus d'un an, Javascript et python pour deux ans. Dans mes projets personnels, le stack Javascript domine. Dans des projets de recherche et académiques, c'est python.
+         Pour des bases de données, j'utilise indifféremment MongoDB et MySQL en accord au projet. J'ajoute que les métiers où j'ai appliqué le développement ce sont en gestion, finances, recherche et l'immobilier.`,
+      MeConc: 'Finalement, si vous êtes arrivés à cette partie de ma petite introduction, n\'hésitez pas à me contacter et me demander au sujet de mes projets et parcours. Il y a un link au final. Je vous invite à regarder mes projets, mon "résumé roulant" et si vous n\'êtes pas encore motivé à me contacter (à la fin, le mail et mon linkedin se trouvent), vous pouvez me donner un feedback. De toute façon, merci et bon recrutement ! :)',
       KeyW: 'Mots Clés',
-      KeyWords: 'Data Science, Computer Science, Artificial Intelligence, Business Analysis, Automation, Project Management, Optimization, Entrepreneurship',
+      KeyWords: 'Software Engineering, FullStack Development, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
       //Soft Skills
       SS1: 'Analytique',
       SS2: 'Engagé',
@@ -113,6 +114,7 @@ export default {
       ResIMTP2: 'Projet: Détection Navire en utilisant imagerie satellite, IA et Statistiques',
       ResIMTP3: 'Projet: Compilateur type Expr - Pfx (Lexer, Parser, NLP, Programmation Fonctionelle)',
       ResIMTP4: 'Projet: Simulation Infection et traitement réseaux sociaux (Graphes)',
+      ResIMTP5: 'Projet: Recommandation de profils à des postes de travail (RH)',
       ResIRH: 'Plataforme de Location Habitation',
       ResIRHRole: 'Projet Personel',
       ResIRHDesc: 'Déveloper une Application Web pour gèrer la location habitation',
@@ -121,6 +123,9 @@ export default {
       ResIMTCHLG: 'Challenge IMT Disrupt’ Campus 2019',
       ResIMTCHLGRole: 'Participant',
       ResIMTCHLGDesc: 'Évenement de 4 jours dédiés à l\'Intelligence Artificielle avec des conférences, activités, rencontres avec des entreprises et un étude de cas. Pour moi, l\'étude de cas était pour BNP, pour leur nouvel "centre d\'innovation" BivWak. C\'était une manière de identification en utilisant l\'IA.',
+      ResAMA: 'Amadeus',
+      ResAMARole: 'Data Science Intern',
+      ResAMADesc: 'Fraud Detection. Research, implement and differentiate among methods. Pipeline proposal for data processing.',
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',
@@ -142,7 +147,7 @@ export default {
       ToDate: 'Á aujourd\'hui',
 
        //Projects
-
+    click_for_more: 'Clickez pour voir plus',
     project_comp_title: 'Compilateur PFX - EXPR',
     project_comp_description: 'Créer un compilateur en utilisant le cadre pfx-expr. En utilisant un lexer et un parser, le nouvel "langage de programmation" est identifié et toutes ses opérations ordonnées dans une pipe (expr) laquelle sera calculée après récursivement (pfx). Le nouveau langage utilise variables et lambda calcul.',
     project_comp_context: 'Programmation Fonctionelle, NLP, Langages et Logique',
@@ -203,5 +208,10 @@ export default {
     project_fccfront_role: 'Étudiant',
     project_fccfront_context: 'Apprenant UI / UX et software engineering',
     project_fccfront_description: "En faisant ces projets, j'ai dû poursuivre des histoires d'utilisateur, utiliser des algorithmes pour créer ce qu¿on me demandait.",
+
+    project_ds_multiple_title: 'Quelques projets DS intéressants',
+    project_ds_multiple_role: 'Étudiant',
+    project_ds_multiple_context: 'MSc Data Science',
+    project_ds_multiple_description: 'Abordé plusieurs sujets avec des outils différents et méthodologie: NLP, AI, ML, Graphes, Operational Research sont ceux les plus interessants je pense.',
   },
 };
