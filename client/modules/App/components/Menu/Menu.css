@@ -14,7 +14,7 @@
   transition: all 0.2s ease;
   z-index: 999;
   opacity: 0.9;
-  outline: 2px solid #FF6447;
+  outline: 3px solid #FF6447;
 }
 .menuactive {
   height: 50px;
@@ -28,7 +28,7 @@
   z-index: 999;
   width: calc(100% - 10vw);
   opacity: 0.9;
-  outline: 2px solid #074B54;
+  outline: 2px solid #FF6447;
 }
 .menuactive span i:nth-child(1) {
   transform: rotate(-45deg) translate(-50%, -50%);
@@ -68,7 +68,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #ccc;
+  background-color: #343A40;
   transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
 }
 .menuactive span i {
@@ -79,7 +79,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #ccc;
+  background-color: #343A40;
   transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
 }
 .menu span i:nth-child(1) {

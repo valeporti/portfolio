@@ -125,7 +125,7 @@ export default {
       ResIMTCHLGDesc: 'Évenement de 4 jours dédiés à l\'Intelligence Artificielle avec des conférences, activités, rencontres avec des entreprises et un étude de cas. Pour moi, l\'étude de cas était pour BNP, pour leur nouvel "centre d\'innovation" BivWak. C\'était une manière de identification en utilisant l\'IA.',
       ResAMA: 'Amadeus',
       ResAMARole: 'Data Science Intern',
-      ResAMADesc: 'Fraud Detection. Research, implement and differentiate among methods. Pipeline proposal for data processing.',
+      ResAMADesc: 'Détection de Fraude. Recherche, application et différentiation des méthodes. Proposer et implémenter le détecteur (règles et ML).',
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',

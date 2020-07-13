@@ -125,7 +125,7 @@ export default {
     ResIMTCHLGDesc: 'Artificial Intelligence 4 day event with conferences, activities, meet ups with enterprises and case study. For me, the study case was for BNP for their new "Innovation Center" BivWak. It was about an Identification Process using AI',
     ResAMA: 'Amadeus',
     ResAMARole: 'Data Science Intern',
-    ResAMADesc: 'Détection de Fraude. Recherche, application et différentiation des méthodes. Proposer et implémenter le détecteur (règles et ML).',
+    ResAMADesc: 'Fraud Detection. Research, implement and differentiate among methods. Pipeline proposal for data processing.',
     //Form
     Name: 'Name',
     Send: 'Send',
