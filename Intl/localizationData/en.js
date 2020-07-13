@@ -168,7 +168,7 @@ export default {
     project_valhalla_title: 'Fintech Core Banking System (ERP)',
     project_valhalla_role: 'Software Engineer',
     project_valhalla_context: 'Fintech / RPA',
-    project_valhalla_description: 'We wanted to create our own software in order to model every product and financial products as we wanted. So, there you will find a huge related database, clients, products, financial products and all you can imagine to automate and help business ...',
+    project_valhalla_description: 'We wanted to create our own software in order to model every product and financial products as we wanted. So, there you will find a huge related database, clients, products, financial products and all you can imagine to automate and help business.',
   
     project_datavis_status: 'Click on the links :)',
     project_datavis_title: 'Data Visualization',
@@ -192,7 +192,8 @@ export default {
     project_cs50final_title: 'CS50 Final - Final Project',
     project_cs50final_role: 'Student',
     project_cs50final_context: 'Web development',
-    project_cs50final_description: 'The final project, I chose to do a coffee management software. If you want to understand its functionaliity, watch the video, click in the title.',
+    project_cs50final_all_proj: 'All CS50 projects',
+    project_cs50final_description: 'The final project, I chose to do a cafeteria management software. Imagine the cafeteria needs, propose and create the most valuable functionalities.',
   
     project_cs50p8_status: "Click to See :)",
     project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',

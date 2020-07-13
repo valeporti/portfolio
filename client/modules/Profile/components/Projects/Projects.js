@@ -284,7 +284,8 @@ function Projects(props, context) {
 
         {/* FINAL */}
         <div className={styles.project_display}>
-          <a href="https://cs50final-vp.herokuapp.com/" target="_blank">
+          {/* <a href="https://cs50final-vp.herokuapp.com/" target="_blank"> */}
+          <div>
             <div className={styles.project_alert}>
               <div className={styles.project_status}>
                 <div className={styles.project_status_icon_pos}>
@@ -292,10 +293,15 @@ function Projects(props, context) {
                 </div>
                 <div className={styles.project_status_text}>
                   <FormattedMessage id="project_cs50final_status" />
+                  <hr className={`${styles.p_squeeze}`}></hr>
+                  <p className={`${styles.p_squeeze}`}><a href='https://cs50final-vp.herokuapp.com/' target="_blank">App</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://youtu.be/2zWBjwMZssI' target="_blank">Video</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://github.com/valeporti/cs50' target="_blank"><FormattedMessage id="project_cs50final_all_proj" /></a></p>
                 </div>
               </div>
             </div>
-          </a>
+          </div>
+          {/* </a> */}
           <div className={styles.project_content}>
             <div className={styles.project_title}>
               {'{'} <a className={styles.title_link} href="https://www.youtube.com/watch?v=h7MBIub-5ao" target="_blank"> <FormattedMessage id="project_cs50final_title" /> </a> {'}'}

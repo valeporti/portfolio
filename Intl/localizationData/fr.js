@@ -117,7 +117,7 @@ export default {
       ResIMTP4: 'Projet: Simulation Infection et traitement réseaux sociaux (Graphes)',
       ResIMTP5: 'Projet: Recommandation de profils à des postes de travail (RH)',
       ResIRH: 'Plataforme de Location Habitation',
-      ResIRHRole: 'Projet Personel',
+      ResIRHRole: 'Projet Personnel',
       ResIRHDesc: 'Déveloper une Application Web pour gèrer la location habitation',
       ResIMTRole: 'Stagiaire Data Science',
       ResIMTDesc: 'Classification non supervisée de caractéristiques obtenues de signaux ECG pour trouver des groupes indiquant battements de cœur',
@@ -162,19 +162,19 @@ export default {
     project_comp_context: 'Programmation Fonctionelle, NLP, Langages et Logique',
     project_comp_status: 'Click pour voir le code',
 
-    project_irent_description: 'Développer une plateforme web pour la gestion de la location habitation pour les entreprises traditionneles (en pensant plutôt en un administrateur immobilier pour qu\'elles puissent controler les proprietés qu\'elles gèrent. Dés la communication, raports, contrats, jusqu\'à paiements et visualisation et analyse des données.',
+    project_irent_description: 'Développer une plateforme web pour la gestion de la location habitation pour les entreprises traditionneles (en pensant plutôt en un administrateur immobilier pour qu\'elles puissent controler les proprietés qu\'elles gèrent. La partie communication, rapports, contrats, jusqu\'à paiements et visualisation et analyse des données.',
     
     project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
     project_valhalla_title: 'Fintech Core Banking System (ERP)',
     project_valhalla_role: 'Software Engineer',
     project_valhalla_context: 'Fintech / RPA',
-    project_valhalla_description: 'Nous voulions créer notre propre logiciel pour modeler chaque produit et produit financier. Alors, vous y trouveriez une énorme structure de base de données, clients, products, financial products, et tout ce que vous pouvez imaginer pour automatiser et aider le business ...',
+    project_valhalla_description: 'Nous voulions créer notre propre logiciel pour modeler chaque produit et produit financier. Alors, vous y trouveriez une énorme structure de base de données, clients, products, financial products, et tout ce que vous pouvez imaginer pour automatiser et aider le métier.',
   
     project_datavis_status: 'Cliquez sur les links :)',
-    project_datavis_title: 'Visualisasion des données',
+    project_datavis_title: 'Visualisation des données',
     project_datavis_role: 'Étudiant',
-    project_datavis_context: 'Visualisasion des données',
-    project_datavis_description: "Les données sont une des choses les plus précieuses pour le commerce et, une des outils les plus révélateurs pour la prise de décisions, alors, c'était à faire.",
+    project_datavis_context: 'Visualisation des données',
+    project_datavis_description: "Les données sont une des choses les plus précieuses pour le commerce et, un des outils les plus révélateurs pour la prise de décisions, alors, c'était à faire.",
 
     project_pm_status: "Désolé, projets privés à cause d'information sensible, mais il y a une vidéo :)",
     project_pm_title: 'Outil de Suivi de Projets',
@@ -192,7 +192,8 @@ export default {
     project_cs50final_title: 'CS50 Final - Projet Final',
     project_cs50final_role: 'Étudiant',
     project_cs50final_context: 'Développement Web',
-    project_cs50final_description: "Pour le projet final, j'ai choisi de faire un logiciel pour la gestion d'une cafétéria. Si vous voulez comprendre son fonctionnement, regardez la vidéo ou cliquez sur le titre.",
+    project_cs50final_all_proj: 'Tous les projects CS50',
+    project_cs50final_description: "Pour le projet final, j'ai choisi de faire un logiciel pour la gestion d'une cafétéria. Imaginer ce que une cafétéria a besoin, proposer et créer ce qui ajoute le plus de valeur possible.",
   
     project_cs50p8_status: "Cliquez pour voir :)",
     project_cs50p8_title: 'CS50 Pset8 - Google Maps & Search',
