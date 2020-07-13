@@ -148,6 +148,14 @@ export default {
       ToDate: 'Á aujourd\'hui',
 
        //Projects
+       print_ph1: 'Vous trouverez listés quelques projets que j\'ai développés ou participé à développer. Soient les plus intéressants et les plus représentatifs de mon parcours.', 
+    print_ph2: 'Les sujets et les contextes sont divers. Principalement des approches software engineering, fullstack developement et enfin data science. Sous des contextes tels que le management, les finances, la recherche et l\'académique.',
+    print_ph3_1: 'Si vous êtes plus curieux de mes projets, je vous encourage à vous rendre à ma',
+    print_ph3_2: 'page web',
+    print_ph3_3: 'qui est sûrement plus dynamique et plus riche en contenu.',
+    print_ph3_4: 'Le démarrage peut prendre quelques secondes.',
+    print_ph4: 'Bonne lecture et si vous l\'aimez, ou vous voulez simplement en parler, mettons-nous en contact',
+
     click_for_more: 'Clickez pour voir plus',
     project_comp_title: 'Compilateur PFX - EXPR',
     project_comp_description: 'Créer un compilateur en utilisant le cadre pfx-expr. En utilisant un lexer et un parser, le nouvel "langage de programmation" est identifié et toutes ses opérations ordonnées dans une pipe (expr) laquelle sera calculée après récursivement (pfx). Le nouveau langage utilise variables et lambda calcul.',

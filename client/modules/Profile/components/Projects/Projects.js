@@ -24,16 +24,37 @@ function Projects(props, context) {
   return (
     <div>
       <div className={styles.Projects}>
+      
+        <div className={styles.on_print}>
+          <br/>
+          <br/>
+          <h2 >Valentin Portillo - Portfolio</h2>
+          <br/>
+          <h4>Hello ! <i class="far fa-hand-spock" /></h4>
+          <hr/>
+          <h5>
+            <br/>
+            <p><FormattedMessage id="print_ph1" /></p>
+            <p><FormattedMessage id="print_ph2" /></p>
+            <p><FormattedMessage id="print_ph3_1" /> <strong><a href='https://portfolio-vp.herokuapp.com/projects'><FormattedMessage id="print_ph3_2" /> <i className="fas fa-rocket" /></a></strong> <FormattedMessage id="print_ph3_3" /> <i>(<FormattedMessage id="print_ph3_4" />)</i></p>
+            <p><FormattedMessage id="print_ph4" /> <i className="far fa-handshake" />.</p>
+          </h5>
+          <br/>
+          <hr/>
+          <br/>
+        </div>
+
+        <div className={`${styles.title} ${styles.no_print}`}>{'{'} <FormattedMessage id="menuProjects" /> {'}'}</div>
 
         {/* DS Projects */}
         <Project is_available all_is_link={false} status='project_datavis_status' 
           id_title='project_ds_multiple_title' id_role='project_ds_multiple_role' 
           id_description='project_ds_multiple_description' id_context='project_ds_multiple_context' 
           links={[
-            <p><a href={'https://drive.google.com/file/d/1Gr0sIoUy7WHez5vw1O7YhusLXqNSoajt/view?usp=sharing'}>Profile-Job matcher</a></p>,
-            <p>Ship Detection <a href={'https://drive.google.com/file/d/1kpq-1Cow1GGDxBXbHUxgPtMH9D6eoShn/view?usp=sharing'}>Read</a>+<a href={'https://github.com/valeporti/detection_navire'}>Code</a></p>,
-            <p><a href={'https://drive.google.com/file/d/1zii3cds5TGAtWBTh9OWT_U1CMQL7uqsE/view?usp=sharing'}>Pandemic Simulator</a></p>,
-            <p>Optimization with Genetic Algorithm <a href={'https://drive.google.com/file/d/1wZVd4X-8VA-nZrYYQ8gx5JfuX5ErhRpV/view?usp=sharing'}>Read</a>+<a href='https://github.com/valeporti/imt/tree/master/imt_or/proj/py'>Code</a></p>,
+            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1Gr0sIoUy7WHez5vw1O7YhusLXqNSoajt/view?usp=sharing'}>Profile-Job matcher</a></p>,
+            <p className={`${styles.p_squeeze}`}>Ship Detection <a href={'https://drive.google.com/file/d/1kpq-1Cow1GGDxBXbHUxgPtMH9D6eoShn/view?usp=sharing'}>Read</a>+<a href={'https://github.com/valeporti/detection_navire'}>Code</a></p>,
+            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1zii3cds5TGAtWBTh9OWT_U1CMQL7uqsE/view?usp=sharing'}>Pandemic Simulator</a></p>,
+            <p className={`${styles.p_squeeze}`}>Optimization with Genetic Algorithm <a href={'https://drive.google.com/file/d/1wZVd4X-8VA-nZrYYQ8gx5JfuX5ErhRpV/view?usp=sharing'}>Read</a>+<a href='https://github.com/valeporti/imt/tree/master/imt_or/proj/py'>Code</a></p>,
           ]}
           img_photo={<img className={styles.project_photo} style={{ width: '11em' }} src={ship_detec} />}
         />
@@ -84,9 +105,9 @@ function Projects(props, context) {
                 </div>
                 <div className={styles.project_status_text}>
                   <FormattedMessage id="project_datavis_status" />
-                  <hr></hr>
-                  <p><a href='https://github.com/valeporti/imt/tree/home/imt_ll/proj/final' target="_blank"><FormattedMessage id="project_comp_status" /></a></p>
-                  <p><a href='https://drive.google.com/file/d/1xB3BDNgIf_vEIXdAhi6_UPcfwnvweu4H/view?usp=sharing' target="_blank"><FormattedMessage id="click_for_more" /></a></p>
+                  <hr className={`${styles.p_squeeze}`}></hr>
+                  <p className={`${styles.p_squeeze}`}><a href='https://github.com/valeporti/imt/tree/home/imt_ll/proj/final' target="_blank"><FormattedMessage id="project_comp_status" /></a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://drive.google.com/file/d/1xB3BDNgIf_vEIXdAhi6_UPcfwnvweu4H/view?usp=sharing' target="_blank"><FormattedMessage id="click_for_more" /></a></p>
                 </div>
               </div>
             </div>
@@ -159,10 +180,10 @@ function Projects(props, context) {
                 </div>
                 <div className={styles.project_status_text}>
                   <FormattedMessage id="project_datavis_status" />
-                  <hr></hr>
-                  <p><a href='https://codepen.io/valeporti/full/KqvdQB/' target="_blank">Heat Map</a></p>
-                  <p><a href='https://codepen.io/valeporti/full/XgVxJr/' target="_blank">Force Directed Graph</a></p>
-                  <p><a href='https://codepen.io/valeporti/full/EXZREY/' target="_blank">Scatter Plot</a></p>
+                  <hr className={`${styles.p_squeeze}`}></hr>
+                  <p className={`${styles.p_squeeze}`}><a href='https://codepen.io/valeporti/full/KqvdQB/' target="_blank">Heat Map</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://codepen.io/valeporti/full/XgVxJr/' target="_blank">Force Directed Graph</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://codepen.io/valeporti/full/EXZREY/' target="_blank">Scatter Plot</a></p>
                 </div>
               </div>
             </div>
@@ -379,11 +400,11 @@ function Projects(props, context) {
                 </div>
                 <div className={styles.project_status_text}>
                   <FormattedMessage id="project_fccback_status" />
-                  <hr></hr>
-                  <p><a href='https://timestamp-vp.herokuapp.com/' target="_blank">TimeStamp</a></p>
-                  <p><a href='https://whoami-vp.herokuapp.com/' target="_blank">Who Am I</a></p>
-                  <p><a href='https://urlshort-vp.herokuapp.com/' target="_blank">Short URL</a></p>
-                  <p><a href='https://imagesearch-vp.herokuapp.com/' target="_blank">Image Search</a></p>
+                  <hr className={`${styles.p_squeeze}`}/>
+                  <p className={`${styles.p_squeeze}`}><a href='https://timestamp-vp.herokuapp.com/' target="_blank">TimeStamp</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://whoami-vp.herokuapp.com/' target="_blank">Who Am I</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://urlshort-vp.herokuapp.com/' target="_blank">Short URL</a></p>
+                  <p className={`${styles.p_squeeze}`}><a href='https://imagesearch-vp.herokuapp.com/' target="_blank">Image Search</a></p>
                 </div>
               </div>
             </div>

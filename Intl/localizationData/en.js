@@ -149,6 +149,13 @@ export default {
     ToDate: 'To Date',
 
     //Projects
+    print_ph1: 'Here you will find listed some of the projects that I\'ve done or done with a team, the most interesting and the ones that are the most representative in my path.', 
+    print_ph2: 'Subjects and contexts are diverse. Mostly with approaches of software engineering, fullstack development and lateley data science. In contexts like management, finance, research and academical.',
+    print_ph3_1: 'If you\'re more curious about my work, I encourage you to go to my',
+    print_ph3_2: 'personal webpage',
+    print_ph3_3: 'which is much more dynamic and has more content.',
+    print_ph3_4: 'Start up can take some seconds.',
+    print_ph4: 'Have a good reading and if you like it, or simply want to discuss about it, let\'s get in touch',
     click_for_more: 'Click to know more',
     project_comp_title: 'Compiler PFX - EXPR',
     project_comp_description: 'Create a compiler using the pfx-expr framework. By using a lexer and a parser, the "new programming language" is identified and all of its operations ordered in a pipe (expr) wich will be afterwards calculated recursively (pfx). The "new language" handles variables and lambda calculations as functions.',

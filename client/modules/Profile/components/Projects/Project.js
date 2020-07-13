@@ -38,7 +38,7 @@ export default function Project(props, context) {
               </div>
               <div className={styles.project_status_text}>
                 <FormattedMessage id={status} />
-                <hr></hr>
+                <hr className={`${styles.p_squeeze}`}></hr>
                 { links.map(e=>e) }
               </div>
             </div>

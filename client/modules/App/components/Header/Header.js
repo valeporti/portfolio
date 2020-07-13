@@ -23,7 +23,7 @@ export function Header(props, context) {
       <Navbar.Brand href="/#About" className={styles.logoContainer}><img src={logo2} className={styles.logo} /></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto" style={{color:'white !important'}}>
+        <Nav className="mr-auto">
           <Nav.Link href="/#About"><FormattedMessage id="menuAbout" /></Nav.Link>
           <Nav.Link href="/#Skills"><FormattedMessage id="menuSkills" /></Nav.Link>
           <Nav.Link href="/#Resume"><FormattedMessage id="menuResume" /></Nav.Link>
