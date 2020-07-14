@@ -157,6 +157,7 @@ export default {
     print_ph3_4: 'Start up can take some seconds.',
     print_ph4: 'Have a good reading and if you like it, or simply want to discuss about it, let\'s get in touch',
     click_for_more: 'Click to know more',
+    
     project_comp_title: 'Compiler PFX - EXPR',
     project_comp_description: 'Create a compiler using the pfx-expr framework. By using a lexer and a parser, the "new programming language" is identified and all of its operations ordered in a pipe (expr) wich will be afterwards calculated recursively (pfx). The "new language" handles variables and lambda calculations as functions.',
     project_comp_context: 'Functional Programming, NLP, Languages and Logic',

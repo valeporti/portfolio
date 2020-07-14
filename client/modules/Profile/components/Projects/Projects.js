@@ -36,7 +36,7 @@ function Projects(props, context) {
             <br/>
             <p><FormattedMessage id="print_ph1" /></p>
             <p><FormattedMessage id="print_ph2" /></p>
-            <p><FormattedMessage id="print_ph3_1" /> <strong><a href='https://portfolio-vp.herokuapp.com/projects'><FormattedMessage id="print_ph3_2" /> <i className="fas fa-rocket" /></a></strong> <FormattedMessage id="print_ph3_3" /> <i>(<FormattedMessage id="print_ph3_4" />)</i></p>
+            <p><FormattedMessage id="print_ph3_1" /> <strong><a href='https://portfolio-vp.herokuapp.com/projects'><FormattedMessage id="print_ph3_2" /> <i className="fas fa-rocket" /></a></strong> <FormattedMessage id="print_ph3_3" /> {/* <i>(<FormattedMessage id="print_ph3_4" />)</i> */}</p>
             <p><FormattedMessage id="print_ph4" /> <i className="far fa-handshake" />.</p>
           </h5>
           <br/>
