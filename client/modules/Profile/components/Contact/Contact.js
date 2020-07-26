@@ -17,7 +17,7 @@ function Contact(props, context) {
               <span className={styles.inputIcon}><i className="fas fa-user"></i></span>
               <FormattedMessage id="Name">
               {
-                (txt) =>  (<input name="name" type="text" className={styles.feedbackInput} placeholder={txt} id="name" value={props.contactName} onChange={(event) => props.contactNameInput(event.target.value)} /> )
+                (txt) =>  (<input name="name" type="text" required className={styles.feedbackInput} placeholder={txt} id="name" value={props.contactName} onChange={(event) => props.contactNameInput(event.target.value)} /> )
               }
               </FormattedMessage>
             </p>
@@ -25,7 +25,7 @@ function Contact(props, context) {
               <span className={styles.inputIcon}><i className="fas fa-at"></i></span>
               <FormattedMessage id="Email">
               {
-                (txt) =>  (<input name="email" type="text" className={styles.feedbackInput} id="email" placeholder={txt} value={props.contactMail} onChange={(event) => props.contactEmailInput(event.target.value)} /> )
+                (txt) =>  (<input name="email" type="text" required className={styles.feedbackInput} id="email" placeholder={txt} value={props.contactMail} onChange={(event) => props.contactEmailInput(event.target.value)} /> )
               }
               </FormattedMessage>
             </p>
@@ -49,7 +49,7 @@ function Contact(props, context) {
               <span className={styles.inputIcon}><i className="far fa-hand-point-right"></i></span>
               <FormattedMessage id="WriteToMe">
               {
-                (txt) =>  (<textarea name="text" className={styles.feedbackInput} id="comment" placeholder={txt} value={props.contactMess} onChange={(event) => props.contactMessInput(event.target.value)}></textarea>)
+                (txt) =>  (<textarea name="text" required className={styles.feedbackInput} id="comment" placeholder={txt} value={props.contactMess} onChange={(event) => props.contactMessInput(event.target.value)}></textarea>)
               }
               </FormattedMessage>
             </p>
