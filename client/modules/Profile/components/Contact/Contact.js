@@ -12,7 +12,7 @@ function Contact(props, context) {
       <div className={styles.title}>{'{'} <FormattedMessage id="menuContact" /> {'}'}</div>
       <div className={styles.formMain}>
         <div className={styles.formDiv}>
-          <form className={styles.form} action="/profile/sendMail" onSubmit={props.handleSentMail}>
+          <form className={styles.form} action="/profile/sendMail" onSubmit={e=>props.handleSentMail(e)}>
             <p className={styles.inputCont}>
               <span className={styles.inputIcon}><i className="fas fa-user"></i></span>
               <FormattedMessage id="Name">
