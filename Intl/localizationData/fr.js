@@ -162,7 +162,7 @@ export default {
     project_comp_context: 'Programmation Fonctionelle, NLP, Langages et Logique',
     project_comp_status: 'Click pour voir le code',
 
-    project_irent_description: 'Développer une plateforme web pour la gestion de la location habitation pour les entreprises traditionneles (en pensant plutôt en un administrateur immobilier pour qu\'elles puissent controler les proprietés qu\'elles gèrent. La partie communication, rapports, contrats, jusqu\'à paiements et visualisation et analyse des données.',
+    project_irent_description: 'Développer une plateforme web de gestion de l\'immobilier pour les entreprises traditionnelles. Fonctionnalités: Payements, création d\'utilisateurs/contrôle de rôles, gestion de finances et documentation, calendrier, contrats (comme google docs), highlights et visualisation/analyse des données.',
     
     project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
     project_valhalla_title: 'Fintech Core Banking System (ERP)',

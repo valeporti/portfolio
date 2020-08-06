@@ -163,7 +163,7 @@ export default {
     project_comp_context: 'Functional Programming, NLP, Languages and Logic',
     project_comp_status: 'Click to see the code',
 
-    project_irent_description: 'Develop a Rent Plataform so that traditional businesses (thinking more in real state managers) can control the properties they manage. From comunication, reports, contracts to payments and data visualization/analysis',
+    project_irent_description: 'Develop a Rent Plataform for traditional real estate businesses. Functionalities: Payments, users creation/role control, finances management, comunication, document management, calendar, contracts (like google docs), highlights and data visualization/analysis',
 
     project_valhalla_status: 'Sorry, "Valhalla" is private, but you can click and access to the public page :)',
     project_valhalla_title: 'Fintech Core Banking System (ERP)',

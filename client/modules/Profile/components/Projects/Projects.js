@@ -50,11 +50,12 @@ function Projects(props, context) {
         <Project is_available all_is_link={false} status='project_datavis_status' 
           id_title='project_ds_multiple_title' id_role='project_ds_multiple_role' 
           id_description='project_ds_multiple_description' id_context='project_ds_multiple_context' 
+          languages=' Python (NLP, ML, Graphs packages)'
           links={[
-            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1Gr0sIoUy7WHez5vw1O7YhusLXqNSoajt/view?usp=sharing'}>Profile-Job matcher</a></p>,
-            <p className={`${styles.p_squeeze}`}>Ship Detection <a href={'https://drive.google.com/file/d/1kpq-1Cow1GGDxBXbHUxgPtMH9D6eoShn/view?usp=sharing'}>Read</a>+<a href={'https://github.com/valeporti/detection_navire'}>Code</a></p>,
-            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1zii3cds5TGAtWBTh9OWT_U1CMQL7uqsE/view?usp=sharing'}>Pandemic Simulator</a></p>,
-            <p className={`${styles.p_squeeze}`}>Optimization with Genetic Algorithm <a href={'https://drive.google.com/file/d/1wZVd4X-8VA-nZrYYQ8gx5JfuX5ErhRpV/view?usp=sharing'}>Read</a>+<a href='https://github.com/valeporti/imt/tree/master/imt_or/proj/py'>Code</a></p>,
+            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1Gr0sIoUy7WHez5vw1O7YhusLXqNSoajt/view?usp=sharing'} target="_blank">Profile-Job matcher</a></p>,
+            <p className={`${styles.p_squeeze}`}>Ship Detection <a href={'https://drive.google.com/file/d/1kpq-1Cow1GGDxBXbHUxgPtMH9D6eoShn/view?usp=sharing'} target="_blank">Read</a>+<a href={'https://github.com/valeporti/detection_navire'} target="_blank">Code</a></p>,
+            <p className={`${styles.p_squeeze}`}><a href={'https://drive.google.com/file/d/1zii3cds5TGAtWBTh9OWT_U1CMQL7uqsE/view?usp=sharing'} target="_blank">Pandemic Simulator</a></p>,
+            <p className={`${styles.p_squeeze}`}>Optimization with Genetic Algorithm <a href={'https://drive.google.com/file/d/1wZVd4X-8VA-nZrYYQ8gx5JfuX5ErhRpV/view?usp=sharing'} target="_blank">Read</a>+<a href='https://github.com/valeporti/imt/tree/master/imt_or/proj/py' target="_blank">Code</a></p>,
           ]}
           img_photo={<img className={styles.project_photo} style={{ width: '11em' }} src={ship_detec} />}
         />
