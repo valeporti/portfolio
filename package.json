@@ -82,7 +82,7 @@
     "mockgoose": "^6.0.3",
     "mongoose": "^4.13.21",
     "nock": "^8.0.0",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.4.16",
     "nodemon": "^1.18.10",
     "null-loader": "^0.1.1",
     "nyc": "^14.1.1",
