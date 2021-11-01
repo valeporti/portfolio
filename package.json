@@ -36,7 +36,7 @@
   "license": "MIT",
   "dependencies": {
     "ava": "^2.4.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^7.1.2",
@@ -63,7 +63,7 @@
     "dotenv": "^7.0.0",
     "enzyme": "^2.3.0",
     "enzyme-adapter-react-16": "^1.9.1",
-    "eslint": "^2.11.1",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-ava": "^2.4.0",
     "eslint-plugin-import": "^1.8.1",
@@ -80,9 +80,9 @@
     "json-loader": "^0.5.4",
     "mock-css-modules": "^1.0.0",
     "mockgoose": "^6.0.3",
-    "mongoose": "^4.13.21",
+    "mongoose": "^5.13.12",
     "nock": "^8.0.0",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.7.0",
     "nodemon": "^1.18.10",
     "null-loader": "^0.1.1",
     "nyc": "^14.1.1",
@@ -110,7 +110,7 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-thunk": "^2.1.0",
     "rimraf": "^2.5.2",
-    "sanitize-html": "^1.11.4",
+    "sanitize-html": "^2.5.2",
     "serve-favicon": "^2.5.0",
     "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
@@ -130,8 +130,7 @@
     "worker-loader": "^2.0.0"
   },
   "engines": {
-    "node": "10.18.0",
-    "npm": "6.13.4"
+    "node": "12.*"
   },
   "ava": {
     "files": [

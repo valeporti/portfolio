@@ -20,7 +20,8 @@ import logo_solar from '../../../../images/logo_solar.png';
 import logo_unam from '../../../../images/logo_unam.png';
 import logo_imt from '../../../../images/logo_imt.png';
 import logo_irent from '../../../../images/icond.png';
-import logo_ama from '../../../../images/ama_logo.png'
+import logo_ama from '../../../../images/ama_logo.png';
+import logo_smood from '../../../../images/logo_smood.jpeg';
 
 
 function Resume(props, context) {
@@ -110,6 +111,7 @@ function Resume(props, context) {
                   <li><strong><FormattedMessage id="ResICAFRole" /></strong></li>
                   <li><FormattedMessage id="ResICAFDesc" /></li>
                   <li><FormattedMessage id="ResICAFAchi" /></li>
+                  <li><i className="fas fa-terminal" /> Visual Basic</li>
                 </ul>
               </section>
             </section>
@@ -124,6 +126,7 @@ function Resume(props, context) {
                   <li><strong><FormattedMessage id="ResJacEngRole" /></strong></li>
                   <li><FormattedMessage id="ResJacEngDesc" /></li>
                   <li><FormattedMessage id="ResJacEngAchi" /></li>
+                  <li><i className="fas fa-terminal" /> Visual Basic</li>
                 </ul>
               </section>
               <section>
@@ -135,6 +138,7 @@ function Resume(props, context) {
                   <li><strong><FormattedMessage id="ResCitiBRole" /></strong></li>
                   <li><FormattedMessage id="ResCitiBDesc" /></li>
                   <li><FormattedMessage id="ResCitiBAchi" /></li>
+                  <li><i className="fas fa-terminal" /> Visual Basic</li>
                 </ul>
               </section>
               <section>
@@ -176,6 +180,7 @@ function Resume(props, context) {
                   <li><strong><FormattedMessage id="ResMutuoRole" /></strong></li>
                   <li><FormattedMessage id="ResMutuoDesc" /></li>
                   <li><FormattedMessage id="ResMutuoAchi" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-php'/> + <i className='fab fa-js'/> (Laravel)</li>
                 </ul>
               </section>
               <section>
@@ -198,7 +203,7 @@ function Resume(props, context) {
                 </ul>
               </section>
               <section>
-                <h4><FormattedMessage id="September" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <h4><FormattedMessage id="September" /> - <FormattedMessage id="September" /> 2020</h4>
                 <ul>
                   <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>
                   <li><strong><FormattedMessage id="ResIMTSpe" /></strong></li>
@@ -209,6 +214,7 @@ function Resume(props, context) {
                 <h4><FormattedMessage id="ResIMTP" /></h4>
                 <ul>
                   <li><FormattedMessage id="ResIMTP1" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-python'/></li>
                 </ul>
               </section>
             </section>
@@ -218,26 +224,30 @@ function Resume(props, context) {
                 <h4><FormattedMessage id="ResIMTP" /></h4>
                 <ul>
                   <li><FormattedMessage id="ResIMTP2" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-python'/> + <i className='fab fa-python'/> <FormattedMessage id="ttBackendLibraries" /> + MongoDB</li>
                 </ul>
               </section>
               <section>
                 <h4><FormattedMessage id="ResIMTP" /></h4>
                 <ul>
                   <li><FormattedMessage id="ResIMTP3" /></li>
+                  <li><i className="fas fa-terminal" /> OCAML</li>
                 </ul>
               </section>
               <section>
                 <h4><FormattedMessage id="ResIMTP" /></h4>
                 <ul>
                   <li><FormattedMessage id="ResIMTP4" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-python'/> + <i className='fab fa-python'/> <FormattedMessage id="ttGraphTheoryLibraries" /></li>
                 </ul>
               </section>
               <section>
-                <h4><FormattedMessage id="January" /> - <FormattedMessage id="ToDate" /> (FullStack)</h4>
+                <h4><FormattedMessage id="January" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
                 <ul>
                   <li><a href="https://www.irent.haus" target="_blank"><img className={styles.logo} src={logo_irent} /></a>IRent Haus: <FormattedMessage id="ResIRH" /></li>
                   <li><strong><FormattedMessage id="ResIRHRole" /></strong></li>
                   <li><FormattedMessage id="ResIRHDesc" /></li>
+                  <li><i className="fas fa-terminal"></i> ExpressJS + <i className='fab fa-react'/> + MongoDB (MERN)</li>
                 </ul>
               </section>
               <section>
@@ -254,6 +264,7 @@ function Resume(props, context) {
                   <li><a href="https://www.imt-atlantique.fr/fr/" target="_blank"><img className={styles.logo} src={logo_imt} /></a> <FormattedMessage id="ResIMT" /></li>
                   <li><strong><FormattedMessage id="ResIMTRole" /></strong></li>
                   <li><FormattedMessage id="ResIMTDesc" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-python'/> + <i className='fab fa-python'/> <FormattedMessage id="ttDataScienceLibraries" /></li>
                 </ul>
               </section>
             </section>
@@ -263,14 +274,41 @@ function Resume(props, context) {
                 <h4><FormattedMessage id="ResIMTP" /></h4>
                 <ul>
                   <li><FormattedMessage id="ResIMTP5" /></li>
+                  <li><i className="fas fa-terminal" /> <i className='fab fa-python'/> + <i className='fab fa-python'/> <FormattedMessage id="ttDataScienceLibraries" />, <FormattedMessage id="ttGraphTheoryLibraries" /></li>
                 </ul>
               </section>
               <section>
-                <h4><FormattedMessage id="September" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <h4><FormattedMessage id="April" /> - <FormattedMessage id="September" /></h4>
                 <ul>
                   <li><a href="https://amadeus.com/" target="_blank"><img style={{verticalAlign: 'middle', width: '60px'}} src={logo_ama} /></a> <FormattedMessage id="ResAMA" /></li>
                   <li><strong><FormattedMessage id="ResAMARole" /></strong></li>
                   <li><FormattedMessage id="ResAMADesc" /></li>
+                  <li><i className="fas fa-terminal"></i> <i className='fab fa-python'/> + pySpark (Hadoop) + <i className='fab fa-python'/> <FormattedMessage id="ttDataScienceLibraries" /></li>
+                </ul>
+              </section>
+              <section>
+              
+                <h4><FormattedMessage id="October" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <ul>
+                  <li><a href="https://www.smood.ch/" target="_blank"><img className={styles.logo} src={logo_smood} /></a> 
+                    <FormattedMessage id="ResSMOOD" />
+                  </li>
+                  <li><strong><FormattedMessage id="ResSMOODRole" /></strong></li>
+                  <li><FormattedMessage id="ResSMOODDesc" /></li>
+                  <li><i className="fas fa-terminal"></i> Typescript + <i className='fab fa-js'/> + ExpressJS + <i className='fab fa-angular'/> + <i className='fab fa-react'/> + MongoDB (NestJS / SailsJS + NextJS)</li>
+                </ul>
+
+              </section>
+            </section>
+            <section className={styles.year}>
+              <h3>2021</h3>
+              <section>
+                <h4><FormattedMessage id="June" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <ul>
+                  <li>Deco Budget: <FormattedMessage id="ResND" /></li>
+                  <li><strong><FormattedMessage id="ResNDRole" /></strong></li>
+                  <li><FormattedMessage id="ResNDDesc" /></li>
+                  <li><i className="fas fa-terminal"></i> Typescript + ExpressJS + <i className='fab fa-react'/> (NextJS) + MongoDB</li>
                 </ul>
               </section>
             </section>

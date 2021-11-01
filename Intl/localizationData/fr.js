@@ -38,7 +38,8 @@ export default {
       Me2: 'Développé du logiciel pour le besoin métier à partir de mon premier emploi. Curieux et motivé par le réalisable avec fullstack developement. De plus, l\'impact que l\'on pouvait avoir en comprenant les données et les montrant comme un outil de décision m\'a impressionné. En liant ces deux faits, j\'ai décidé d\'ajouter à mes connaissances la Data Science qui est intéressante et surprenante.',
       Me3: 'Actuellement, je veux me focaliser sur le software engineerig ou fullstack developement puisque trouver des solutions algorithmiques, améliorer le code (propre, performant et rusé), créer des produits qui ajoutent de la valeur et proposer des systèmes (ou des solutions) sont les sujets qui me stimulent le plus toujours. Et oui, apprendre et découvrir. J\'aime les nouvelles technos.',
       Me4: `Comme vous pouvez noter plus en bas, je connais plusieurs langages professionnellement, VBA pour deux ans, PHP (Laravel) pour plus d'un an, Javascript et python pour deux ans. Dans mes projets personnels, le stack Javascript domine. Dans des projets de recherche et académiques, c'est python.
-         Pour des bases de données, j'utilise indifféremment MongoDB et MySQL en accord au projet. J'ajoute que les métiers où j'ai appliqué le développement ce sont en gestion, finances, recherche et l'immobilier.`,
+        Pour des bases de données, j'utilise indifféremment MongoDB et MySQL en accord au projet. J'ajoute que les métiers où j'ai appliqué le développement ce sont en gestion, finances, recherche et l'immobilier.`
+        + `Grâce à ces faits et à l'exprérience, je me considère en étant agnosique du language et du framework.`,
       MeConc: 'Finalement, si vous êtes arrivés à cette partie de ma petite introduction, n\'hésitez pas à me contacter et me demander au sujet de mes projets et parcours. Il y a un link au final. Je vous invite à regarder mes projets, mon "résumé roulant" et si vous n\'êtes pas encore motivé à me contacter (à la fin, le mail et mon linkedin se trouvent), vous pouvez me donner un feedback. De toute façon, merci et bon recrutement ! :)',
       KeyW: 'Mots Clés',
       KeyWords: 'Software Engineering, FullStack Development, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
@@ -72,6 +73,10 @@ export default {
       ttStacks: 'Stacks',
       ttFrameworks: 'Frameworks/Librairies',
       ttOther: 'Autres',
+      ttGraphTheoryLibraries: 'Bibliothèques de Théorie de Graphes',
+      ttBackendLibraries: 'Bibliothèques de Backend',
+      ttDataScienceLibraries: 'Bibliothèques de Data Science',
+
       //Resume
       ResHighShool: ' Lycée Franco Mexicain',
       ResHighShoolSpe: 'Spécialité  Sciences de l\'ingénieur',
@@ -126,7 +131,14 @@ export default {
       ResIMTCHLGDesc: 'Évenement de 4 jours dédiés à l\'Intelligence Artificielle avec des conférences, activités, rencontres avec des entreprises et un étude de cas. Pour moi, l\'étude de cas était pour BNP, pour leur nouvel "centre d\'innovation" BivWak. C\'était une manière de identification en utilisant l\'IA.',
       ResAMA: 'Amadeus',
       ResAMARole: 'Data Science Intern',
-      ResAMADesc: 'Détection de Fraude. Recherche, application et différentiation des méthodes. Proposer et implémenter le détecteur (règles et ML).',
+      ResAMADesc: 'Détection de Fraude. Recherche et implémentation MVP. Proposed two sources feeding data with features engineering and a pipeline of models.',
+      ResSMOOD: 'Smood',
+      ResSMOODRole: 'Developpeur FullStack',
+      ResSMOODDesc: 'Améliorer les différents produits concernant les associés (restaurants). Implémenter des "features", developperdes solutions pour des "business cases".',
+      ResND: 'Création de budgets pour architectes d\'intérieur',
+      ResNDRole: 'Projet Personnel',
+      ResNDDesc: 'Une application web pour faciliter la gestion de budgets et la relation client.',
+
       //Form
       Name: 'Prénom',
       Send: 'Envoyer',

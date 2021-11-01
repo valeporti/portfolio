@@ -38,7 +38,7 @@ export default {
     Me2: 'Developped software for business needs since my first job. Got curious and motivated by the achievable with fullstack developement. Besides, I also got impressed by the impact that one could have by understanding data and showing it as the decision tool. By matching these two facts, I decided then to add to my knowledge Data Science which is interesting and mindblowing.',
     Me3: 'Currently, I want to focus on the path of software engineering or fullstack developement since finding algorithmic solutions, improving code (clean, performant and smart), creating products, proposing systems (or solutions) and adding up to the client\'s value still are the subjects that stimulate me the most. And yes, learning and discovering, I love new technologies.',
     Me4: `As you can see downwards, I\'ve used several languages professionnaly, VBA for two years, PHP (Laravel) for more than one year, Javascript and python for two years. In my personal projects, the one that dominate is Javascript stack. And on research or academic projects, the language I\'ve most used is python.  
-        For databases, I've used indefferently MongoDB and MySQL depending on the project. As an add up, the buinesses where I've developed software are management, finance, research and real estate I would say.`,
+        For databases, I've used indefferently MongoDB and MySQL depending on the project. As an add up, the buinesses where I've developed software are management, finance, research and real estate I would say. Thanks to this facts and the experience I consider myself to be language and framework agnostic.`,
     MeConc: 'Finally, if you\'ve arrived to this part of my small introduction, feel free to contact me and ask me for my projects and path. There\'s a link at the end. I invite you to take a look in my projects, to my "rolling résumé" and if you still don\'t want to contact me (by the end there\'s mail, linkedin ...), maybe you can give me any feedback, why not. Anyway, thank you and good recruitment! :)',
     KeyW: 'Key Words',
     KeyWords: 'Software Engineering, FullStack Development, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
@@ -72,6 +72,10 @@ export default {
     ttStacks: 'Stacks',
     ttFrameworks: 'Frameworks/Libraries',
     ttOther: 'Other',
+    ttGraphTheoryLibraries: 'Graph theory libraries',
+    ttBackendLibraries: 'Backend libraries',
+    ttDataScienceLibraries: 'Data Science libraries',
+
     //Resume
     ResHighShool: ' Lycée Franco Mexicain (High School)',
     ResHighShoolSpe: 'Engineering Science Specialization',
@@ -126,7 +130,14 @@ export default {
     ResIMTCHLGDesc: 'Artificial Intelligence 4 day event with conferences, activities, meet ups with enterprises and case study. For me, the study case was for BNP for their new "Innovation Center" BivWak. It was about an Identification Process using AI',
     ResAMA: 'Amadeus',
     ResAMARole: 'Data Science Intern',
-    ResAMADesc: 'Fraud Detection. Research, implement and differentiate among methods. Pipeline proposal for data processing.',
+    ResAMADesc: 'Fraud Detection. Research and implementation MVP. Proposed a two sources feeding data with features engineering and a pipeline of models.',
+    ResSMOOD: 'Smood',
+    ResSMOODRole: 'Full Stack developer',
+    ResSMOODDesc: 'Improve the different products concerning partner (restaurants). Implement features, develop solutions for business cases.',
+    ResND: 'Interior design budget creator',
+    ResNDRole: 'Projet Personnel',
+    ResNDDesc: 'Web app to facilitate budget management and client relationship.',
+
     //Form
     Name: 'Name',
     Send: 'Send',
