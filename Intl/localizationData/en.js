@@ -35,13 +35,16 @@ export default {
     menuProjects: 'Projects',
     clickable_logos: 'Logos are clickable',
     Me1: 'Hello! :)',
-    Me2: 'Developped software for business needs since my first job. Got curious and motivated by the achievable with fullstack developement. Besides, I also got impressed by the impact that one could have by understanding data and showing it as the decision tool. By matching these two facts, I decided then to add to my knowledge Data Science which is interesting and mindblowing.',
-    Me3: 'Currently, I want to focus on the path of software engineering or fullstack developement since finding algorithmic solutions, improving code (clean, performant and smart), creating products, proposing systems (or solutions) and adding up to the client\'s value still are the subjects that stimulate me the most. And yes, learning and discovering, I love new technologies.',
-    Me4: `As you can see downwards, I\'ve used several languages professionnaly, VBA for two years, PHP (Laravel) for more than one year, Javascript and python for two years. In my personal projects, the one that dominate is Javascript stack. And on research or academic projects, the language I\'ve most used is python.  
+    Me2: 'Developped software for business needs and done data analysis since my first career stage. In the begining of my career, I did ETL, and modeling to predict projects\' behavior and create decision making dashbord as tool for mangers. This softawre, the software I created to that end was used in multiple projects of engineering and construction. And so, I got captivated by the power of software and decision making. ' 
+      + 'So, I wanted to learn more and deep dive in those subjects. I was already doing data, but I felt that I had to improve in software and in data skill. As my next step I decided to start by deep dive in computer science since it\'s the base. And then, it was time for data, so I went for a master in Data Science which is interesting and mindblowing.',
+    Me3: 'Currently, because of interesting oportunities that had arrived, I\'m in a software engineering position (loving it) but I\'m also open to a data science position to be able to put in practice my knowledge (a hybrid position would be awesome). Things that I love or stimulate me the most are: ' 
+      + 'finding algorithmic solutions (algorithms, graph theory, operation reasearch), decision making aid (data engineering, feateures engineering, modeling, data visualisation), improving code (clean, performant and smart), creating start-to-end features, proposing systems (or solutions) and adding up to the client\'s value. Of course, learning and discovering. '
+      + 'One subject I\'m curious of is NLP.',
+    Me4: `As you can see downwards, I\'ve used several languages professionnaly, VBA for two years (data analysis and ETL), PHP (Laravel) for more than one year (FullStack, ETL, Data Analysis), Javascript (FullStack) and Python (Data Science) for two years. In my personal projects, the one that dominate is Javascript stack. And on research or academic projects, the language I\'ve most used is Python.  
         For databases, I've used indefferently MongoDB and MySQL depending on the project. As an add up, the buinesses where I've developed software are management, finance, research and real estate I would say. Thanks to this facts and the experience I consider myself to be language and framework agnostic.`,
     MeConc: 'Finally, if you\'ve arrived to this part of my small introduction, feel free to contact me and ask me for my projects and path. There\'s a link at the end. I invite you to take a look in my projects, to my "rolling résumé" and if you still don\'t want to contact me (by the end there\'s mail, linkedin ...), maybe you can give me any feedback, why not. Anyway, thank you and good recruitment! :)',
     KeyW: 'Key Words',
-    KeyWords: 'Software Engineering, FullStack Development, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
+    KeyWords: 'Software Engineering, Data Science, Computer Science, Artificial Intelligence, Automation, Business Analysis, Project Management, Operational Research, Entrepreneurship',
     //Soft Skills
     SS1: 'Analytic',
     SS2: 'Commitment',
@@ -135,7 +138,7 @@ export default {
     ResSMOODRole: 'Full Stack developer',
     ResSMOODDesc: 'Improve the different products concerning partner (restaurants). Implement features, develop solutions for business cases.',
     ResND: 'Interior design budget creator',
-    ResNDRole: 'Projet Personnel',
+    ResNDRole: 'Side project',
     ResNDDesc: 'Web app to facilitate budget management and client relationship.',
 
     //Form
