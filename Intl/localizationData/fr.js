@@ -135,7 +135,7 @@ export default {
       ResSMOOD: 'Smood',
       ResSMOODRole: 'Developpeur FullStack',
       ResSMOODDesc: 'Améliorer les différents produits concernant les associés (restaurants). Implémenter des "features", developperdes solutions pour des "business cases".',
-      ResND: 'Création de budgets pour architectes d\'intérieur',
+      ResND: 'Gerer le process d\'interior design',
       ResNDRole: 'Projet Personnel',
       ResNDDesc: 'Une application web pour faciliter la gestion de budgets et la relation client.',
 
@@ -163,7 +163,7 @@ export default {
        print_ph1: 'Vous trouverez listés quelques projets que j\'ai développés ou participé à développer. Soient les plus intéressants et les plus représentatifs de mon parcours.', 
     print_ph2: 'Les sujets et les contextes sont divers. Principalement des approches software engineering, fullstack developement et enfin data science. Sous des contextes tels que le management, les finances, la recherche et l\'académique.',
     print_ph3_1: 'Si vous êtes plus curieux de mes projets, je vous encourage à vous rendre à ma',
-    print_ph3_2: 'page web',
+    print_ph3_2: 'page web (https://portfolio-vp.herokuapp.com)',
     print_ph3_3: 'qui est sûrement plus dynamique et plus riche en contenu.',
     print_ph3_4: 'Le démarrage peut prendre quelques secondes.',
     print_ph4: 'Bonne lecture et si vous l\'aimez, ou vous voulez simplement en parler, mettons-nous en contact',
@@ -175,6 +175,7 @@ export default {
     project_comp_status: 'Click pour voir le code',
 
     project_irent_description: 'Développer une plateforme web de gestion de l\'immobilier pour les entreprises traditionnelles. Fonctionnalités: Payements, création d\'utilisateurs/contrôle de rôles, gestion de finances et documentation, calendrier, contrats (comme google docs), highlights et visualisation/analyse des données.',
+    project_homebudget_description: 'Développer une plataformw où les architectes d\'intérieur seront capables de communiquer avec leurs clients tout au long du projet. Gerer les différentes étapes. Faciliter la préparation du projet de la part du designer. Also faciliate their design preparation.',
     
     project_valhalla_status: 'Désolé, "Valhalla" est privé, mais vous pouvez cliquer dessus et accéder à la page publique :)',
     project_valhalla_title: 'Fintech Core Banking System (ERP)',
