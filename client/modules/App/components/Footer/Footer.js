@@ -11,7 +11,7 @@ export function Footer() {
   //<div style={{ background: `#FFF url(${bg}) center` }} className={styles.footer}>
   return (
     <div className={styles.footer}>
-      <p>&copy; 2020 &middot; V &middot; Valentin Portillo</p>
+      <p>&copy; {(new Date()).getFullYear()} &middot; V &middot; Valentin Portillo</p>
       <p className={styles.links}>
         <a className={styles.link} href="https://www.linkedin.com/in/valeporti/" target="_Blank"><i className="fab fa-linkedin-in"></i></a>
         <a className={styles.link} href="https://codepen.io/valeporti/" target="_Blank"><i className="fab fa-codepen"></i></a>
