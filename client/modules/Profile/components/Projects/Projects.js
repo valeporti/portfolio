@@ -19,6 +19,7 @@ import mutuo_valhalla from '../../../../images/Projects/mutuo_valhalla.png';
 import logo_irent from '../../../../images/icond.png';
 import exprpfx from '../../../../images/exprpfx.png';
 import ship_detec from '../../../../images/ship_detect.jpg';
+import logo_homebudget from '../../../../images/logo_HB.png';
 
 function Projects(props, context) {
   return (
@@ -45,6 +46,42 @@ function Projects(props, context) {
         </div>
 
         <div className={`${styles.title} ${styles.no_print}`}>{'{'} <FormattedMessage id="menuProjects" /> {'}'}</div>
+
+        {/* Nico Deco */}
+        <div className={styles.project_display}>
+          <a href="https://homedecobudget.herokuapp.com/" target="_blank">
+            <div className={styles.project_alert}>
+              <div className={styles.project_status}>
+                <div className={styles.project_status_icon_pos}>
+                  <i className="fas fa-check-circle"></i>
+                </div>
+                <div className={styles.project_status_text}>
+                  <FormattedMessage id="project_cs50p8_status" />
+                </div>
+              </div>
+            </div>
+          </a>
+          <div className={styles.project_content}>
+            <div className={styles.project_title}>
+              {'{'} <FormattedMessage id="ResND" /> {'}'}
+            </div>
+            <div className={styles.project_photo} >
+              <img className={styles.project_photo} style={{ width: '7em' }} src={logo_homebudget} />
+            </div>
+            <div className={styles.technologies}>
+              <i className="fas fa-flask"></i> Mongo, React/Redux, NextJS + ExpressJS
+            </div>
+            <div className={styles.worked_as}>
+              <i className="far fa-address-card"></i> <FormattedMessage id="ResNDRole" />
+            </div>
+            <div className={styles.context}>
+              <i className="fas fa-briefcase"></i> Interior Design
+            </div>
+            <div className={styles.description}>
+              <i className="fas fa-comment"></i> <FormattedMessage id="project_homebudget_description" />
+            </div>
+          </div>
+        </div>
 
         {/* DS Projects */}
         <Project is_available all_is_link={false} status='project_datavis_status' 

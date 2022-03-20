@@ -22,6 +22,7 @@ import logo_imt from '../../../../images/logo_imt.png';
 import logo_irent from '../../../../images/icond.png';
 import logo_ama from '../../../../images/ama_logo.png';
 import logo_smood from '../../../../images/logo_smood.jpeg';
+import logo_homebudget from '../../../../images/logo_HB.png';
 
 
 function Resume(props, context) {
@@ -305,7 +306,7 @@ function Resume(props, context) {
               <section>
                 <h4><FormattedMessage id="June" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
                 <ul>
-                  <li>Deco Budget: <FormattedMessage id="ResND" /></li>
+                  <li><a href="https://homedecobudget.herokuapp.com" target="_blank"><img className={styles.logo} src={logo_homebudget} /></a>Deco Budget: <FormattedMessage id="ResND" /></li>
                   <li><strong><FormattedMessage id="ResNDRole" /></strong></li>
                   <li><FormattedMessage id="ResNDDesc" /></li>
                   <li><i className="fas fa-terminal"></i> Typescript + ExpressJS + <i className='fab fa-react'/> (NextJS) + MongoDB</li>

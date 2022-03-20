@@ -137,7 +137,7 @@ export default {
     ResSMOOD: 'Smood',
     ResSMOODRole: 'Full Stack developer',
     ResSMOODDesc: 'Improve the different products concerning partner (restaurants). Implement features, develop solutions for business cases.',
-    ResND: 'Interior design budget creator',
+    ResND: 'Interior design process handler',
     ResNDRole: 'Side project',
     ResNDDesc: 'Web app to facilitate budget management and client relationship.',
 
@@ -166,7 +166,7 @@ export default {
     print_ph1: 'Here you will find listed some of the projects that I\'ve done or done with a team, the most interesting and the ones that are the most representative in my path.', 
     print_ph2: 'Subjects and contexts are diverse. Mostly with approaches of software engineering, fullstack development and lateley data science. In contexts like management, finance, research and academical.',
     print_ph3_1: 'If you\'re more curious about my work, I encourage you to go to my',
-    print_ph3_2: 'personal webpage',
+    print_ph3_2: 'personal webpage (https://portfolio-vp.herokuapp.com)',
     print_ph3_3: 'which is much more dynamic and has more content.',
     print_ph3_4: 'Start up can take some seconds.',
     print_ph4: 'Have a good reading and if you like it, or simply want to discuss about it, let\'s get in touch',
@@ -178,6 +178,7 @@ export default {
     project_comp_status: 'Click to see the code',
 
     project_irent_description: 'Develop a Rent Plataform for traditional real estate businesses. Functionalities: Payments, users creation/role control, finances management, comunication, document management, calendar, contracts (like google docs), highlights and data visualization/analysis',
+    project_homebudget_description: 'Develop a plataform where interior designers could comminucate with clients and deliver the whole design process. Manage the different stages. Also faciliate their design preparation.',
 
     project_valhalla_status: 'Sorry, "Valhalla" is private, but you can click and access to the public page :)',
     project_valhalla_title: 'Fintech Core Banking System (ERP)',
