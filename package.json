@@ -76,7 +76,7 @@
     "intl": "^1.2.4",
     "intl-locales-supported": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^9.2.1",
+    "jsdom": "^16.5.0",
     "json-loader": "^0.5.4",
     "mock-css-modules": "^1.0.0",
     "mockgoose": "^6.0.3",
