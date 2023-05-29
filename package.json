@@ -80,7 +80,7 @@
     "json-loader": "^0.5.4",
     "mock-css-modules": "^1.0.0",
     "mockgoose": "^6.0.3",
-    "mongoose": "^5.13.12",
+    "mongoose": "^5.13.15",
     "nock": "^8.0.0",
     "nodemailer": "^6.7.0",
     "nodemon": "^1.18.10",
