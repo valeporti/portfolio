@@ -1,22 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-
-// Import Style
-import styles from './HardSkills.css';
-
+import PropTypes from 'prop-types';
+import React from 'react';
 //Import Components
 import SkillBar from '../SkillBar/SkillBar';
-
 //Other funcitonalities
 import VisibilitySensor from 'react-visibility-sensor';
+// Import Style
+import styles from './HardSkills.css';
 
 function HardSkills(props, context) {
   let isVisible = props.isVisible;
   const hard_program_arr = [
     {name: 'PHP', percentage: 100},
     {name: 'C', percentage: 80},
-    {name: 'JS', percentage: 100},
+    {name: 'JS/TS', percentage: 100},
     {name: 'VBA', percentage: 100},
     {name: 'Python', percentage: 100},
     {name: 'Matlab', percentage: 60},
@@ -40,6 +37,8 @@ function HardSkills(props, context) {
   ];
   const hard_frame_arr = [
     {name: 'ExpressJS', percentage: 100},
+    {name: 'NestJS', percentage: 100},
+    {name: 'NextJS', percentage: 100},
     {name: 'React/Redux', percentage: 100},
     {name: 'D3.js', percentage: 80},
     {name: 'Mongoose', percentage: 100},
@@ -50,10 +49,12 @@ function HardSkills(props, context) {
   const hard_others_arr = [
     {name: 'HTML', percentage: 100},
     {name: 'CSS', percentage: 80},
-    {name: 'SQL', percentage: 100},
+    {name: 'MySQL', percentage: 100},
+    {name: 'Postgre', percentage: 60},
     {name: 'Git', percentage: 100},
     {name: 'NPM', percentage: 80},
     {name: 'Mongo', percentage: 100},
+    {name: 'Docker', percentage: 100},
   ];
   let hard_programs;
   let hard_langs;

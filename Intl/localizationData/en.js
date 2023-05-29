@@ -135,11 +135,14 @@ export default {
     ResAMARole: 'Data Science Intern',
     ResAMADesc: 'Fraud Detection. Research and implementation MVP. Proposed a two sources feeding data with features engineering and a pipeline of models.',
     ResSMOOD: 'Smood',
-    ResSMOODRole: 'Full Stack developer',
+    ResSMOODRole: 'Full Stack engineer',
     ResSMOODDesc: 'Improve the different products concerning partner (restaurants). Implement features, develop solutions for business cases.',
     ResND: 'Interior design process handler',
     ResNDRole: 'Side project',
     ResNDDesc: 'Web app to facilitate budget management and client relationship.',
+    ResKNAP: 'Knap',
+    ResKNAPRole: 'Full Stack engineer',
+    ResKNAPDesc: 'Built app ground up. Features for customer, fraud and management apps.',
 
     //Form
     Name: 'Name',

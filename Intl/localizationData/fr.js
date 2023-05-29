@@ -136,11 +136,14 @@ export default {
       ResAMARole: 'Data Science Intern',
       ResAMADesc: 'Détection de Fraude. Recherche et implémentation MVP. Proposed two sources feeding data with features engineering and a pipeline of models.',
       ResSMOOD: 'Smood',
-      ResSMOODRole: 'Developpeur FullStack',
+      ResSMOODRole: 'Full Stack engineer',
       ResSMOODDesc: 'Améliorer les différents produits concernant les associés (restaurants). Implémenter des "features", developperdes solutions pour des "business cases".',
       ResND: 'Gerer le process d\'interior design',
       ResNDRole: 'Projet Personnel',
       ResNDDesc: 'Une application web pour faciliter la gestion de budgets et la relation client.',
+      ResKNAP: 'Knap',
+      ResKNAPRole: 'Full Stack engineer',
+      ResKNAPDesc: 'Création de features, solutions pour l\'app client, fraude et de gestion du produit.',
 
       //Form
       Name: 'Prénom',

@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
-import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap'
+import { Button, Form, FormControl, Nav, NavDropdown, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap'
 
-// Import Style
-import styles from './Header.css';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router';
+import PropTypes from 'prop-types';
+import React from 'react';
 //image
 import logo2 from '../../../../images/logo2.jpg';
+// Import Style
+import styles from './Header.css';
 
 export function Header(props, context) {
   /* const languageNodes = props.intl.enabledLanguages.map(
@@ -57,6 +57,17 @@ export function Header(props, context) {
             </span>
           </Nav.Link>
           { isProjects && <Nav.Item>&nbsp;&nbsp;<i className="fas fa-arrow-right" style={{color: 'white'}} />&nbsp;&nbsp;<Button variant='outline-light' onClick={() => { window.print(); return false; }}><i className='fas fa-print'/></Button></Nav.Item>}
+          <Nav.Link target='_blank' href='https://www.dropbox.com/sh/xs615cmc3ncqu66/AACRePpt39u5U6EqkyFf-ogQa?dl=0'>
+            <OverlayTrigger placement='bottom' overlay={
+              <Tooltip>
+                CV
+              </Tooltip>
+            }> 
+              <span>
+                <i className='fas fa-id-card' />
+              </span>
+            </OverlayTrigger>
+          </Nav.Link>
         </Nav>
         <Nav>
           <NavDropdown
@@ -66,6 +77,7 @@ export function Header(props, context) {
             {languageNodes}
           </NavDropdown>
         </Nav>
+       
       </Navbar.Collapse>
     </Navbar>
   );

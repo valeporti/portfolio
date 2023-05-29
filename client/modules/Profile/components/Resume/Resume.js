@@ -1,29 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-
-// Import Style
-import styles from './Resume.css';
-
-// Import Images
-import tridisap from '../../../../images/tridisap.jpg';
-import logo_mutuo from '../../../../images/logo_mutuo.png';
+import PropTypes from 'prop-types';
+import React from 'react';
+import logo_ama from '../../../../images/ama_logo.png';
 import logo_bnmx from '../../../../images/logo_bnmx.png';
 import logo_casa from '../../../../images/logo_casa.png';
 import logo_cicm from '../../../../images/logo_cicm.png';
+import logo_homebudget from '../../../../images/logo_HB.png';
 import logo_icaf from '../../../../images/logo_icaf.png';
 import logo_imei from '../../../../images/logo_imei.jpg';
+import logo_imt from '../../../../images/logo_imt.png';
 import logo_innova from '../../../../images/logo_innova.jpg';
+import logo_irent from '../../../../images/icond.png';
 import logo_jacobs from '../../../../images/logo_jacobs.jpg';
+import logo_knap from '../../../../images/logo_knap.png';
 import logo_lfm from '../../../../images/logo_lfm.jpg';
+import logo_mutuo from '../../../../images/logo_mutuo.png';
+import logo_smood from '../../../../images/logo_smood.jpeg';
 import logo_solar from '../../../../images/logo_solar.png';
 import logo_unam from '../../../../images/logo_unam.png';
-import logo_imt from '../../../../images/logo_imt.png';
-import logo_irent from '../../../../images/icond.png';
-import logo_ama from '../../../../images/ama_logo.png';
-import logo_smood from '../../../../images/logo_smood.jpeg';
-import logo_homebudget from '../../../../images/logo_HB.png';
-
+// Import Style
+import styles from './Resume.css';
+// Import Images
+import tridisap from '../../../../images/tridisap.jpg';
 
 function Resume(props, context) {
   let date = new Date();
@@ -306,10 +304,26 @@ function Resume(props, context) {
               <section>
                 <h4><FormattedMessage id="June" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
                 <ul>
-                  <li><a href="https://homedecobudget.herokuapp.com" target="_blank"><img className={styles.logo} src={logo_homebudget} /></a>Deco Budget: <FormattedMessage id="ResND" /></li>
+                  <li><a href="https://homedecobudget.herokuapp.com" target="_blank"><img className={styles.logo} src={logo_homebudget} /></a>{" "}Deco Budget: <FormattedMessage id="ResND" /></li>
                   <li><strong><FormattedMessage id="ResNDRole" /></strong></li>
                   <li><FormattedMessage id="ResNDDesc" /></li>
-                  <li><i className="fas fa-terminal"></i> Typescript + ExpressJS + <i className='fab fa-react'/> (NextJS) + MongoDB</li>
+                  <li><i className="fas fa-terminal"></i> Typescript + ExpressJS (NestJS) + <i className='fab fa-react'/> (NextJS) + MongoDB</li>
+                </ul>
+              </section>
+            </section>
+            <section className={styles.year}>
+              <h3>2022</h3>
+              <section>
+                <h4><FormattedMessage id="June" /> - <FormattedMessage id="ToDate" /> ({date.getMonth() + 1} / {date.getFullYear()})</h4>
+                <ul>
+                  <li>
+                    <a href="https://www.knap.fr" target="_blank"><img className={styles.logo} src={logo_knap} /></a>
+                    {" "}
+                    <FormattedMessage id="ResKNAP" />
+                  </li>
+                  <li><strong><FormattedMessage id="ResKNAPRole" /></strong></li>
+                  <li><FormattedMessage id="ResKNAPDesc" /></li>
+                  <li><i className="fas fa-terminal"></i> Typescript + <i className='fab fa-js'/> + ExpressJS + NestJS + <i className='fab fa-react'/> + NextJS + MongoDB + PostGre</li>
                 </ul>
               </section>
             </section>
